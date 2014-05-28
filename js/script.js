@@ -1,0 +1,3 @@
+function merde (){
+	alert("jack");
+}
