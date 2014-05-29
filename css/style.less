@@ -48,11 +48,12 @@ body {
 a { text-decoration: none; color: @black; }
 
 .nav {
+    height: 44px;
     box-sizing: border-box;
     width: 100%;
     padding: 0 3.5% 0 3.5%;
     margin: 0 auto;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 44px;
 
     &-logo {
@@ -74,8 +75,10 @@ a { text-decoration: none; color: @black; }
 
     &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 5%); }
 
+    &-grimpeur { border-right: 1px solid @black;}
+
     &-filtre {
-        input[type=checkbox] { display: none; }
+        input { display: none; }
         label { cursor: pointer; }
 
         label:before {
@@ -84,13 +87,54 @@ a { text-decoration: none; color: @black; }
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 0 0 13px 13px;
+            border-width: 0 0 12px 12px;
             margin-right: 5px;
+            border-color: transparent transparent darken(@grey, 20%) transparent; 
+            transition: border-color 0.2s ease;
         }
 
-        &-recommandes:before { border-color: transparent transparent @red transparent;  transition: border-color 0.3s ease;}
-        &-suivi:before { border-color: transparent transparent @blue transparent;  transition: border-color 0.3s ease;}
-        &-nonlus:before { border-color: transparent transparent @green transparent;  transition: border-color 0.3s ease;}
+        input:checked + &-recommandes:before { border-color: transparent transparent @red transparent; }
+        input:checked + &-suivi:before { border-color: transparent transparent @blue transparent; }
+        input:checked + &-nonlus:before { border-color: transparent transparent @green transparent; }
+    }
+
+    &-recherche {
+        margin-top: 9px;
+        display: inline-block;
+        float: right;
+        height: 26px;
+
+        &-input {
+            display: inline-block;
+            width: 250px;
+            height: 26px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 2px solid @grey;
+            float: left;
+        }
+
+        &-input:focus { outline: none; }
+
+        &-submit {
+            display: inline-block;
+            height: 26px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: none;
+            background: @grey url(../img/icones/flunks.svg) no-repeat 11px 5px;
+            background-size: 17px;
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+
+    &-creer {
+        display: inline-block;
+        float: left;
+        width: 35px;
     }
 }
 
