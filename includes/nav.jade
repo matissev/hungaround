@@ -3,13 +3,15 @@ nav.nav
 		img.nav-logo(src="img/logo.svg" alt="logo")
 	.nav-gazette
 		p Gazette
-		input(type='checkbox', name='choix1', value='1')
+		input.nav-gazette-recommandés(type='checkbox', name='choix1', value='1')
 		| Recomandés
-		input(type='checkbox', name='choix2', value='2')
+		input.nav-gazette-suivi(type='checkbox', name='choix2', value='2')
 		| Suivi
-		input(type='checkbox', name='choix3', value='3')
+		input.nav-gazette-nonlus(type='checkbox', name='choix3', value='3')
 		| Non-lus
 		
-	.nav_grimpeur
+	.nav-grimpeur
 		a(href="") Grimpeur
-		
+	
+	.nav-recherche
+		input.nav-recherche-champDeTexte(type='search', placeholder='Entrez un mot-clef', name='barre de recherche')
