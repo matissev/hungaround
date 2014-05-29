@@ -76,27 +76,27 @@ a { text-decoration: none; color: @black; }
         outline: 1px solid darken(@grey, 2%);
     }
 
-    &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 5%); }
+    &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 2%); }
 
     &-filtre {
+        cursor: pointer;
         input { display: none; }
-        label { cursor: pointer; }
 
-        label:before {
-            content: "";
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 0 12px 12px;
-            margin-right: 5px;
-            border-color: transparent transparent darken(@grey, 20%) transparent; 
-            transition: border-color 0.2s ease;
+        &-text:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 12px 12px;
+        margin-right: 5px;
+        border-color: transparent transparent darken(@grey, 20%) transparent; 
+        transition: border-color 0.2s ease;
         }
 
-        input:checked + &-recommandes:before { border-color: transparent transparent @red transparent; }
-        input:checked + &-suivi:before { border-color: transparent transparent @blue transparent; }
-        input:checked + &-nonlus:before { border-color: transparent transparent @green transparent; }
+        input:checked + .recommandes:before { border-color: transparent transparent @red transparent; }
+        input:checked + .suivi:before { border-color: transparent transparent @blue transparent; }
+        input:checked + .nonlus:before { border-color: transparent transparent @green transparent; }
     }
 
     &-recherche {
@@ -111,7 +111,7 @@ a { text-decoration: none; color: @black; }
             appearance: none;
             -moz-appearance: none;
             -webkit-appearance: none;
-            border: 2px solid @grey;
+            border: 1px solid darken(@grey, 2%);
             float: left;
         }
 
@@ -124,7 +124,7 @@ a { text-decoration: none; color: @black; }
             -moz-appearance: none;
             -webkit-appearance: none;
             border: none;
-            background: @grey url(../img/icones/flunks.svg) no-repeat 11px 5px;
+            background: darken(@grey, 2%) url(../img/icones/flunks.svg) no-repeat 11px 5px;
             background-size: 17px;
             width: 40px;
             cursor: pointer;
@@ -141,7 +141,6 @@ a { text-decoration: none; color: @black; }
     &-profil {
         &-photo {
             display: inline-block;
-            background: @grey;
             width: 44px;
             height: 44px;
             float: right;
