@@ -12,11 +12,6 @@ nav.nav
 	.nav-filtre
 		input(type='checkbox' name='choix3' id='choix3' checked)
 		label.nav-filtre-nonlus(for="choix3") Non-lus
-	.nav-recherche
-		input.nav-recherche-input(type='search', placeholder='Recherche', name='barre de recherche')
-		input.nav-recherche-submit(type='submit' value="")
-	a(href="")
-		img.nav-creer(src="img/icones/new-article.svg" alt="boussole")
 	.nav-profil
 		a(href="#"): img.nav-profil-photo(src="img/icones/user.svg" alt="photoDeProfil")
 		ul.nav-profil-menuDeroulant
@@ -32,4 +27,9 @@ nav.nav
 				a(href="") Parametres
 					img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
 			p A propos-Aide-FAQ-confidentialité...
+	a(href="")
+		img.nav-creer(src="img/icones/new-article.svg" alt="boussole")
+	.nav-recherche
+		input.nav-recherche-input(type='search', placeholder='Recherche', name='barre de recherche')
+		input.nav-recherche-submit(type='submit' value="")
 

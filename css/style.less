@@ -53,29 +53,29 @@ a { text-decoration: none; color: @black; }
     width: 100%;
     padding: 0 3.5% 0 3.5%;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 44px;
+    box-shadow: 0 1px 10px darken(@grey, 10%);
 
     &-logo {
         width: 170px;
         float: left;
         padding-top: 5px;
-        margin-right: 25px;
+        margin-right: 20px;
     }
 
     &-gazette, &-grimpeur, &-filtre {
         display: inline-block;
-        padding: 0 15px;
+        padding: 0 12px;
         height: 44px;
         text-align: center;
-        background: @grey;
+        background: white;
         float: left;
         transition: background 0.3s ease;
+        outline: 1px solid darken(@grey, 2%);
     }
 
     &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 5%); }
-
-    &-grimpeur { border-right: 1px solid @black;}
 
     &-filtre {
         input { display: none; }
@@ -132,9 +132,22 @@ a { text-decoration: none; color: @black; }
     }
 
     &-creer {
+        margin: 4px 10px 0 10px;
         display: inline-block;
-        float: left;
+        float: right;
         width: 35px;
+    }
+
+    &-profil {
+        &-photo {
+            display: inline-block;
+            background: @grey;
+            width: 44px;
+            height: 44px;
+            float: right;
+        }
+
+        &-menuDeroulant { display: none; }
     }
 }
 
