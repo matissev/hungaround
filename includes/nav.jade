@@ -1,25 +1,24 @@
 nav.nav
-	.nav-logo
-		a(href="index.html")
-			img.nav-logo-img(src="img/logo.svg" alt="logo")
-	.nav-gazette
-		p Gazette
-		input.nav-gazette-suivi(type='checkbox', name='choix1', value='1')
-		| Recommandés
-		input.nav-gazette-suivi(type='checkbox', name='choix2', value='1')
-		| Suivi
-		input.nav-gazette-nonlus(type='checkbox', name='choix3', value='1')
-		| Non-lus
-	.nav-grimpeur
-		a(href="") Grimpeur
+	a(href="index.html")
+			img.nav-logo(src="img/logo.svg" alt="logo")
+	a.nav-gazette(href="index.html") Gazette
+	a.nav-grimpeur(href="#") Grimpeur
+	.nav-filtre
+		input(type='checkbox' name='choix1' id='choix1' checked)
+		label.nav-filtre-recommandes(for="choix1") Recommandés
+	.nav-filtre
+		input(type='checkbox' name='choix2' id='choix2' checked)
+		label.nav-filtre-suivi(for="choix2") Suivi
+	.nav-filtre
+		input(type='checkbox' name='choix3' id='choix3' checked)
+		label.nav-filtre-nonlus(for="choix3") Non-lus
 	.nav-recherche
-		input.nav-recherche-champDeTexte(type='search', placeholder='Recherche', name='barre de recherche')
-		input(type='submit')
-	.nav-creer
-		a(href="")
-			img.nav-creer-img(src="img/icones/new-article.svg" alt="boussole")
+		input.nav-recherche-input(type='search', placeholder='Recherche', name='barre de recherche')
+		input.nav-recherche-submit(type='submit')
+	a.nav-creer(href="")
+		img.nav-creer-img(src="img/icones/new-article.svg" alt="boussole")
 	.nav-profil
-		img.nav-profil-photo(src="img/icones/user.svg" alt="photoDeProfil")
+		a(href="#"): img.nav-profil-photo(src="img/icones/user.svg" alt="photoDeProfil")
 		ul.nav-profil-menuDeroulant
 			li
 				h3 Nom du grimpeur

@@ -24,7 +24,7 @@
 @garalde: "EB Garamond", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 
 @black: #211e1e;
-@grey: #d0d0d0;
+@grey: #f2efed; /* GRIS NEUTRE: #d0d0d0 ------- GRIS CHAUD: : #f2efed */
 
 @red: #e64c27;
 @red-light: #e9634f;
@@ -44,3 +44,62 @@ body {
 	color: @black;
 	margin: 0;
 }
+
+a { text-decoration: none; color: @black; }
+
+.nav {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 3.5% 0 3.5%;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 44px;
+
+    &-logo {
+        width: 170px;
+        float: left;
+        padding-top: 5px;
+        margin-right: 25px;
+    }
+
+    &-gazette, &-grimpeur, &-filtre {
+        display: inline-block;
+        padding: 0 15px;
+        height: 44px;
+        text-align: center;
+        background: @grey;
+        float: left;
+        transition: background 0.3s ease;
+    }
+
+    &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 5%); }
+
+    &-filtre {
+        input[type=checkbox] { display: none; }
+        label { cursor: pointer; }
+
+        label:before {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 13px 13px;
+            margin-right: 5px;
+        }
+
+        &-recommandes:before { border-color: transparent transparent @red transparent;  transition: border-color 0.3s ease;}
+        &-suivi:before { border-color: transparent transparent @blue transparent;  transition: border-color 0.3s ease;}
+        &-nonlus:before { border-color: transparent transparent @green transparent;  transition: border-color 0.3s ease;}
+    }
+}
+
+
+
+
+
+
+
+
+
+
