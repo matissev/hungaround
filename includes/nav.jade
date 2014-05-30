@@ -19,18 +19,18 @@ nav.nav
 		
 	.nav-profil
 		a(href="#" onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
-		ul.nav-profil-menuDeroulant.close#menuNotif
-			li
-				h3 Nom du grimpeur
-			li
-				a(href="") Profil
-					img.nav-profil-menuDeroulant-profil(src="img/icones/user.svg" alt="user")
-			li
-				a(href="") Favoris
-					img.nav-profil-menuDeroulant-favoris(src="img/icones/like.svg" alt="user")
-			li
-				a(href="") Parametres
-					img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
+		.nav-profil-menuDeroulant.close#menuNotif
+			strong Nom du grimpeur
+			ul
+				li
+					a(href="") Profil
+						img.nav-profil-menuDeroulant-profil(src="img/icones/user.svg" alt="user")
+				li
+					a(href="") Favoris
+						img.nav-profil-menuDeroulant-favoris(src="img/icones/like.svg" alt="user")
+				li
+					a(href="") Parametres
+						img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
 			p A propos-Aide-FAQ-confidentialité...
 
 	a(href="")

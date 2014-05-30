@@ -153,7 +153,8 @@ a { text-decoration: none; color: @black; }
             margin-top: 44px;
             display: block;
             height: 100%;
-            width: 300px;
+            width: 260px;
+            padding: 0 20px;
             color: white;
             background: @black;
             position: fixed;
@@ -161,8 +162,8 @@ a { text-decoration: none; color: @black; }
             right: -340px;
         }
 
-        .close { transform: translateX(0); transition: transform 0.3s ease; }
-        .open { transform: translateX(-340px); transition: transform 1s ease; }
+        .close { transform: translate3d(0, 0, 0); transition: transform 0.35s ease; }
+        .open { transform: translate3d(-340px, 0, 0); transition: transform 0.6s ease; }
 
         a { color: white; }
     }
