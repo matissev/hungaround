@@ -80,6 +80,8 @@ a { text-decoration: none; color: @black; }
 
     &-filtre {
         cursor: pointer;
+        background: lighten(@grey, 2%);
+
         input { display: none; }
 
         &-text:before {
@@ -146,7 +148,17 @@ a { text-decoration: none; color: @black; }
             float: right;
         }
 
-        &-menuDeroulant { display: none; }
+        &-menuDeroulant {
+            margin-top: 44px;
+            display: block;
+            height: 100%;
+            width: 20%;
+            color: white;
+            background: @black;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
     }
 }
 
