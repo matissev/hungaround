@@ -149,16 +149,22 @@ a { text-decoration: none; color: @black; }
         }
 
         &-menuDeroulant {
+            text-align: left;
             margin-top: 44px;
             display: block;
             height: 100%;
-            width: 20%;
+            width: 300px;
             color: white;
             background: @black;
             position: fixed;
             top: 0;
-            right: 0;
+            right: -340px;
         }
+
+        .close { transform: translateX(0); transition: transform 0.3s ease; }
+        .open { transform: translateX(-340px); transition: transform 1s ease; }
+
+        a { color: white; }
     }
 }
 
