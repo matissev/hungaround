@@ -3,7 +3,7 @@ nav.nav
 		img.nav-logo(src="img/logo.svg" alt="logo")
 
 	a.nav-gazette(href="index.html") Gazette
-	a.nav-grimpeur(href="#") Grimpeur
+	a.nav-grimpeur(href="#") Grimpeurs
 
 	label.nav-filtre(for="choix1")
 		input.nav-filtre(type='checkbox' name='choix1' id='choix1' checked)
@@ -20,17 +20,18 @@ nav.nav
 	.nav-profil
 		a(href="#" onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
 		.nav-profil-menuDeroulant.close#menuNotif
-			strong Nom du grimpeur
-			ul
-				li
-					a(href="") Profil
-						img.nav-profil-menuDeroulant-profil(src="img/icones/user.svg" alt="user")
-				li
-					a(href="") Favoris
-						img.nav-profil-menuDeroulant-favoris(src="img/icones/like.svg" alt="user")
-				li
-					a(href="") Parametres
-						img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
+			.nav-profil-menuDeroulant-user
+				strong François
+				ul
+					li
+						a(href="") Profil
+							img.nav-profil-menuDeroulant-profil(src="img/icones/user.svg" alt="user")
+					li
+						a(href="") Favoris
+							img.nav-profil-menuDeroulant-favoris(src="img/icones/like.svg" alt="user")
+					li
+						a(href="") Paramètres
+							img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
 			p A propos-Aide-FAQ-confidentialité...
 
 	a(href="")
