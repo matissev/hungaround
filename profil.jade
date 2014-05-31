@@ -8,16 +8,22 @@ html(lang="fr")
 		main#content
 			.border
 				.border-user
-					img.border-user-photoProfil(src="img/photos/francois.jpg" alt="photoDeProfil")
-					p.border-user-nom Francois <strong>html</strong>
+					img.border-user-photoProfil(src="" alt="photoDeProfil")
+					p.border-user-nom  <strong>Francois</strong>
 
 				.border-ajoutLieu
 					img.border-ajoutLieu-img(src="img/photos/francois.jpg" alt="photoDeProfil")
 					a.border-ajoutLieu-lien(href="#") Ajoutez un lieu
 
-				p.border-articlePostes 0 article Posté
-				
-				a.border-creer(href="#") Ajouter un article
-				p.border-folowers Grimpeurs suivis
-				a
+				.border-article
+					p.border-article-Postes Article Posté
+					p.border-article-Postes-nmb 0
+					a.border-creer(href="#") Ajouter un article
+
+				.border-folowers	
+					p.border-folowers-text Grimpeurs suivis
+					a.border-folowers-nmb(href="#") 0 
+						//- fenetre pop up avec les folowers
+
+
 		include includes/scripts
