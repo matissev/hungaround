@@ -22,16 +22,14 @@ nav.nav
 		.nav-profil-toggle.close#menuNotif
 			.nav-profil-toggle-user
 				strong.nav-profil-toggle-user-name François
+				span.nav-profil-toggle-user-statut rédacteur
 				ul.nav-profil-toggle-user-links
-					li.nav-profil-toggle-user-links-profil
-						a(href="") Profil
-							img(src="img/icones/user.svg" alt="user")
-					li.nav-profil-toggle-user-links-favoris
-						a(href="") Favoris
-							img(src="img/icones/like.svg" alt="user")
-					li.nav-profil-toggle-user-links-parametres
-						a(href="") Paramètres
-							img(src="img/icones/settings.svg" alt="user")
+					a(href=""): li.nav-profil-toggle-user-links-profil
+						| Profil
+					a(href=""): li.nav-profil-toggle-user-links-favoris
+						| Favoris
+					a(href=""): li.nav-profil-toggle-user-links-parametres
+						| Paramètres
 			p A propos-Aide-FAQ-confidentialité...
 
 	a(href="")

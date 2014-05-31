@@ -161,6 +161,54 @@ a { text-decoration: none; color: @black; }
             position: fixed;
             top: 0;
             right: -340px;
+
+            &-user {
+                &-name { font-size: 22px; font-weight: bold; }
+                &-statut:before { content: "\00A0\00A0/\00A0" }
+
+                &-links {
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        list-style: none;
+                        height: 30px;
+                    }
+
+                    &-profil:before {
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        background: url("../img/icones/user-white.svg") no-repeat;
+                        background-size: contain;
+                        vertical-align: -15%;
+                    }
+
+                    &-favoris:before {
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        background: url("../img/icones/like-white.svg") no-repeat;
+                        background-size: contain;
+                        vertical-align: -15%;
+                    }
+
+                    &-parametres:before {
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        background: url("../img/icones/settings-white.svg") no-repeat;
+                        background-size: contain;
+                        vertical-align: -11%;
+                    }
+                }
+            }
         }
 
         .close { transform: translate3d(0, 0, 0); transition: transform 0.35s ease; }
