@@ -19,19 +19,19 @@ nav.nav
 		
 	.nav-profil
 		a(href="#" onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
-		.nav-profil-menuDeroulant.close#menuNotif
-			.nav-profil-menuDeroulant-user
-				strong François
-				ul
-					li
+		.nav-profil-toggle.close#menuNotif
+			.nav-profil-toggle-user
+				strong.nav-profil-toggle-user-name François
+				ul.nav-profil-toggle-user-links
+					li.nav-profil-toggle-user-links-profil
 						a(href="") Profil
-							img.nav-profil-menuDeroulant-profil(src="img/icones/user.svg" alt="user")
-					li
+							img(src="img/icones/user.svg" alt="user")
+					li.nav-profil-toggle-user-links-favoris
 						a(href="") Favoris
-							img.nav-profil-menuDeroulant-favoris(src="img/icones/like.svg" alt="user")
-					li
+							img(src="img/icones/like.svg" alt="user")
+					li.nav-profil-toggle-user-links-parametres
 						a(href="") Paramètres
-							img.nav-profil-menuDeroulant-parametres(src="img/icones/settings.svg" alt="user")
+							img(src="img/icones/settings.svg" alt="user")
 			p A propos-Aide-FAQ-confidentialité...
 
 	a(href="")
