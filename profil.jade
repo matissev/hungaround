@@ -1,0 +1,21 @@
+html(lang="fr")
+	head
+		include includes/head
+	body
+		include includes/nav
+		main#content
+			.border
+				.border-user
+					img.border-user-photoProfil(src="img/photos/francois.jpg" alt="photoDeProfil")
+					p.border-user-nom Francois <strong>html</strong>
+
+				.border-ajoutLieu
+					img.border-ajoutLieu-img(src="img/photos/francois.jpg" alt="photoDeProfil")
+					a.border-ajoutLieu-lien(href="#") Ajoutez un lieu
+
+				p.border-articlePostes 0 article Posté
+				
+				a.border-creer(href="#") Ajouter un article
+				p.border-folowers Grimpeurs suivis
+				a
+		include includes/scripts

@@ -1,0 +1,52 @@
+
+<html lang="fr">
+  <head>
+    <title>Hung Around</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="#" class="nav-grimpeur">Grimpeurs</a>
+      <label for="choix1" class="nav-filtre">
+        <input type="checkbox" name="choix1" id="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text recommandes">Recommandés</span>
+      </label>
+      <label for="choix2" class="nav-filtre">
+        <input type="checkbox" name="choix2" id="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text suivi">Suivi</span>
+      </label>
+      <label for="choix3" class="nav-filtre">
+        <input type="checkbox" name="choix3" id="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text nonlus">Non lus</span>
+      </label>
+      <div class="nav-profil"><a href="#" onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
+        <div id="menuNotif" class="nav-profil-menuDeroulant close">
+          <div class="nav-profil-menuDeroulant-user"><strong>François</strong>
+            <ul>
+              <li><a href="">Profil<img src="img/icones/user.svg" alt="user" class="nav-profil-menuDeroulant-profil"/></a></li>
+              <li><a href="">Favoris<img src="img/icones/like.svg" alt="user" class="nav-profil-menuDeroulant-favoris"/></a></li>
+              <li><a href="">Paramètres<img src="img/icones/settings.svg" alt="user" class="nav-profil-menuDeroulant-parametres"/></a></li>
+            </ul>
+          </div>
+          <p>A propos-Aide-FAQ-confidentialité...</p>
+        </div>
+      </div><a href=""><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a>
+      <div class="nav-recherche">
+        <input type="search" placeholder="Recherche" name="barre de recherche" class="nav-recherche-input"/>
+        <input type="submit" value="" class="nav-recherche-submit"/>
+      </div>
+    </nav>
+    <main id="content">
+      <div class="border">
+        <div class="border-user"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="border-user-photoProfil"/>
+          <p class="border-user-nom">Francois <strong>html</strong></p>
+        </div>
+        <div class="border-ajoutLieu"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="border-ajoutLieu-img"/><a href="#" class="border-ajoutLieu-lien">Ajoutez un lieu</a></div>
+        <p class="border-articlePostes">0 article Posté</p><a href="#" class="border-creer">Ajouter un article</a>
+        <p class="border-folowers">Grimpeurs suivis</p><a></a>
+      </div>
+    </main>
+    <script type="text/javascript" src="js/script.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scrollto.min.js"></script>
+    <script type="text/javascript" src="js/history.min.js"></script>
+    <script type="text/javascript" src="js/ajaxify.min.js"></script>
+  </body>
+</html>
