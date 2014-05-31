@@ -9,7 +9,7 @@ html(lang="fr")
 			.border
 				.border-user
 					img.border-user-photoProfil(src="" alt="photoDeProfil")
-					p.border-user-nom  <strong>Francois</strong>
+					h2.border-user-nom  <strong>Francois</strong>
 
 				.border-ajoutLieu
 					img.border-ajoutLieu-img(src="" alt="photoDeProfil")
@@ -21,9 +21,17 @@ html(lang="fr")
 					a.border-creer(href="#") Ajouter un article
 
 				.border-folowers	
-					p.border-folowers-text Grimpeurs suivis
+					h3.border-folowers-text Grimpeurs suivis
 					a.border-folowers-nmb(href="#") 0 
 						//- fenetre pop up avec les folowers
+
+				.border-amis	
+					h3.border-amis-text Compagnons de grimpe
+						img.border-amis-info-photo(src="" alt="photoAmis1")
+						img.border-amis-info-photo(src="" alt="photoAmis2")
+						img.border-amis-info-photo(src="" alt="photoAmis3")
+						a.border-amis-info-nmb(href="#") +2 
+						//- fenetre pop up avec les amis
 
 
 		include includes/scripts
