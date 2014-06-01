@@ -86,15 +86,15 @@ a { text-decoration: none; color: @black; }
         input { display: none; }
 
         &-text:before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0 12px 12px;
-        margin-right: 5px;
-        border-color: transparent transparent darken(@grey, 20%) transparent; 
-        transition: border-color 0.2s ease;
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 12px 12px;
+            margin-right: 5px;
+            border-color: transparent transparent darken(@grey, 20%) transparent; 
+            transition: border-color 0.2s ease;
         }
 
         input:checked + .recommandes:before { border-color: transparent transparent @red transparent; }
@@ -166,7 +166,7 @@ a { text-decoration: none; color: @black; }
             &-user {
                 height: 165px;
                 min-height: 165px;
-                border-bottom: 2px solid white;
+                border-bottom: 1px solid white;
                 padding: 8px 23px 0 23px;
                 display: block;
                 &-name { font-size: 22px; font-weight: bold; }
@@ -223,17 +223,83 @@ a { text-decoration: none; color: @black; }
             }
 
             &-notif {
-                box-sizing: border-box;
+                position: relative;
                 overflow: scroll;
                 flex: 1;
-                padding: 8px 23px 0 23px;
-                min-height: 100px;
+                min-height: 150px;
+                padding: 0 23px 0 23px;
+                margin: 0;
+
+                &-oneNotif {
+                    position: relative;
+                    line-height: normal;
+                    display: inline-block;
+                    height: 60px;
+                    padding: 23px 0;
+                    width: 100%;
+
+                    img { width: 60px; float: left; margin-right: 15px; display: block; }
+                    p { margin: 0; display: block; }
+                    .username { font-weight: bold; }
+                }
+
+                &-oneNotif:not(:last-child):after {
+                    position: absolute;
+                    margin: 0;
+                    left: -23px;
+                    bottom: 0;
+                    content:"";
+                    display: block;
+                    clear: both;
+                    width: 300px;
+                    border-bottom: 1px solid white;
+                }
+
+                .message p:after {
+                    content: "";
+                    display: table;
+                    width: 20px;
+                    height: 20px;
+                    background: url("../img/icones/mail-white.svg") center bottom no-repeat;
+                    background-size: 20px;
+                }
+
+                .lieu p:after {
+                    content: "";
+                    display: table;
+                    width: 20px;
+                    height: 20px;
+                    background: url("../img/icones/place-white.svg") center bottom no-repeat;
+                    background-size: 20px;
+                }
+
+                .person p:after {
+                    content: "";
+                    display: table;
+                    width: 20px;
+                    height: 20px;
+                    background: url("../img/icones/user-white.svg") center bottom no-repeat;
+                    background-size: 20px;
+                }
+
+                .unseen:before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    top: 0;
+                    left: -23px;
+                    border-style: solid;
+                    border-width: 17px 17px 0 0;
+                    border-color: @red transparent transparent transparent;
+                }
             }
 
             &-footer {
                 height: 115px;
                 min-height: 115px;
-                border-top: solid 2px white;
+                border-top: solid 1px white;
                 font-size: 12px;
                 line-height: 19px;
                 margin: 0;
@@ -249,7 +315,6 @@ a { text-decoration: none; color: @black; }
         a { color: white; }
     }
 }
-
 
 
 
