@@ -150,12 +150,13 @@ a { text-decoration: none; color: @black; }
         }
 
         &-toggle {
+            box-sizing: border-box;
             text-align: left;
             margin-top: 44px;
-            display: block;
+            display: flex;
+            flex-direction: column;
             height: 100%;
-            width: 260px;
-            padding: 0 20px;
+            width: 330px;
             color: white;
             background: @black;
             position: fixed;
@@ -163,38 +164,49 @@ a { text-decoration: none; color: @black; }
             right: -340px;
 
             &-user {
+                height: 165px;
+                min-height: 165px;
+                border-bottom: 2px solid white;
+                padding: 8px 23px 0 23px;
+                display: block;
                 &-name { font-size: 22px; font-weight: bold; }
                 &-statut:before { content: "\00A0\00A0/\00A0" }
+                &-logout { float: right; position: relative; bottom: 10px; color: @red-light !important; }
 
                 &-links {
                     padding: 0;
-                    margin: 0;
+                    margin: 5px 0 0 0;
 
                     li {
+                        float: left;
+                        clear: left;
+                        display: inline;
+                        height: 25px;
+                        line-height: 0px;
                         list-style: none;
-                        height: 30px;
                     }
-
+                    
                     &-profil:before {
                         content: "";
                         display: inline-block;
                         width: 20px;
                         height: 20px;
                         margin-right: 10px;
-                        background: url("../img/icones/user-white.svg") no-repeat;
+                        background: url("../img/icones/user-white.svg") no-repeat center center;
                         background-size: contain;
-                        vertical-align: -15%;
+                        vertical-align: sub;
                     }
-
+                    
+                    &-favoris { margin: 10px 0; }
                     &-favoris:before {
                         content: "";
                         display: inline-block;
                         width: 20px;
                         height: 20px;
                         margin-right: 10px;
-                        background: url("../img/icones/like-white.svg") no-repeat;
+                        background: url("../img/icones/like-white.svg") no-repeat center center;
                         background-size: contain;
-                        vertical-align: -15%;
+                        vertical-align: sub;
                     }
 
                     &-parametres:before {
@@ -203,12 +215,32 @@ a { text-decoration: none; color: @black; }
                         width: 20px;
                         height: 20px;
                         margin-right: 10px;
-                        background: url("../img/icones/settings-white.svg") no-repeat;
+                        background: url("../img/icones/settings-white.svg") no-repeat center center;
                         background-size: contain;
-                        vertical-align: -11%;
+                        vertical-align: sub;
                     }
                 }
             }
+
+            &-notif {
+                box-sizing: border-box;
+                overflow: scroll;
+                flex: 1;
+                padding: 8px 23px 0 23px;
+                min-height: 100px;
+            }
+
+            &-footer {
+                height: 115px;
+                min-height: 115px;
+                border-top: solid 2px white;
+                font-size: 12px;
+                line-height: 19px;
+                margin: 0;
+                padding: 15px 23px 15px 23px;
+            }
+
+            &-user:before, &-user:after { content: " "; display: table; clear: both; }
         }
 
         .close { transform: translate3d(0, 0, 0); transition: transform 0.35s ease; }
@@ -217,9 +249,6 @@ a { text-decoration: none; color: @black; }
         a { color: white; }
     }
 }
-
-
-
 
 
 

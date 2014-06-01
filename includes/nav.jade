@@ -22,15 +22,18 @@ nav.nav
 		.nav-profil-toggle.close#menuNotif
 			.nav-profil-toggle-user
 				strong.nav-profil-toggle-user-name François
-				span.nav-profil-toggle-user-statut rédacteur
+				span.nav-profil-toggle-user-statut lecteur
 				ul.nav-profil-toggle-user-links
 					a(href="profil.html"): li.nav-profil-toggle-user-links-profil
 						| Profil
-					a(href=""): li.nav-profil-toggle-user-links-favoris
+					a(href="#"): li.nav-profil-toggle-user-links-favoris
 						| Favoris
-					a(href=""): li.nav-profil-toggle-user-links-parametres
+					a(href="#"): li.nav-profil-toggle-user-links-parametres
 						| Paramètres
-			p A propos-Aide-FAQ-confidentialité...
+				a.nav-profil-toggle-user-logout(href="#") Déconnexion
+			.nav-profil-toggle-notif
+				.nav-profil-toggle-notif-scroller 
+			p.nav-profil-toggle-footer À propos - Aide - Conditions - Confidentialité - Cookies - Informations sur la publicité - Marque - Blog - Statut - Applications - Offres d'emploi - Annoncer - Professionnels - Médias - Développeurs
 
 	a(href="")
 		img.nav-creer(src="img/icones/new-article.svg" alt="boussole")
