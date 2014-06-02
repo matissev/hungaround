@@ -45,6 +45,13 @@ body {
 	margin: 0;
 }
 
+main {
+    display: block;
+    margin: 40px 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+
 a { text-decoration: none; color: @black; }
 
 .nav {
@@ -314,6 +321,25 @@ a { text-decoration: none; color: @black; }
 
         a { color: white; }
     }
+}
+
+#mosaic {
+    display: block;
+    height: 4000px;
+    text-align: center;
+    width: 93%;
+    margin: 0 auto;
+    background: green;
+
+    .item {
+        display: block;
+        outline: 1px solid white; 
+        background: @black;
+    }
+
+    .p1x1 { width: 20%; } .p1x1:after { content: ""; display: inline-block; padding-top: 92.5%; }
+    .p2x1 { width: 40%; } .p2x1:after { content: ""; display: inline-block; padding-top: 50%; }
+    .p2x2 { width: 40%; } .p2x2:after { content: ""; display: inline-block; padding-top: 128.5%; }
 }
 
 

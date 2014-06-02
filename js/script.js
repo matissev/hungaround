@@ -15,7 +15,7 @@ function toggleNotif() {
 
 
 
-/* ISOTOPE LAYOUT SETTINGS */
+/* ISOTOPE LAYOUT SETTINGS
 
 var $container = $('#mosaic').isotope({
   // main isotope options
@@ -30,4 +30,15 @@ var $container = $('#mosaic').isotope({
   masonry: {
     columnWidth: '.grid-sizer'
   }
-})
+})*/
+
+
+
+
+/* MASONRY LAYOUT SETTINGS */
+
+var mosaic = document.querySelector('#mosaic');
+var msnry = new Masonry( mosaic );
+container.appendChild( item );
+msnry.appended( item );
+msnry.layout();
