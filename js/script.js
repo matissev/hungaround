@@ -20,17 +20,3 @@ function toggleNotif() {
 $('#mosaic').packery({
   itemSelector: '.item'
 });
-
-
-
-
-/* MASONRY LAYOUT SETTINGS */
-
-// var mosaic = document.querySelector('#mosaic');
-// var msnry = new Masonry( mosaic, {
-//   "columnWidth": ".grid-sizer",
-//   "itemSelector": ".item"
-// });
-// container.appendChild( item );
-// msnry.appended( item );
-// msnry.layout();
