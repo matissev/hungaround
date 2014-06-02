@@ -15,30 +15,22 @@ function toggleNotif() {
 
 
 
-/* ISOTOPE LAYOUT SETTINGS
+/* ISOTOPE LAYOUT SETTINGS */
 
-var $container = $('#mosaic').isotope({
-  // main isotope options
-  itemSelector: '.item',
-  layoutMode: 'masonry',
-  // options for cellsByRow layout mode
-  cellsByRow: {
-    columnWidth: 200,
-    rowHeight: 150
-  },
-  // options for masonry layout mode
-  masonry: {
-    columnWidth: '.grid-sizer'
-  }
-})*/
+$('#mosaic').packery({
+  itemSelector: '.item'
+});
 
 
 
 
 /* MASONRY LAYOUT SETTINGS */
 
-var mosaic = document.querySelector('#mosaic');
-var msnry = new Masonry( mosaic );
-container.appendChild( item );
-msnry.appended( item );
-msnry.layout();
+// var mosaic = document.querySelector('#mosaic');
+// var msnry = new Masonry( mosaic, {
+//   "columnWidth": ".grid-sizer",
+//   "itemSelector": ".item"
+// });
+// container.appendChild( item );
+// msnry.appended( item );
+// msnry.layout();

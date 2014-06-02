@@ -400,45 +400,60 @@ a {
 
 #mosaic {
   display: block;
-  height: 4000px;
-  text-align: center;
   width: 93%;
   margin: 0 auto;
-  background: green;
+}
+
+#mosaic .grid-sizer {
+  width: 20%;
 }
 
 #mosaic .item {
-  display: block;
+  position: relative;
+  width: 20%;
+  display: inline-block;
   outline: 1px solid white;
   background: #211e1e;
+  overflow: hidden;
+}
+
+#mosaic .item img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 #mosaic .p1x1 {
-  width: 20%;
+  float: left;
+  width: 16.6666666%;
 }
 
 #mosaic .p1x1:after {
   content: "";
   display: inline-block;
-  padding-top: 92.5%;
+  padding-top: 125%;
 }
 
 #mosaic .p2x1 {
-  width: 40%;
+  float: left;
+  width: 33.3333333%;
 }
 
 #mosaic .p2x1:after {
   content: "";
   display: inline-block;
-  padding-top: 50%;
+  padding-top: 62.5%;
 }
 
 #mosaic .p2x2 {
-  width: 40%;
+  float: left;
+  width: 33.3333333%;
 }
 
 #mosaic .p2x2:after {
   content: "";
   display: inline-block;
-  padding-top: 128.5%;
+  padding-top: 125%;
 }
