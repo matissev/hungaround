@@ -354,8 +354,22 @@ a { text-decoration: none; color: @black; }
     margin-left: 3.5%;
 
     .item {
+        position: relative;
         outline: 1px solid white;
-        background: @black;
+        background: silver;
+
+        &-links {
+            box-sizing: border-box;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: @black;
+
+            a { color: white; display: block; }
+        }
     }
 
     .p1x1 { float: left; width: 16.6666666%;} .p1x1:after { content: ""; display: inline-block; padding-top: 125%; }
