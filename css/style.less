@@ -46,13 +46,24 @@ body {
 }
 
 main {
+    z-index: 1;
     display: block;
     margin: 40px 0 0 0;
     padding: 0;
-    width: 100%;
+    width: 96.5%;
 }
 
 a { text-decoration: none; color: @black; }
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------- NAVIGATION */
 
 .nav {
     text-align: center;
@@ -73,7 +84,7 @@ a { text-decoration: none; color: @black; }
 
     &-gazette, &-grimpeur { font-weight: bold; }
 
-    &-gazette, &-grimpeur, &-filtre {
+    &-gazette, &-grimpeur, &-filtre, &-register {
         display: inline-block;
         padding: 0 12px;
         height: 44px;
@@ -84,7 +95,9 @@ a { text-decoration: none; color: @black; }
         outline: 1px solid darken(@grey, 2%);
     }
 
-    &-gazette:hover, &-grimpeur:hover, &-filtre:hover { background: darken(@grey, 2%); }
+    &-register { float: right; }
+
+    &-gazette:hover, &-grimpeur:hover, &-filtre:hover, &-register:hover { background: darken(@grey, 2%); }
 
     &-filtre {
         cursor: pointer;
@@ -157,6 +170,7 @@ a { text-decoration: none; color: @black; }
         }
 
         &-toggle {
+            z-index: 2;
             box-sizing: border-box;
             text-align: left;
             margin-top: 44px;
@@ -323,28 +337,29 @@ a { text-decoration: none; color: @black; }
     }
 }
 
-#mosaic {
-    .grid-sizer { width: 20%; }
 
-    display: block;
-    width: 93%;
-    margin: 0 auto;
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------- GAZETTE */
+
+#mosaic {
+    box-sizing: border-box;
+    border-right: 44px solid transparent;
+    width: 96.5%;
+    margin-left: 3.5%;
 
     .item {
-        position: relative;
-        width: 20%;
-        display: inline-block;
-        outline: 1px solid white; 
+        outline: 1px solid white;
         background: @black;
-        overflow: hidden;
-
-        img { position: absolute; height: 100%; width: 100%; left: 0; top: 0; }
     }
 
     .p1x1 { float: left; width: 16.6666666%;} .p1x1:after { content: ""; display: inline-block; padding-top: 125%; }
     .p2x1 { float: left; width: 33.3333333%;} .p2x1:after { content: ""; display: inline-block; padding-top: 62.5%; }
     .p2x2 { float: left; width: 33.3333333%;} .p2x2:after { content: ""; display: inline-block; padding-top: 125%; }
 }
-
-
 

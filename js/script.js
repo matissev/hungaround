@@ -17,6 +17,4 @@ function toggleNotif() {
 
 /* ISOTOPE LAYOUT SETTINGS */
 
-$('#mosaic').packery({
-  itemSelector: '.item'
-});
+$('#mosaic').packery({ itemSelector: '.item' });
