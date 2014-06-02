@@ -354,23 +354,65 @@ a { text-decoration: none; color: @black; }
     margin-left: 3.5%;
 
     .item {
+        box-sizing: border-box;
         position: relative;
-        outline: 1px solid white;
+        border: 1px solid white;
         background: silver;
+        overflow: hidden;
+
+        &-img {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
 
         &-links {
+            z-index: 2;
+            opacity: 0;
             box-sizing: border-box;
             font-size: 14px;
-            line-height: 18px;
-            padding: 10px;
+            line-height: 20px;
+            padding: 7px 10px;
             position: absolute;
             width: 100%;
             bottom: 0;
             background: @black;
+            transition: opacity 0.5s ease;
 
-            a { color: white; display: block; }
+            &-articleName {
+                max-width: 100%;
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            &-lieu:before {
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                margin-right: 10px;
+                background: url("../img/icones/place-white.svg") no-repeat center center;
+                background-size: contain;
+                vertical-align: sub;
+            }
+
+            &-auteur:before {
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                margin-right: 10px;
+                background: url("../img/icones/user-white.svg") no-repeat center center;
+                background-size: contain;
+                vertical-align: sub;
+            }
+
+            a { display: table; color: white; }
         }
     }
+
+    .item:hover .item-links {opacity: 1;}
 
     .p1x1 { float: left; width: 16.6666666%;} .p1x1:after { content: ""; display: inline-block; padding-top: 125%; }
     .p2x1 { float: left; width: 33.3333333%;} .p2x1:after { content: ""; display: inline-block; padding-top: 62.5%; }
