@@ -18,3 +18,4 @@ function toggleNotif() {
 /* ISOTOPE LAYOUT SETTINGS */
 
 $('#mosaic').packery({ itemSelector: '.item' });
+/* $container.packery('destroy') */
