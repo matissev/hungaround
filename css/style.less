@@ -48,7 +48,7 @@ body {
 main {
     z-index: 1;
     display: block;
-    margin: 40px 0 0 0;
+    margin: 80px 0 0 0;
     padding: 0;
     width: 96.5%;
 }
@@ -66,6 +66,11 @@ a { text-decoration: none; color: @black; }
 /* --------------------------------------------------------------------------------------------------- NAVIGATION */
 
 .nav {
+	z-index: 2;
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
     text-align: center;
     height: 44px;
     box-sizing: border-box;
@@ -86,13 +91,15 @@ a { text-decoration: none; color: @black; }
 
     &-gazette, &-grimpeur, &-filtre, &-register {
         display: inline-block;
+        box-sizing: border-box;
         padding: 0 12px;
         height: 44px;
         text-align: center;
         background: white;
         float: left;
         transition: background 0.3s ease;
-        outline: 1px solid darken(@grey, 2%);
+        border-left: 1px solid darken(@grey, 2%);
+        border-right: 1px solid darken(@grey, 2%);
     }
 
     &-register { float: right; }
@@ -354,6 +361,7 @@ a { text-decoration: none; color: @black; }
     margin-left: 3.5%;
 
     .item {
+    	z-index: 1;
         box-sizing: border-box;
         position: relative;
         border: 1px solid white;
