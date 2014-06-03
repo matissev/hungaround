@@ -8,16 +8,16 @@
   </head>
   <body>
     <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="#" class="nav-grimpeur">Grimpeurs</a>
-      <label for="choix1" class="nav-filtre">
-        <input type="checkbox" name="choix1" id="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text recommandes">Recommandés</span>
+      <label for="choix1" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix1" type="checkbox" name="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
       </label>
-      <label for="choix2" class="nav-filtre">
-        <input type="checkbox" name="choix2" id="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text suivi">Suivi</span>
+      <label for="choix2" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix2" type="checkbox" name="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navSuivi">Suivi</span>
       </label>
-      <label for="choix3" class="nav-filtre">
-        <input type="checkbox" name="choix3" id="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text nonlus">Non lus</span>
+      <label for="choix3" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix3" type="checkbox" name="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navNonlus">Non lus</span>
       </label>
-      <div class="nav-profil"><a href="#" onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
+      <div class="nav-profil"><a onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
         <div id="menuNotif" class="nav-profil-toggle close">
           <div class="nav-profil-toggle-user"><strong class="nav-profil-toggle-user-name">François</strong><span class="nav-profil-toggle-user-statut">lecteur</span>
             <ul class="nav-profil-toggle-user-links"><a href="profil.html">
@@ -58,40 +58,28 @@
     </nav>
     <main id="content">
       <div id="mosaic">
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
+        <div class="item p2x2 recommande"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
+        <div class="item p1x1 nonlu"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
+        <div class="item p2x1 suivi"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
         <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
+        <div class="item p2x2 nonlu"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
+        <div class="item p1x1 recommande"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
+        <div class="item p2x1 recommande"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
@@ -106,15 +94,6 @@
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
@@ -124,19 +103,7 @@
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
         <div class="item p1x1"><a href=""><img src="http://placepic.me/ganjagirls/300-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x1"><a href=""><img src="http://placepic.me/ganjagirls/600-375" alt="" class="item-img"/></a>
-          <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
-        </div>
-        <div class="item p2x2"><a href=""><img src="http://placepic.me/ganjagirls/500-625" alt="" class="item-img"/></a>
           <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="#" class="item-links-lieu">Col de la Lyé</a><a href="#" class="item-links-auteur">Francois Juste</a></div>
         </div>
       </div>

@@ -13,6 +13,24 @@ function toggleNotif() {
 	}
 }
 
+function filter() {
+	if ( $('#checkRecommandes').checked ) {
+		$('.recommande').style.display = 'none'; }
+	else { $('.recommande').style.display = 'block'; }
+
+	if ( $('#checkNonlus').checked ) {
+		$('.nonlu').style.display = 'none'; }
+	else { $('.nonlu').style.display = 'block'; }
+
+	if ( $('#checkSuivi').checked ) {
+		$('.suivi').style.display = 'none'; }
+	else { $('.suivi').style.display = 'block'; }
+
+
+	$('#mosaic').packery({ itemSelector: '.item' });
+	$container.packery('destroy');
+}
+
 
 
 /* ISOTOPE LAYOUT SETTINGS */

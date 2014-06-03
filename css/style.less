@@ -48,7 +48,7 @@ body {
 main {
     z-index: 1;
     display: block;
-    margin: 80px 0 0 0;
+    margin: 80px 0 40px 0;
     padding: 0;
     width: 96.5%;
 }
@@ -80,6 +80,7 @@ a { text-decoration: none; color: @black; }
     font-size: 14px;
     line-height: 46px;
     box-shadow: 0 1px 10px darken(@grey, 10%);
+    border-bottom: 1px solid darken(@grey, 2%);
 
     &-logo {
         width: 165px;
@@ -93,13 +94,12 @@ a { text-decoration: none; color: @black; }
         display: inline-block;
         box-sizing: border-box;
         padding: 0 12px;
-        height: 44px;
+        height: 43px;
         text-align: center;
         background: white;
         float: left;
         transition: background 0.3s ease;
-        border-left: 1px solid darken(@grey, 2%);
-        border-right: 1px solid darken(@grey, 2%);
+        outline: 1px solid darken(@grey, 2%);
     }
 
     &-register { float: right; }
@@ -124,9 +124,9 @@ a { text-decoration: none; color: @black; }
             transition: border-color 0.2s ease;
         }
 
-        input:checked + .recommandes:before { border-color: transparent transparent @red transparent; }
-        input:checked + .suivi:before { border-color: transparent transparent @blue transparent; }
-        input:checked + .nonlus:before { border-color: transparent transparent @green transparent; }
+        input:checked + .navRecommandes:before { border-color: transparent transparent @red transparent; }
+        input:checked + .navSuivi:before { border-color: transparent transparent @blue transparent; }
+        input:checked + .navNonlus:before { border-color: transparent transparent @green transparent; }
     }
 
     &-recherche {
@@ -174,6 +174,7 @@ a { text-decoration: none; color: @black; }
             width: 44px;
             height: 44px;
             float: right;
+            cursor: pointer;
         }
 
         &-toggle {
@@ -357,7 +358,7 @@ a { text-decoration: none; color: @black; }
 #mosaic {
     box-sizing: border-box;
     border-right: 44px solid transparent;
-    width: 96.5%;
+    width: 96%;
     margin-left: 3.5%;
 
     .item {
@@ -422,8 +423,25 @@ a { text-decoration: none; color: @black; }
 
     .item:hover .item-links {opacity: 1;}
 
-    .p1x1 { float: left; width: 16.6666666%;} .p1x1:after { content: ""; display: inline-block; padding-top: 125%; }
-    .p2x1 { float: left; width: 33.3333333%;} .p2x1:after { content: ""; display: inline-block; padding-top: 62.5%; }
-    .p2x2 { float: left; width: 33.3333333%;} .p2x2:after { content: ""; display: inline-block; padding-top: 125%; }
+    .p1x1 { float: left; width: 16.6666666%;} .p1x1:before { content: ""; display: inline-block; padding-top: 125%; }
+    .p2x1 { float: left; width: 33.3333333%;} .p2x1:before { content: ""; display: inline-block; padding-top: 62.5%; }
+    .p2x2 { float: left; width: 33.3333333%;} .p2x2:before { content: ""; display: inline-block; padding-top: 125%; }
+
+    .recommande:after, .suivi:after, .nonlu:after {
+        z-index: 10;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+        border-style: solid;
+        border-width: 35px 35px 0 0;
+    }
+
+    .recommande:after { border-color: transparent @red transparent transparent; }
+    .suivi:after { border-color: transparent @blue transparent transparent; }
+    .nonlu:after { border-color: transparent @green transparent transparent; }
 }
 

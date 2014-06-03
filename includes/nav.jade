@@ -5,20 +5,20 @@ nav.nav
 	a.nav-gazette(href="index.html") Gazette
 	a.nav-grimpeur(href="#") Grimpeurs
 
-	label.nav-filtre(for="choix1")
-		input.nav-filtre(type='checkbox' name='choix1' id='choix1' checked)
-		span.nav-filtre-text.recommandes Recommandés
+	label.nav-filtre(for="choix1" onclick="javascript:filter();")
+		input.nav-filtre#checkRecommandes( type='checkbox' name='choix1' id='choix1' checked)
+		span.nav-filtre-text.navRecommandes Recommandés
 		
-	label.nav-filtre(for="choix2")
-		input.nav-filtre(type='checkbox' name='choix2' id='choix2' checked)
-		span.nav-filtre-text.suivi Suivi
+	label.nav-filtre(for="choix2" onclick="javascript:filter();")
+		input.nav-filtre#checkSuivi( type='checkbox' name='choix2' id='choix2' checked)
+		span.nav-filtre-text.navSuivi Suivi
 		
-	label.nav-filtre(for="choix3")
-		input.nav-filtre(type='checkbox' name='choix3' id='choix3' checked)
-		span.nav-filtre-text.nonlus Non lus
+	label.nav-filtre(for="choix3" onclick="javascript:filter();")
+		input.nav-filtre#checkNonlus( type='checkbox' name='choix3' id='choix3' checked)
+		span.nav-filtre-text.navNonlus Non lus
 		
 	.nav-profil
-		a(href="#" onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
+		a(onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
 		.nav-profil-toggle.close#menuNotif
 			.nav-profil-toggle-user
 				strong.nav-profil-toggle-user-name François
