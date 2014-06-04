@@ -46,12 +46,63 @@ body {
 }
 
 main {
-    z-index: 1;
-    display: block;
-    margin: 80px 0 40px 0;
-    padding: 0;
-    width: 96.5%;
+    box-sizing: border-box;
+    background: white;
+    z-index: 30;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.3s ease;
+    transform: translateX(0);
+
+    .scroller {
+        z-index: 1;
+        box-sizing: border-box;
+        border-top: solid 44px transparent;
+        padding-top: 36px;
+        overflow-y: scroll;
+        height: 100%;
+        width: 96.5%;
+    }
+
+    .scroller:after { content: ""; display: inline-block; height: 40px; width: 100%; }
+
+    .linkMap {
+        z-index: 3;
+        background: @orange;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 3.5%;
+        display: block;
+        transform: translateX(0);
+        transition: transform 1.3s ease;
+
+        span {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 48%;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        span:before {
+            content: "";
+            top: 200px;
+            display: inline-block;
+            width: 100%;
+            padding-top: 100%;
+            background: url("../img/icones/map.svg") no-repeat center center;
+            background-size: 30px;
+        }
+    }
 }
+
+.kickOutContent { transform: translateX(-100%); }
+.letLinkMap { transform: translateX(100%)!important; }
+
 
 a { text-decoration: none; color: @black; }
 
@@ -66,7 +117,7 @@ a { text-decoration: none; color: @black; }
 /* --------------------------------------------------------------------------------------------------- NAVIGATION */
 
 .nav {
-	z-index: 2;
+	z-index: 3;
 	background: white;
 	position: fixed;
 	top: 0;
@@ -198,6 +249,7 @@ a { text-decoration: none; color: @black; }
                 border-bottom: 1px solid white;
                 padding: 8px 23px 0 23px;
                 display: block;
+
                 &-name { font-size: 22px; font-weight: bold; }
                 &-statut:before { content: "\00A0\00A0/\00A0" }
                 &-logout { float: right; position: relative; bottom: 10px; color: @red-light !important; }
@@ -358,11 +410,12 @@ a { text-decoration: none; color: @black; }
 #mosaic {
     box-sizing: border-box;
     border-right: 44px solid transparent;
-    width: 96%;
+    width: 96.5%;
     margin-left: 3.5%;
+    float: left;
 
     .item {
-    	z-index: 1;
+    	z-index: 2;
         box-sizing: border-box;
         position: relative;
         border: 1px solid white;
@@ -376,7 +429,7 @@ a { text-decoration: none; color: @black; }
         }
 
         &-links {
-            z-index: 2;
+            z-index: 3;
             opacity: 0;
             box-sizing: border-box;
             font-size: 14px;
@@ -445,3 +498,16 @@ a { text-decoration: none; color: @black; }
     .nonlu:after { border-color: transparent @green transparent transparent; }
 }
 
+#largeMap {
+    z-index: -1;
+    background: white;
+    position: fixed !important;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 44px solid white;
+    border-left: 44px solid white;
+}
