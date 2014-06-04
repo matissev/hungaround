@@ -7,6 +7,38 @@ html(lang="fr")
 
 		main#content
 			img.panoramique(src="img/photos/panoramique/panoramique.jpg" alt="panoramique")
+			.info
+				.info-lieu
+					h2.info-user-nom  <strong>Col de la Lyé</strong>
+				.info-meteo
+					h4.info-meteo-text Météo
+					p.info-meteo-jour Lun
+					img.info-meteo-img(src="img/weather/stormy.svg" alt="storm")
+					p.info-meteo-jour Mar
+					img.info-meteo-img(src="img/weather/stormy.svg" alt="storm")
+					p.info-meteo-jour Mer
+					img.info-meteo-img(src="img/weather/stormy.svg" alt="storm")
+					p.info-meteo-jour Jeu
+					img.info-meteo-img(src="img/weather/stormy.svg" alt="storm")
+					p.info-meteo-jour Ven
+					img.info-meteo-img(src="img/weather/stormy.svg" alt="storm")
+				.info-article
+					h4.info-article-Postes Article Posté
+					p.info-article-Postes 0
+					a.info-article-creer(href="#") Ajouter un article
+				.info-info	
+					h4.info-folowers-text Grimpeurs suivis
+					a.info-folowers-nmb(href="#") 0 
+						//- fenetre pop up avec les folowers
+				.info-amis	
+					h4.info-amis-text Compagnons de grimpe
+					img.info-amis-info-photo(src="img/photos/users/1.jpg" alt="photoAmis1")
+					img.info-amis-info-photo(src="img/photos/users/2.jpg" alt="photoAmis2")
+					img.info-amis-info-photo(src="img/photos/users/3.jpg" alt="photoAmis3")
+					a.info-amis-info-nmb(href="#") +6 
+						//- fenetre pop up avec les amis
+				.info-habitudes
+					h4.border-habitudes-text Sites les plus grimpés
 
 
 		include includes/scripts
