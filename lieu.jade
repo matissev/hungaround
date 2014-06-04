@@ -6,45 +6,159 @@ html(lang="fr")
 		include includes/nav-unlogged
 
 		main#content
-			img.panoramique(src="img/photos/panoramique/panoramique.jpg" alt="panoramique")
-			.info
-				.info-lieu
-					h2.info-user-nom  <strong>Col de la Lyé</strong>
-				.info-meteo
-					h4.info-meteo-text Météo
-					p.info-meteo-jour Lun
-					img.info-meteo-img(src="img/weather/stormy.svg" alt="Météo")
-					p.info-meteo-jour Mar
-					img.info-meteo-img(src="img/weather/sunny.svg" alt="Météo")
-					p.info-meteo-jour Mer
-					img.info-meteo-img(src="img/weather/stormy.svg" alt="Météo")
-					p.info-meteo-jour Jeu
-					img.info-meteo-img(src="img/weather/cloudy.svg" alt="Météo")
-					p.info-meteo-jour Ven
-					img.info-meteo-img(src="img/weather/stormy.svg" alt="Météo")
-				.info-terrain
-					h4.info-terrain-text Composition du terrain
-					img.info-terrain-compo(src="" alt="CompositionTerrain")
-					P.info-terrain-granite Granite / 37%
-					p.info-terrain-calcaire Calcaire / 23%
-					p.info-terrain-grès Grès / 24%
-					p.info-terrain-schiste Schiste / 12%
-					p.info-terrain-glace Glace / 4%
-					
 
-				.info-info	
-					h4.info-folowers-text Grimpeurs suivis
-					a.info-folowers-nmb(href="#") 0 
-						//- fenetre pop up avec les folowers
-				.info-amis	
-					h4.info-amis-text Compagnons de grimpe
-					img.info-amis-info-photo(src="img/photos/users/1.jpg" alt="photoAmis1")
-					img.info-amis-info-photo(src="img/photos/users/2.jpg" alt="photoAmis2")
-					img.info-amis-info-photo(src="img/photos/users/3.jpg" alt="photoAmis3")
-					a.info-amis-info-nmb(href="#") +6 
-						//- fenetre pop up avec les amis
-				.info-habitudes
-					h4.border-habitudes-text Sites les plus grimpés
+			img(src="img/photos/panoramique/panoramique.jpg" alt="panoramique")
+			section.info
+				h1.info-lieu <strong>Col de la Lyé</strong>
+				article.info-meteo
+					h1 Météo
+					ol
+						li
+							img.icone(src="img/weather/stormy.svg" alt="Météo")
+							span.jour Lun 26
+						li
+							img.icone(src="img/weather/sunny.svg" alt="Météo")
+							span.jour Mar 27
+						li
+							img.icone(src="img/weather/stormy.svg" alt="Météo")
+							span.jour Mer 28
 
+						li
+							img.icone(src="img/weather/cloudy.svg" alt="Météo")
+							span.jour Jeu 29
+						li
+							img.icone(src="img/weather/stormy.svg" alt="Météo")
+							span.jour Ven 30
+
+				article.info-terrain
+					h1 Composition du terrain
+						img(src="" alt="CompositionTerrain")
+						ol
+							li.granite Granite / 37%
+							li.calcaire Calcaire / 23%
+							li.grès Grès / 24%
+							li.schiste Schiste / 12%
+							li.glace Glace / 4%
+
+
+				article.info-voie	
+					h1 Diffuculté des voie
+					ol
+						li
+							span.nombre 9
+							span.text voies de niveau
+							span.niveau 1
+						li
+							span.nombre 2
+							span.text voies de niveau
+							span.niveau 2
+						li
+							span.nombre 9
+							span.text voies de niveau
+							span.niveau 3
+						li
+							span.nombre 5
+							span.text voies de niveau
+							span.niveau 4
+						li
+							span.nombre 6
+							span.text voies de niveau
+							span.niveau 5a
+						li
+							span.nombre 9
+							span.text voies de niveau
+							span.niveau 5b
+						li
+							span.nombre 4
+							span.text voies de niveau
+							span.niveau 6a
+						li
+							span.nombre 9
+							span.text voies de niveau
+							span.niveau 6a+
+						li
+							span.nombre 8
+							span.text voies de niveau
+							span.niveau 6b
+						li
+							span.nombre 5
+							span.text voies de niveau
+							span.niveau 6b+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 6c
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 6c+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7a
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7a+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7b
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7b+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7c
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 7c+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8a
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8a+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8b
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8b+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8c
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 8c+
+												li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 9a
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 9a+
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 9b
+						li
+							span.nombre 1
+							span.text voies de niveau
+							span.niveau 9b+
+
+
+
+				
 
 		include includes/scripts
