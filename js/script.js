@@ -23,6 +23,12 @@ jQuery(document).ready(function($) {
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
 		$(this).toggleClass("letLinkMap");
+
+		if ($("#textLinkMap").html() == "Carte" ) {
+			$("#textLinkMap").html("Gazette");
+		} else {
+			$("#textLinkMap").html("Carte");
+		}
 	})
 
 	// =========================== GOOGLE MAPS API ===========================
