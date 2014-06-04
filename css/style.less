@@ -182,8 +182,6 @@ a { text-decoration: none; color: @black; }
             box-sizing: border-box;
             text-align: left;
             margin-top: 44px;
-            display: flex;
-            flex-direction: column;
             height: 100%;
             width: 330px;
             color: white;
@@ -252,10 +250,11 @@ a { text-decoration: none; color: @black; }
             }
 
             &-notif {
-                position: relative;
+                position: absolute;
+                top: 174px;
+                bottom: 150px;
                 overflow: scroll;
-                flex: 1;
-                min-height: 150px;
+                outline: 1px red solid;
                 padding: 0 23px 0 23px;
                 margin: 0;
 
@@ -265,7 +264,7 @@ a { text-decoration: none; color: @black; }
                     display: inline-block;
                     height: 60px;
                     padding: 23px 0;
-                    width: 100%;
+                    // width: 100%;
 
                     img { width: 60px; float: left; margin-right: 15px; display: block; }
                     p { margin: 0; display: block; }
@@ -326,6 +325,8 @@ a { text-decoration: none; color: @black; }
             }
 
             &-footer {
+                position: absolute;
+                bottom: 0;
                 height: 115px;
                 min-height: 115px;
                 border-top: solid 1px white;
