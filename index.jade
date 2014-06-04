@@ -1,10 +1,17 @@
 html(lang="fr")
 	head
 		include includes/head
+		style
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
+
 	body
 		include includes/nav-unlogged
 
 		main#content
-			include includes/mosaic
+			.scroller
+				include includes/mosaic
+			a.linkMap(href="#")
+				span Carte
+		#largeMap
 
 		include includes/scripts
