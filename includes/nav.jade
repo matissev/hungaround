@@ -2,24 +2,23 @@ nav.nav
 	a(href="index.html")
 		img.nav-logo(src="img/logo.svg" alt="logo")
 
-	a.nav-gazette(href="index.html") Gazette
-	a.nav-grimpeur(href="") Grimpeurs
-
-	label.nav-filtre(for="choix1" onclick="javascript:filter();")
-		input.nav-filtre#checkRecommandes( type='checkbox' name='choix1' id='choix1' checked)
+	label.nav-filtre(for="checkRecommandes" data-filtered="recommande")
+		input.nav-filtre-check#checkRecommandes( type='checkbox' name='choix1' checked="checked")
 		span.nav-filtre-text.navRecommandes Recommandés
 		
-	label.nav-filtre(for="choix2" onclick="javascript:filter();")
-		input.nav-filtre#checkSuivi( type='checkbox' name='choix2' id='choix2' checked)
+	label.nav-filtre(for="checkSuivi" data-filtered="suivi")
+		input.nav-filtre-check#checkSuivi( type='checkbox' name='choix2' checked="checked")
 		span.nav-filtre-text.navSuivi Suivi
 		
-	label.nav-filtre(for="choix3" onclick="javascript:filter();")
-		input.nav-filtre#checkNonlus( type='checkbox' name='choix3' id='choix3' checked)
+	label.nav-filtre(for="checkNonlus" data-filtered="nonlu")
+		input.nav-filtre-check#checkNonlus( type='checkbox' name='choix3' checked="checked" )
 		span.nav-filtre-text.navNonlus Non lus
+
+	a.nav-grimpeur(href="") Grimpeurs
 		
 	.nav-profil
 		a(onclick="toggleNotif()"): img.nav-profil-photo(src="img/photos/francois.jpg" alt="photoDeProfil")
-		.nav-profil-toggle.close#menuNotif
+		.nav-profil-toggle#menuNotif
 			.nav-profil-toggle-user
 				strong.nav-profil-toggle-user-name François
 				span.nav-profil-toggle-user-statut lecteur
