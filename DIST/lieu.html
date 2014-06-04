@@ -8,43 +8,70 @@
     <tittle>Col de la Lyé</tittle>
   </head>
   <body>
-    <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="#" class="nav-grimpeur">Grimpeurs</a><a href=""><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a><a href="inscription.html" class="nav-register">S'incrire / Se connecter</a>
+    <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="#" class="nav-grimpeur">Grimpeurs</a><a href=""><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a><a href="inscription.html" class="nav-register">S'incrire / Se connecter</a>
       <div class="nav-recherche">
         <input type="search" placeholder="Recherche" name="barre de recherche" class="nav-recherche-input"/>
         <input type="submit" value="" class="nav-recherche-submit"/>
       </div>
     </nav>
-    <main id="content"><img src="img/photos/panoramique/panoramique.jpg" alt="panoramique" class="panoramique"/>
-      <div class="info">
-        <div class="info-lieu">
-          <h2 class="info-user-nom"> <strong>Col de la Lyé</strong></h2>
-        </div>
-        <div class="info-meteo">
-          <h4 class="info-meteo-text">Météo</h4>
-          <p class="info-meteo-jour">Lun</p><img src="img/weather/stormy.svg" alt="Météo" class="info-meteo-img"/>
-          <p class="info-meteo-jour">Mar</p><img src="img/weather/sunny.svg" alt="Météo" class="info-meteo-img"/>
-          <p class="info-meteo-jour">Mer</p><img src="img/weather/stormy.svg" alt="Météo" class="info-meteo-img"/>
-          <p class="info-meteo-jour">Jeu</p><img src="img/weather/cloudy.svg" alt="Météo" class="info-meteo-img"/>
-          <p class="info-meteo-jour">Ven</p><img src="img/weather/stormy.svg" alt="Météo" class="info-meteo-img"/>
-        </div>
-        <div class="info-terrain">
-          <h4 class="info-terrain-text">Composition du terrain</h4><img src="" alt="CompositionTerrain" class="info-terrain-compo"/>
-          <P class="info-terrain-granite">Granite / 37%</P>
-          <p class="info-terrain-calcaire">Calcaire / 23%</p>
-          <p class="info-terrain-gr">ès Grès / 24%</p>
-          <p class="info-terrain-schiste">Schiste / 12%</p>
-          <p class="info-terrain-glace">Glace / 4%</p>
-        </div>
-        <div class="info-info">	
-          <h4 class="info-folowers-text">Grimpeurs suivis</h4><a href="#" class="info-folowers-nmb">0 </a>
-        </div>
-        <div class="info-amis">	
-          <h4 class="info-amis-text">Compagnons de grimpe</h4><img src="img/photos/users/1.jpg" alt="photoAmis1" class="info-amis-info-photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="info-amis-info-photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="info-amis-info-photo"/><a href="#" class="info-amis-info-nmb">+6 </a>
-        </div>
-        <div class="info-habitudes">
-          <h4 class="border-habitudes-text">Sites les plus grimpés</h4>
-        </div>
-      </div>
+    <main id="content"><img src="img/photos/panoramique/panoramique.jpg" alt="panoramique"/>
+      <section class="info">
+        <h1 class="info-lieu"><strong>Col de la Lyé</strong></h1>
+        <article class="info-meteo">
+          <h1>Météo</h1>
+          <ol>
+            <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Lun 26</span></li>
+            <li><img src="img/weather/sunny.svg" alt="Météo" class="icone"/><span class="jour">Mar 27</span></li>
+            <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Mer 28</span></li>
+            <li><img src="img/weather/cloudy.svg" alt="Météo" class="icone"/><span class="jour">Jeu 29</span></li>
+            <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Ven 30</span></li>
+          </ol>
+        </article>
+        <article class="info-terrain">
+          <h1>Composition du terrain<img src="" alt="CompositionTerrain"/>
+            <ul>
+              <li class="granite">Granite / 37%</li>
+              <li class="calcaire">Calcaire / 23%</li>
+              <li class="gr">ès Grès / 24%</li>
+              <li class="schiste">Schiste / 12%</li>
+              <li class="glace">Glace / 4%</li>
+            </ul>
+          </h1>
+        </article>
+        <article class="info-voie">	
+          <h1>Diffuculté des voie</h1>
+          <ul>
+            <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">1</span></li>
+            <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">2</span></li>
+            <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">3</span></li>
+            <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">4</span></li>
+            <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">5a</span></li>
+            <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">5b</span></li>
+            <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">6a</span></li>
+            <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">6a+</span></li>
+            <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">6b</span></li>
+            <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">6b+</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">6c</span></li>
+            <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">6c+</span></li>
+            <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7a</span></li>
+            <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">7a+</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">7b</span></li>
+            <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">7b+</span></li>
+            <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">7c</span></li>
+            <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7c+</span></li>
+            <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">8a</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8a+</span></li>
+            <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8b</span></li>
+            <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">8b+</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8c</span></li>
+            <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8c+</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9a</span></li>
+            <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">9a+</span></li>
+            <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9b</span></li>
+            <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">9b+</span></li>
+          </ul>
+        </article>
+      </section>
     </main>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/packery.min.js"></script>

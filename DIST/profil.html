@@ -9,17 +9,17 @@
   </head>
   <body>
     <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="" class="nav-grimpeur">Grimpeurs</a>
-      <label for="checkRecommandes" data-filtered="recommande" class="nav-filtre">
-        <input id="checkRecommandes" type="checkbox" name="choix1" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
+      <label for="choix1" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix1" type="checkbox" name="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
       </label>
-      <label for="checkSuivi" data-filtered="suivi" class="nav-filtre">
-        <input id="checkSuivi" type="checkbox" name="choix2" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navSuivi">Suivi</span>
+      <label for="choix2" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix2" type="checkbox" name="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navSuivi">Suivi</span>
       </label>
-      <label for="checkNonlus" data-filtered="nonlu" class="nav-filtre">
-        <input id="checkNonlus" type="checkbox" name="choix3" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navNonlus">Non lus</span>
+      <label for="choix3" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix3" type="checkbox" name="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navNonlus">Non lus</span>
       </label>
       <div class="nav-profil"><a onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
-        <div id="menuNotif" class="nav-profil-toggle">
+        <div id="menuNotif" class="nav-profil-toggle close">
           <div class="nav-profil-toggle-user"><strong class="nav-profil-toggle-user-name">François</strong><span class="nav-profil-toggle-user-statut">lecteur</span>
             <ul class="nav-profil-toggle-user-links"><a href="profil.html">
                 <li class="nav-profil-toggle-user-links-profil">Profil</li></a><a href="#">
@@ -58,28 +58,33 @@
       </div>
     </nav>
     <main id="content">
-      <div class="info">
-        <div class="info-user"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="info-user-photoProfil"/>
-          <h2 class="info-user-nom"> <strong>Francois</strong></h2>
-        </div>
-        <div class="info-ajoutLieu"><img src="img/icones/home.svg" alt="maison" class="info-ajoutLieu-img"/>
-          <h4 class="info-ajoutLieu-text">Habite à </h4><a href="#" class="info-ajoutLieu-lien">Ajoutez un lieu</a>
-        </div>
-        <div class="info-article">
-          <h4 class="info-article-Postes">Article Posté</h4>
+      <section class="info">
+        <article class="info-user"><img src="img/photos/francois.jpg" alt="photoDeProfil"/>
+          <h1><strong>Francois</strong></h1>
+          <article class="ajouterLieu"><img src="img/icones/home.svg" alt="maison"/>
+            <p>Habite à </p><a href="#">Ajoutez une localisation</a>
+          </article>
+        </article>
+        <article class="info-article">
+          <h1>Article Posté</h1>
           <p class="info-article-Postes">0</p><a href="#" class="info-article-creer">Ajouter un article</a>
-        </div>
-        <div class="info-info">	
-          <h4 class="info-folowers-text">Grimpeurs suivis</h4><a href="#" class="info-folowers-nmb">0 </a>
-        </div>
-        <div class="info-amis">	
-          <h4 class="info-amis-text">Compagnons de grimpe</h4><img src="img/photos/users/1.jpg" alt="photoAmis1" class="info-amis-info-photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="info-amis-info-photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="info-amis-info-photo"/><a href="#" class="info-amis-info-nmb">+6 </a>
-        </div>
-        <div class="info-habitudes">
-          <h4 class="border-habitudes-text">Sites les plus grimpés</h4>
-        </div>
-      </div>
-      <div class="center"><a href="#" class="center-articlesPoste">Articles postés</a><a href="#" class="center-articlesPartage">Articles partagés</a></div>
+        </article>
+        <article class="info-info">	
+          <h1>Grimpeurs suivis</h1><a href="#" class="nmb">0 </a>
+        </article>
+        <article class="info-amis">	
+          <h1>Compagnons de grimpe</h1><img src="img/photos/users/1.jpg" alt="photoAmis1" class="photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="photo"/><a href="#" class="nmb">+6 </a>
+        </article>
+        <article class="info-habitudes">
+          <h1>Sites les plus grimpés</h1>
+          <ul>
+            <li><span class="site1">Col de la grimpette</span><span class="nombre">7 Ascension</span></li>
+            <li><span class="site2">Plateau de jeune pousse</span><span class="nombre">4</span></li>
+            <li><span class="site3">La montagne noire</span><span class="nombre">2</span></li>
+          </ul>
+        </article>
+      </section>
+      <section class="center"><a href="#" class="center-articlesPoste">Articles postés</a><a href="#" class="center-articlesPartage">Articles partagés</a></section>
     </main>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/packery.min.js"></script>
