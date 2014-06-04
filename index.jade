@@ -5,7 +5,10 @@ html(lang="fr")
 		include includes/nav-unlogged
 
 		main#content
-			include includes/mosaic
+			.scroller
+				include includes/mosaic
+			a.linkMap(href="#")
+				span Carte
 		#largeMap
 
 		include includes/scripts
