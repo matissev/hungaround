@@ -4,27 +4,52 @@
     <title>Hung Around</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="img/icones/favicon.ico"/>
+    <title>Hang arond</title>
   </head>
   <body>
     <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="#" class="nav-grimpeur">Grimpeurs</a>
-      <label for="choix1" class="nav-filtre">
-        <input type="checkbox" name="choix1" id="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text recommandes">Recommandés</span>
+      <label for="choix1" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix1" type="checkbox" name="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
       </label>
-      <label for="choix2" class="nav-filtre">
-        <input type="checkbox" name="choix2" id="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text suivi">Suivi</span>
+      <label for="choix2" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix2" type="checkbox" name="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navSuivi">Suivi</span>
       </label>
-      <label for="choix3" class="nav-filtre">
-        <input type="checkbox" name="choix3" id="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text nonlus">Non lus</span>
+      <label for="choix3" onclick="javascript:filter();" class="nav-filtre">
+        <input id="choix3" type="checkbox" name="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navNonlus">Non lus</span>
       </label>
-      <div class="nav-profil"><a href="#" onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
+      <div class="nav-profil"><a onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
         <div id="menuNotif" class="nav-profil-toggle close">
-          <div class="nav-profil-toggle-user"><strong class="nav-profil-toggle-user-name">François</strong><span class="nav-profil-toggle-user-statut">rédacteur</span>
-            <ul class="nav-profil-toggle-user-links"><a href="">
-                <li class="nav-profil-toggle-user-links-profil">Profil</li></a><a href="">
-                <li class="nav-profil-toggle-user-links-favoris">Favoris</li></a><a href="">
-                <li class="nav-profil-toggle-user-links-parametres">Paramètres</li></a></ul>
+          <div class="nav-profil-toggle-user"><strong class="nav-profil-toggle-user-name">François</strong><span class="nav-profil-toggle-user-statut">lecteur</span>
+            <ul class="nav-profil-toggle-user-links"><a href="profil.html">
+                <li class="nav-profil-toggle-user-links-profil">Profil</li></a><a href="#">
+                <li class="nav-profil-toggle-user-links-favoris">Favoris</li></a><a href="#">
+                <li class="nav-profil-toggle-user-links-parametres">Paramètres</li></a></ul><a href="#" class="nav-profil-toggle-user-logout">Déconnexion</a>
           </div>
-          <p>A propos-Aide-FAQ-confidentialité...</p>
+          <ul class="nav-profil-toggle-notif">
+            <li class="nav-profil-toggle-notif-oneNotif unseen message"><img src="img/photos/users/5.jpg"/>
+              <p><span class="username">MargotMontargie</span> vous envoyé un message.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif unseen lieu"><img src="img/photos/users/28.jpg"/>
+              <p><span class="username">Jojo</span> vous recommande Le Pic du diable.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif message"><img src="img/photos/users/12.jpg"/>
+              <p><span class="username">Tristan Morain</span> vous envoyé un message.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/5.jpg"/>
+              <p><span class="username">MargotMontargie</span> vous recommande Tristan Morain.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif lieu"><img src="img/photos/users/11.jpg"/>
+              <p><span class="username">émilie03</span> vous envoyé un message.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/11.jpg"/>
+              <p><span class="username">émilie03</span> vous envoyé un message.</p>
+            </li>
+            <li class="nav-profil-toggle-notif-oneNotif message"><img src="img/photos/users/28.jpg"/>
+              <p><span class="username">Jojo</span> vous envoyé un message.</p>
+            </li>
+          </ul>
+          <p class="nav-profil-toggle-footer">À propos - Aide - Conditions - Confidentialité - Cookies - Informations sur la publicité - Marque - Blog - Statut - Applications - Offres d'emploi - Annoncer - Professionnels - Médias - Développeurs</p>
         </div>
       </div><a href=""><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a>
       <div class="nav-recherche">
@@ -33,34 +58,31 @@
       </div>
     </nav>
     <main id="content">
-      <div class="border">
-        <div class="border-user"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="border-user-photoProfil"/>
-          <h2 class="border-user-nom"> <strong>Francois</strong></h2>
+      <div class="info">
+        <div class="info-user"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="info-user-photoProfil"/>
+          <h2 class="info-user-nom"> <strong>Francois</strong></h2>
         </div>
-        <div class="border-ajoutLieu"><img src="img/icones/home.svg" alt="maison" class="border-ajoutLieu-img"/>
-          <h4 class="border-ajoutLieu-text">Habite à </h4><a href="#" class="border-ajoutLieu-lien">Ajoutez un lieu</a>
+        <div class="info-ajoutLieu"><img src="img/icones/home.svg" alt="maison" class="info-ajoutLieu-img"/>
+          <h4 class="info-ajoutLieu-text">Habite à </h4><a href="#" class="info-ajoutLieu-lien">Ajoutez un lieu</a>
         </div>
-        <div class="border-article">
-          <h4 class="border-article-Postes">Article Posté</h4>
-          <p class="border-article-Postes">0</p><a href="#" class="border-article-creer">Ajouter un article</a>
+        <div class="info-article">
+          <h4 class="info-article-Postes">Article Posté</h4>
+          <p class="info-article-Postes">0</p><a href="#" class="info-article-creer">Ajouter un article</a>
         </div>
-        <div class="border-folowers">	
-          <h4 class="border-folowers-text">Grimpeurs suivis</h4><a href="#" class="border-folowers-nmb">0 </a>
+        <div class="info-info">	
+          <h4 class="info-folowers-text">Grimpeurs suivis</h4><a href="#" class="info-folowers-nmb">0 </a>
         </div>
-        <div class="border-amis">	
-          <h4 class="border-amis-text">Compagnons de grimpe</h4><img src="img/photos/users/1.jpg" alt="photoAmis1" class="border-amis-info-photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="border-amis-info-photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="border-amis-info-photo"/><a href="#" class="border-amis-info-nmb">+6 </a>
+        <div class="info-amis">	
+          <h4 class="info-amis-text">Compagnons de grimpe</h4><img src="img/photos/users/1.jpg" alt="photoAmis1" class="info-amis-info-photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="info-amis-info-photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="info-amis-info-photo"/><a href="#" class="info-amis-info-nmb">+6 </a>
         </div>
-        <div class="border-habitudes">
+        <div class="info-habitudes">
           <h4 class="border-habitudes-text">Sites les plus grimpés</h4>
         </div>
       </div>
       <div class="center"><a href="#" class="center-articlesPoste">Articles postés</a><a href="#" class="center-articlesPartage">Articles partagés</a></div>
     </main>
-    <script type="text/javascript" src="js/script.min.js"></script>
-    <script type="text/javascript" src="js/isotope.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/scrollto.min.js"></script>
-    <script type="text/javascript" src="js/history.min.js"></script>
-    <script type="text/javascript" src="js/ajaxify.min.js"></script>
+    <script type="text/javascript" src="js/packery.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
