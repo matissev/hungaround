@@ -3,162 +3,159 @@ html(lang="fr")
 		include includes/head
 		tittle Col de la Lyé
 	body
-		include includes/nav-unlogged
+		include includes/nav
 
-		main#content
+		main
+			.scroller
+				img(src="img/photos/panoramique/panoramique.jpg" alt="panoramique")
+				section.info
+					h1.info-lieu <strong>Col de la Lyé</strong>
+					article.info-meteo
+						h1 Météo
+						ol
+							li
+								img.icone(src="img/weather/stormy.svg" alt="Météo")
+								span.jour Lun 26
+							li
+								img.icone(src="img/weather/sunny.svg" alt="Météo")
+								span.jour Mar 27
+							li
+								img.icone(src="img/weather/stormy.svg" alt="Météo")
+								span.jour Mer 28
 
-			img(src="img/photos/panoramique/panoramique.jpg" alt="panoramique")
-			section.info
-				h1.info-lieu <strong>Col de la Lyé</strong>
-				article.info-meteo
-					h1 Météo
-					ol
-						li
-							img.icone(src="img/weather/stormy.svg" alt="Météo")
-							span.jour Lun 26
-						li
-							img.icone(src="img/weather/sunny.svg" alt="Météo")
-							span.jour Mar 27
-						li
-							img.icone(src="img/weather/stormy.svg" alt="Météo")
-							span.jour Mer 28
+							li
+								img.icone(src="img/weather/cloudy.svg" alt="Météo")
+								span.jour Jeu 29
+							li
+								img.icone(src="img/weather/stormy.svg" alt="Météo")
+								span.jour Ven 30
 
-						li
-							img.icone(src="img/weather/cloudy.svg" alt="Météo")
-							span.jour Jeu 29
-						li
-							img.icone(src="img/weather/stormy.svg" alt="Météo")
-							span.jour Ven 30
+					article.info-terrain
+						h1 Composition du terrain
+							img(src="" alt="CompositionTerrain")
+							ul
+								li.granite Granite / 37%
+								li.calcaire Calcaire / 23%
+								li.grès Grès / 24%
+								li.schiste Schiste / 12%
+								li.glace Glace / 4%
 
-				article.info-terrain
-					h1 Composition du terrain
-						img(src="" alt="CompositionTerrain")
+
+					article.info-voie	
+						h1 Diffuculté des voie
 						ul
-							li.granite Granite / 37%
-							li.calcaire Calcaire / 23%
-							li.grès Grès / 24%
-							li.schiste Schiste / 12%
-							li.glace Glace / 4%
-
-
-				article.info-voie	
-					h1 Diffuculté des voie
-					ul
-						li
-							span.nombre 9
-							span.text voies de niveau
-							span.niveau 1
-						li
-							span.nombre 2
-							span.text voies de niveau
-							span.niveau 2
-						li
-							span.nombre 9
-							span.text voies de niveau
-							span.niveau 3
-						li
-							span.nombre 5
-							span.text voies de niveau
-							span.niveau 4
-						li
-							span.nombre 6
-							span.text voies de niveau
-							span.niveau 5a
-						li
-							span.nombre 9
-							span.text voies de niveau
-							span.niveau 5b
-						li
-							span.nombre 4
-							span.text voies de niveau
-							span.niveau 6a
-						li
-							span.nombre 9
-							span.text voies de niveau
-							span.niveau 6a+
-						li
-							span.nombre 8
-							span.text voies de niveau
-							span.niveau 6b
-						li
-							span.nombre 5
-							span.text voies de niveau
-							span.niveau 6b+
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 6c
-						li
-							span.nombre 2
-							span.text voies de niveau
-							span.niveau 6c+
-						li
-							span.nombre 4
-							span.text voies de niveau
-							span.niveau 7a
-						li
-							span.nombre 8
-							span.text voies de niveau
-							span.niveau 7a+
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 7b
-						li
-							span.nombre 3
-							span.text voies de niveau
-							span.niveau 7b+
-						li
-							span.nombre 6
-							span.text voies de niveau
-							span.niveau 7c
-						li
-							span.nombre 4
-							span.text voies de niveau
-							span.niveau 7c+
-						li
-							span.nombre 5
-							span.text voies de niveau
-							span.niveau 8a
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 8a+
-						li
-							span.nombre 2
-							span.text voies de niveau
-							span.niveau 8b
-						li
-							span.nombre 3
-							span.text voies de niveau
-							span.niveau 8b+
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 8c
-						li
-							span.nombre 2
-							span.text voies de niveau
-							span.niveau 8c+
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 9a
-						li
-							span.nombre 4
-							span.text voies de niveau
-							span.niveau 9a+
-						li
-							span.nombre 1
-							span.text voies de niveau
-							span.niveau 9b
-						li
-							span.nombre 2
-							span.text voies de niveau
-							span.niveau 9b+
-
-
-
+							li
+								span.nombre 9
+								span.text voies de niveau
+								span.niveau 1
+							li
+								span.nombre 2
+								span.text voies de niveau
+								span.niveau 2
+							li
+								span.nombre 9
+								span.text voies de niveau
+								span.niveau 3
+							li
+								span.nombre 5
+								span.text voies de niveau
+								span.niveau 4
+							li
+								span.nombre 6
+								span.text voies de niveau
+								span.niveau 5a
+							li
+								span.nombre 9
+								span.text voies de niveau
+								span.niveau 5b
+							li
+								span.nombre 4
+								span.text voies de niveau
+								span.niveau 6a
+							li
+								span.nombre 9
+								span.text voies de niveau
+								span.niveau 6a+
+							li
+								span.nombre 8
+								span.text voies de niveau
+								span.niveau 6b
+							li
+								span.nombre 5
+								span.text voies de niveau
+								span.niveau 6b+
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 6c
+							li
+								span.nombre 2
+								span.text voies de niveau
+								span.niveau 6c+
+							li
+								span.nombre 4
+								span.text voies de niveau
+								span.niveau 7a
+							li
+								span.nombre 8
+								span.text voies de niveau
+								span.niveau 7a+
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 7b
+							li
+								span.nombre 3
+								span.text voies de niveau
+								span.niveau 7b+
+							li
+								span.nombre 6
+								span.text voies de niveau
+								span.niveau 7c
+							li
+								span.nombre 4
+								span.text voies de niveau
+								span.niveau 7c+
+							li
+								span.nombre 5
+								span.text voies de niveau
+								span.niveau 8a
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 8a+
+							li
+								span.nombre 2
+								span.text voies de niveau
+								span.niveau 8b
+							li
+								span.nombre 3
+								span.text voies de niveau
+								span.niveau 8b+
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 8c
+							li
+								span.nombre 2
+								span.text voies de niveau
+								span.niveau 8c+
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 9a
+							li
+								span.nombre 4
+								span.text voies de niveau
+								span.niveau 9a+
+							li
+								span.nombre 1
+								span.text voies de niveau
+								span.niveau 9b
+							li
+								span.nombre 2
+								span.text voies de niveau
+								span.niveau 9b+
 				
 
 		include includes/scripts

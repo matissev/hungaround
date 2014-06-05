@@ -48,9 +48,10 @@ jQuery(document).ready(function($) {
 
 
     // =========================== TOGGLE NOTIF ===========================
+
+    // =========================== AJAXIFY ============================
+
+    $.Ajaxify.container = '.scroller';
 });
-
-
-function toggleNotif() { $("#menuNotif").toggleClass("open"); }
 
 
