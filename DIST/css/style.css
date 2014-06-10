@@ -673,7 +673,7 @@ main .linkMap span:before {
   width: 100%;
 }
 
-.lieu .info-lieu {
+.lieu h1 {
   height: 44px;
   background: #211e1e;
 }
