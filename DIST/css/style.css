@@ -710,7 +710,7 @@ main .linkMap span:before {
 .lieu .glace {
   font-size: 18px;
   position: relative;
-  left: 300px;
+  left: 260px;
   top: -200px;
   margin-bottom: 20px;
 }
@@ -724,6 +724,7 @@ main .linkMap span:before {
 .lieu .niveau3,
 .lieu .niveau4 {
   background: #57b178;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -735,6 +736,7 @@ main .linkMap span:before {
 .lieu .niveau5b,
 .lieu .niveau6a {
   background: #3f7fbb;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -749,6 +751,7 @@ main .linkMap span:before {
 .lieu .niveau6cplus,
 .lieu .niveau7a {
   background: #dcc668;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -762,6 +765,7 @@ main .linkMap span:before {
 .lieu .niveau7c,
 .lieu .niveau7cplus {
   background: #ed7f30;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -777,6 +781,7 @@ main .linkMap span:before {
 .lieu .niveau8cplus,
 .lieu .niveau9a {
   background: #e64c27;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -788,6 +793,7 @@ main .linkMap span:before {
 .lieu .niveau9b,
 .lieu .niveau9bplus {
   background: #211e1e;
+  font-size: 18px;
   color: white;
   padding-right: 50px;
   padding-left: 10px;
@@ -797,8 +803,8 @@ main .linkMap span:before {
 
 .lieu .mosaic {
   position: relative;
-  width: 76%;
+  width: 75.5%;
   float: right;
-  top: -1446px;
+  top: -1530px;
   right: -45px;
 }
