@@ -674,9 +674,9 @@ main .linkMap span:before {
 }
 
 .lieu .info-lieu {
-  height: 100px;
+  height: 60px;
   background: #211e1e;
   color: white;
   text-align: center;
-  padding: 0 50px;
+  padding: 40px;
 }
