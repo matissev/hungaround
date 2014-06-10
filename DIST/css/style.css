@@ -714,3 +714,83 @@ main .linkMap span:before {
   top: -200px;
   margin-bottom: 20px;
 }
+
+.lieu .text {
+  visibility: hidden;
+}
+
+.lieu .niveau1,
+.lieu .niveau2,
+.lieu .niveau3,
+.lieu .niveau4 {
+  background: #57b178;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .niveau5a,
+.lieu .niveau5b,
+.lieu .niveau6a {
+  background: #3f7fbb;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .niveau6aplus,
+.lieu .niveau6b,
+.lieu .niveau6bplus,
+.lieu .niveau6c,
+.lieu .niveau6cplus,
+.lieu .niveau7a {
+  background: #dcc668;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .niveau7aplus,
+.lieu .niveau7b,
+.lieu .niveau7bplus,
+.lieu .niveau7c,
+.lieu .niveau7cplus {
+  background: #ed7f30;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .niveau8a,
+.lieu .niveau8aplus,
+.lieu .niveau8b,
+.lieu .niveau8bplus,
+.lieu .niveau8c,
+.lieu .niveau8cplus,
+.lieu .niveau9a {
+  background: #e64c27;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .niveau9aplus,
+.lieu .niveau9b,
+.lieu .niveau9bplus {
+  background: #211e1e;
+  color: white;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
