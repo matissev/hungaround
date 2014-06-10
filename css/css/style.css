@@ -529,6 +529,9 @@ main .linkMap span:before {
   margin-left: 3.5%;
   float: left;
 }
+.lieu ul li {
+  list-style: none;
+}
 .lieu .panoramique {
-  width: 100%;
+  width: 10%;
 }
