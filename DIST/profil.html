@@ -8,29 +8,29 @@
     <title>Hang arond</title>
   </head>
   <body>
-    <nav class="nav"><a href="index.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a><a href="index.html" class="nav-gazette">Gazette</a><a href="" class="nav-grimpeur">Grimpeurs</a>
-      <label for="choix1" onclick="javascript:filter();" class="nav-filtre">
-        <input id="choix1" type="checkbox" name="choix1" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
+    <nav class="nav"><a href="gazette.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a>
+      <label for="checkRecommandes" data-filtered="recommande" class="nav-filtre">
+        <input id="checkRecommandes" type="checkbox" name="choix1" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
       </label>
-      <label for="choix2" onclick="javascript:filter();" class="nav-filtre">
-        <input id="choix2" type="checkbox" name="choix2" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navSuivi">Suivi</span>
+      <label for="checkSuivi" data-filtered="suivi" class="nav-filtre">
+        <input id="checkSuivi" type="checkbox" name="choix2" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navSuivi">Suivi</span>
       </label>
-      <label for="choix3" onclick="javascript:filter();" class="nav-filtre">
-        <input id="choix3" type="checkbox" name="choix3" checked="checked" class="nav-filtre"/><span class="nav-filtre-text navNonlus">Non lus</span>
-      </label>
-      <div class="nav-profil"><a onclick="toggleNotif()"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
-        <div id="menuNotif" class="nav-profil-toggle close">
+      <label for="checkNonlus" data-filtered="nonlu" class="nav-filtre">
+        <input id="checkNonlus" type="checkbox" name="choix3" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navNonlus">Non lus</span>
+      </label><a href="" class="nav-grimpeur">Grimpeurs</a>
+      <div class="nav-profil"><a href="#"><img src="img/photos/francois.jpg" alt="photoDeProfil" class="nav-profil-photo"/></a>
+        <div id="menuNotif" class="nav-profil-toggle">
           <div class="nav-profil-toggle-user"><strong class="nav-profil-toggle-user-name">François</strong><span class="nav-profil-toggle-user-statut">lecteur</span>
             <ul class="nav-profil-toggle-user-links"><a href="profil.html">
                 <li class="nav-profil-toggle-user-links-profil">Profil</li></a><a href="#">
                 <li class="nav-profil-toggle-user-links-favoris">Favoris</li></a><a href="#">
-                <li class="nav-profil-toggle-user-links-parametres">Paramètres</li></a></ul><a href="#" class="nav-profil-toggle-user-logout">Déconnexion</a>
+                <li class="nav-profil-toggle-user-links-parametres">Paramètres</li></a></ul><a href="index.html" class="nav-profil-toggle-user-logout no-ajaxy">Déconnexion</a>
           </div>
           <ul class="nav-profil-toggle-notif">
             <li class="nav-profil-toggle-notif-oneNotif unseen message"><img src="img/photos/users/5.jpg"/>
               <p><span class="username">MargotMontargie</span> vous envoyé un message.</p>
             </li>
-            <li class="nav-profil-toggle-notif-oneNotif unseen lieu"><img src="img/photos/users/28.jpg"/>
+            <li class="nav-profil-toggle-notif-oneNotif unseen site"><img src="img/photos/users/28.jpg"/>
               <p><span class="username">Jojo</span> vous recommande Le Pic du diable.</p>
             </li>
             <li class="nav-profil-toggle-notif-oneNotif message"><img src="img/photos/users/12.jpg"/>
@@ -39,7 +39,7 @@
             <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/5.jpg"/>
               <p><span class="username">MargotMontargie</span> vous recommande Tristan Morain.</p>
             </li>
-            <li class="nav-profil-toggle-notif-oneNotif lieu"><img src="img/photos/users/11.jpg"/>
+            <li class="nav-profil-toggle-notif-oneNotif site"><img src="img/photos/users/11.jpg"/>
               <p><span class="username">émilie03</span> vous envoyé un message.</p>
             </li>
             <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/11.jpg"/>
@@ -58,36 +58,111 @@
       </div>
     </nav>
     <main id="content">
-      <section class="info">
-        <article class="info-user"><img src="img/photos/francois.jpg" alt="photoDeProfil"/>
-          <h1><strong>Francois</strong></h1>
-          <article class="ajouterLieu"><img src="img/icones/home.svg" alt="maison"/>
-            <p>Habite à </p><a href="#">Ajoutez une localisation</a>
+      <div class="scroller">
+        <section class="info">
+          <article class="info-user"><img src="img/photos/francois.jpg" alt="photoDeProfil"/>
+            <h1><strong>Francois</strong></h1>
+            <article class="ajouterLieu"><img src="img/icones/home.svg" alt="maison"/>
+              <p>Habite à </p><a href="#">Ajoutez une localisation</a>
+            </article>
           </article>
-        </article>
-        <article class="info-article">
-          <h1>Article Posté</h1>
-          <p class="info-article-Postes">0</p><a href="#" class="info-article-creer">Ajouter un article</a>
-        </article>
-        <article class="info-info">	
-          <h1>Grimpeurs suivis</h1><a href="#" class="nmb">0 </a>
-        </article>
-        <article class="info-amis">	
-          <h1>Compagnons de grimpe</h1><img src="img/photos/users/1.jpg" alt="photoAmis1" class="photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="photo"/><a href="#" class="nmb">+6 </a>
-        </article>
-        <article class="info-habitudes">
-          <h1>Sites les plus grimpés</h1>
-          <ul>
-            <li><span class="site1">Col de la grimpette</span><span class="nombre">7 Ascension</span></li>
-            <li><span class="site2">Plateau de jeune pousse</span><span class="nombre">4</span></li>
-            <li><span class="site3">La montagne noire</span><span class="nombre">2</span></li>
-          </ul>
-        </article>
-      </section>
-      <section class="center"><a href="#" class="center-articlesPoste">Articles postés</a><a href="#" class="center-articlesPartage">Articles partagés</a></section>
+          <article class="info-article">
+            <h1>Article Posté</h1>
+            <p class="info-article-Postes">0</p><a href="#" class="info-article-creer">Ajouter un article</a>
+          </article>
+          <article class="info-info">	
+            <h1>Grimpeurs suivis</h1><a href="#" class="nmb">0 </a>
+          </article>
+          <article class="info-amis">	
+            <h1>Compagnons de grimpe</h1><img src="img/photos/users/1.jpg" alt="photoAmis1" class="photo"/><img src="img/photos/users/2.jpg" alt="photoAmis2" class="photo"/><img src="img/photos/users/3.jpg" alt="photoAmis3" class="photo"/><a href="#" class="nmb">+6 </a>
+          </article>
+          <article class="info-habitudes">
+            <h1>Sites les plus grimpés</h1>
+            <ul>
+              <li><span class="site1">Col de la grimpette</span><span class="nombre">7 Ascension</span></li>
+              <li><span class="site2">Plateau de jeune pousse</span><span class="nombre">4</span></li>
+              <li><span class="site3">La montagne noire</span><span class="nombre">2</span></li>
+            </ul>
+          </article>
+        </section>
+        <section class="center"><a href="#" class="center-articlesPoste">Articles postés</a><a href="#" class="center-articlesPartage">Articles partagés</a></section>
+        <div id="mosaic">
+          <div class="item p2x2 recommande"><a href=""><img src="img/photos/mosaic/2x2-1.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1 nonlu"><a href=""><img src="img/photos/mosaic/1x1-2.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1 suivi"><a href=""><img src="img/photos/mosaic/1x2-1.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1"><a href=""><img src="img/photos/mosaic/1x2-2.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x2 nonlu"><a href=""><img src="img/photos/mosaic/2x2-2.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1 recommande"><a href=""><img src="img/photos/mosaic/1x1-3.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1 recommande"><a href=""><img src="img/photos/mosaic/1x2-3.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-4.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1"><a href=""><img src="img/photos/mosaic/1x2-4.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x2"><a href=""><img src="img/photos/mosaic/2x2-3.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-5.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-6.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1"><a href=""><img src="img/photos/mosaic/1x2-5.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-7.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-8.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-9.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1"><a href=""><img src="img/photos/mosaic/1x2-6.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x2"><a href=""><img src="img/photos/mosaic/2x2-4.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-10.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p2x1"><a href=""><img src="img/photos/mosaic/1x2-7.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-11.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+          <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-12.jpg" alt="" class="item-img"/></a>
+            <div class="item-links"><a href="#" class="item-links-articleName">D'est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div>
+          </div>
+        </div>
+      </div><a href="#" class="linkMap"><span id="textLinkMap">Carte</span></a>
     </main>
+    <div id="largeMap"></div>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/packery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyyHBk577NziTUibLUV-R7yXQbDHFS9EE"></script>
     <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
