@@ -5,7 +5,6 @@
 	 width="223px" height="223.333px" viewBox="0 0 223 223.333" enable-background="new 0 0 223 223.333" xml:space="preserve">
 <rect x="12.405" y="96.828" transform="matrix(0.7071 0.7071 -0.7071 0.7071 87.1006 13.3758)" fill="#D0D0D0" width="30" height="30"/>
 <rect x="54.83" y="96.828" transform="matrix(0.7071 0.7071 -0.7071 0.7071 99.5268 -16.6238)" fill="#DCC668" width="30" height="30"/>
-<rect x="33.617" y="75.615" transform="matrix(0.7071 0.7071 -0.7071 0.7071 78.3139 -7.8371)" fill="#211E1E" width="30" height="30"/>
 <rect x="75.855" y="75.615" transform="matrix(0.7071 0.7071 -0.7071 0.7071 90.685 -37.7034)" fill="#D0D0D0" width="30" height="30"/>
 <rect x="97.332" y="96.828" transform="matrix(0.7071 0.7071 -0.7071 0.7071 111.9754 -46.6772)" fill="#DCC668" width="30" height="30"/>
 <polygon fill="#DCC668" points="133.093,154.586 111.54,133.374 133.093,112.161 154.646,133.374 "/>
@@ -30,7 +29,7 @@
 <rect x="96.998" y="54.967" transform="matrix(0.7071 0.7071 -0.7071 0.7071 82.2776 -58.7017)" fill="#68C4DD" width="30" height="30"/>
 <rect x="56.687" y="137.503" transform="matrix(0.7071 0.7071 -0.7071 0.7071 128.8287 -6.0243)" fill="#E9634F" width="29.999" height="30"/>
 <rect x="96.885" y="97.067" transform="matrix(0.7071 0.7071 -0.7071 0.7071 112.0135 -46.2908)" fill="#DCC668" width="30" height="30"/>
-<rect x="33.523" y="75.615" transform="matrix(0.7071 0.7071 -0.7071 0.7071 78.2862 -7.7701)" fill="#D0D0D0" width="30" height="30"/>
+<rect x="33.523" y="75.781" transform="matrix(0.7071 0.7071 -0.7071 0.7071 78.4036 -7.7215)" fill="#D0D0D0" width="30" height="30"/>
 <rect x="76.025" y="160.466" transform="matrix(0.7071 0.7071 -0.7071 0.7071 150.7335 -12.9712)" fill="#E9634F" width="30" height="29.999"/>
 <rect x="160.613" y="76.221" transform="matrix(0.7071 0.7071 -0.7071 0.7071 115.9388 -97.4586)" fill="#DCC668" width="30" height="30"/>
 <rect x="54.736" y="96.828" transform="matrix(0.7071 0.7071 -0.7071 0.7071 99.4991 -16.5568)" fill="#D0D0D0" width="30" height="30"/>
