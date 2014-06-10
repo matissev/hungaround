@@ -794,3 +794,11 @@ main .linkMap span:before {
   padding-bottom: 1px;
   padding-top: 1px;
 }
+
+.lieu .mosaic {
+  position: relative;
+  width: 76%;
+  float: right;
+  top: -1446px;
+  right: -45px;
+}
