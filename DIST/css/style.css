@@ -661,6 +661,10 @@ main .linkMap span:before {
   float: left;
 }
 
+.lieu .lieu {
+  width: 33.3333333%;
+}
+
 .lieu ul li {
   list-style: none;
 }
