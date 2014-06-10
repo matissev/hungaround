@@ -50,6 +50,8 @@ main {
     box-sizing: border-box;
     background: white;
     z-index: 2;
+    top: 0;
+    left: 0;
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -60,7 +62,7 @@ main {
         z-index: 1;
         box-sizing: border-box;
         border-top: solid 44px transparent;
-        padding-top: 36px;
+        padding-top: 30px;
         overflow-y: scroll;
         height: 100%;
         width: 96.5%;
@@ -110,6 +112,20 @@ main {
     span:before {
         background: url("../img/icones/gazette.svg") no-repeat center center !important;
     }
+}
+
+#largeMap {
+    z-index: 1;
+    background: white;
+    position: fixed !important;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 44px solid white;
+    border-left: 44px solid white;
 }
 
 
@@ -353,7 +369,7 @@ a { text-decoration: none; color: @black; }
                     background-size: 20px;
                 }
 
-                .lieu p:after {
+                .site p:after {
                     content: "";
                     display: table;
                     width: 20px;
@@ -511,16 +527,14 @@ a { text-decoration: none; color: @black; }
     .nonlu:after { border-color: transparent @green transparent transparent; }
 }
 
-#largeMap {
-    z-index: 1;
-    background: white;
-    position: fixed !important;
+.lieu {
     display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
     box-sizing: border-box;
-    border-top: 44px solid white;
-    border-left: 44px solid white;
+    border-right: 44px solid transparent;
+    width: 96.5%;
+    margin-left: 3.5%;
+    float: left;
+    
+    ul li { list-style: none; }
+    .panoramique { width: 100%; }
 }

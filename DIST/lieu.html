@@ -30,7 +30,7 @@
             <li class="nav-profil-toggle-notif-oneNotif unseen message"><img src="img/photos/users/5.jpg"/>
               <p><span class="username">MargotMontargie</span> vous envoyé un message.</p>
             </li>
-            <li class="nav-profil-toggle-notif-oneNotif unseen lieu"><img src="img/photos/users/28.jpg"/>
+            <li class="nav-profil-toggle-notif-oneNotif unseen site"><img src="img/photos/users/28.jpg"/>
               <p><span class="username">Jojo</span> vous recommande Le Pic du diable.</p>
             </li>
             <li class="nav-profil-toggle-notif-oneNotif message"><img src="img/photos/users/12.jpg"/>
@@ -39,7 +39,7 @@
             <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/5.jpg"/>
               <p><span class="username">MargotMontargie</span> vous recommande Tristan Morain.</p>
             </li>
-            <li class="nav-profil-toggle-notif-oneNotif lieu"><img src="img/photos/users/11.jpg"/>
+            <li class="nav-profil-toggle-notif-oneNotif site"><img src="img/photos/users/11.jpg"/>
               <p><span class="username">émilie03</span> vous envoyé un message.</p>
             </li>
             <li class="nav-profil-toggle-notif-oneNotif person"><img src="img/photos/users/11.jpg"/>
@@ -57,67 +57,70 @@
         <input type="submit" value="" class="nav-recherche-submit"/>
       </div>
     </nav>
-    <main>
-      <div class="scroller"><img src="img/photos/panoramique/panoramique.jpg" alt="panoramique"/>
-        <section class="info">
-          <h1 class="info-lieu"><strong>Col de la Lyé</strong></h1>
-          <article class="info-meteo">
-            <h1>Météo</h1>
-            <ol>
-              <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Lun 26</span></li>
-              <li><img src="img/weather/sunny.svg" alt="Météo" class="icone"/><span class="jour">Mar 27</span></li>
-              <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Mer 28</span></li>
-              <li><img src="img/weather/cloudy.svg" alt="Météo" class="icone"/><span class="jour">Jeu 29</span></li>
-              <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Ven 30</span></li>
-            </ol>
-          </article>
-          <article class="info-terrain">
-            <h1>Composition du terrain<img src="" alt="CompositionTerrain"/>
+    <main id="content">
+      <div class="scroller">
+        <div class="lieu"><img src="img/photos/panoramique/panoramique.jpg" alt="panoramique" class="panoramique"/>
+          <section class="info">
+            <h1 class="info-lieu"><strong>Col de la Lyé</strong></h1>
+            <article class="info-meteo">
+              <h1>Météo</h1>
               <ul>
-                <li class="granite">Granite / 37%</li>
-                <li class="calcaire">Calcaire / 23%</li>
-                <li class="gr">ès Grès / 24%</li>
-                <li class="schiste">Schiste / 12%</li>
-                <li class="glace">Glace / 4%</li>
+                <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Lun 26</span></li>
+                <li><img src="img/weather/sunny.svg" alt="Météo" class="icone"/><span class="jour">Mar 27</span></li>
+                <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Mer 28</span></li>
+                <li><img src="img/weather/cloudy.svg" alt="Météo" class="icone"/><span class="jour">Jeu 29</span></li>
+                <li><img src="img/weather/stormy.svg" alt="Météo" class="icone"/><span class="jour">Ven 30</span></li>
               </ul>
-            </h1>
-          </article>
-          <article class="info-voie">	
-            <h1>Diffuculté des voie</h1>
-            <ul>
-              <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">1</span></li>
-              <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">2</span></li>
-              <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">3</span></li>
-              <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">4</span></li>
-              <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">5a</span></li>
-              <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">5b</span></li>
-              <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">6a</span></li>
-              <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">6a+</span></li>
-              <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">6b</span></li>
-              <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">6b+</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">6c</span></li>
-              <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">6c+</span></li>
-              <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7a</span></li>
-              <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">7a+</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">7b</span></li>
-              <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">7b+</span></li>
-              <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">7c</span></li>
-              <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7c+</span></li>
-              <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">8a</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8a+</span></li>
-              <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8b</span></li>
-              <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">8b+</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8c</span></li>
-              <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8c+</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9a</span></li>
-              <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">9a+</span></li>
-              <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9b</span></li>
-              <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">9b+</span></li>
-            </ul>
-          </article>
-        </section>
-      </div>
+            </article>
+            <article class="info-terrain">
+              <h1>Composition du terrain<img src="" alt="CompositionTerrain"/>
+                <ul>
+                  <li class="granite">Granite / 37%</li>
+                  <li class="calcaire">Calcaire / 23%</li>
+                  <li class="gr">ès Grès / 24%</li>
+                  <li class="schiste">Schiste / 12%</li>
+                  <li class="glace">Glace / 4%</li>
+                </ul>
+              </h1>
+            </article>
+            <article class="info-voie">	
+              <h1>Diffuculté des voie</h1>
+              <ul>
+                <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">1</span></li>
+                <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">2</span></li>
+                <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">3</span></li>
+                <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">4</span></li>
+                <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">5a</span></li>
+                <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">5b</span></li>
+                <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">6a</span></li>
+                <li><span class="nombre">9</span><span class="text">voies de niveau</span><span class="niveau">6a+</span></li>
+                <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">6b</span></li>
+                <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">6b+</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">6c</span></li>
+                <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">6c+</span></li>
+                <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7a</span></li>
+                <li><span class="nombre">8</span><span class="text">voies de niveau</span><span class="niveau">7a+</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">7b</span></li>
+                <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">7b+</span></li>
+                <li><span class="nombre">6</span><span class="text">voies de niveau</span><span class="niveau">7c</span></li>
+                <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">7c+</span></li>
+                <li><span class="nombre">5</span><span class="text">voies de niveau</span><span class="niveau">8a</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8a+</span></li>
+                <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8b</span></li>
+                <li><span class="nombre">3</span><span class="text">voies de niveau</span><span class="niveau">8b+</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">8c</span></li>
+                <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">8c+</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9a</span></li>
+                <li><span class="nombre">4</span><span class="text">voies de niveau</span><span class="niveau">9a+</span></li>
+                <li><span class="nombre">1</span><span class="text">voies de niveau</span><span class="niveau">9b</span></li>
+                <li><span class="nombre">2</span><span class="text">voies de niveau</span><span class="niveau">9b+</span></li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div><a href="#" class="linkMap"><span id="textLinkMap">Carte</span></a>
     </main>
+    <div id="largeMap"></div>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/packery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyyHBk577NziTUibLUV-R7yXQbDHFS9EE"></script>
