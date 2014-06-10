@@ -662,7 +662,7 @@ main .linkMap span:before {
 }
 
 .lieu .info {
-  width: 33.3333333%;
+  width: 30%;
 }
 
 .lieu ul li {
@@ -674,9 +674,43 @@ main .linkMap span:before {
 }
 
 .lieu .info-lieu {
-  height: 60px;
+  position: relative;
+  top: -28px;
+  height: 48px;
   background: #211e1e;
   color: white;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
+  font-size: 34px;
+}
+
+.lieu .info-terrain h1,
+.lieu .info-meteo h1,
+.lieu .info-voie h1 {
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.lieu .info-meteo li {
+  display: inline-block;
+}
+
+.lieu .icone {
+  width: 50px;
+}
+
+.lieu .terrain img {
+  width: 200px;
+}
+
+.lieu .granite,
+.lieu .calcaire,
+.lieu .gres,
+.lieu .schiste,
+.lieu .glace {
+  font-size: 18px;
+  position: relative;
+  left: 300px;
+  top: -200px;
+  margin-bottom: 20px;
 }

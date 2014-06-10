@@ -6,14 +6,40 @@
     margin-left: 3.5%;
     float: left;
     
-    .info { width: 33.3333333%}
+    .info { width: 30%}
     ul li { list-style: none; }
     .panoramique { width: 100%; }
     .info-lieu {
-    	height: 60px;
+    	position: relative;
+    	top: -28px;
+    	height: 48px;
     	background: @black;
     	color: white;
     	text-align: center;
-    	padding: 40px;
+    	padding: 30px;
+    	 font-size: 34px;
     }
+
+	.info-terrain h1, .info-meteo h1, .info-voie h1 {
+    	margin-left: 20px;
+    	font-size: 26px;
+    }
+    .info-meteo li {display: inline-block;}
+    .icone {
+    	width: 50px;
+    }
+    .jour {
+
+    }
+    .terrain img{
+    	width: 200px;
+    }
+    .granite, .calcaire, .gres, .schiste, .glace, {
+    	font-size: 18px;
+    	position: relative;
+		left: 300px;
+		top: -200px;
+		margin-bottom: 20px;
+    }
+
 }
