@@ -754,6 +754,11 @@ main .linkMap span:before {
   text-align: center;
   font-size: 34px;
 }
-.profil .ajouterLieu p {
-  visibility: hidden;
+.profil .ajouterLieu a {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
 }
