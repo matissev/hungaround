@@ -498,7 +498,7 @@ main .linkMap span:before {
   color: white;
 }
 
-#mosaic {
+.mosaic {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -509,7 +509,7 @@ main .linkMap span:before {
   float: left;
 }
 
-#mosaic .item {
+.mosaic .item {
   z-index: 2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -520,7 +520,7 @@ main .linkMap span:before {
   overflow: hidden;
 }
 
-#mosaic .item-img {
+.mosaic .item-img {
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -528,7 +528,7 @@ main .linkMap span:before {
   transition: transform 0.3s ease;
 }
 
-#mosaic .item-links {
+.mosaic .item-links {
   z-index: 3;
   opacity: 0;
   -webkit-box-sizing: border-box;
@@ -545,14 +545,14 @@ main .linkMap span:before {
   transition: opacity 0.5s ease;
 }
 
-#mosaic .item-links-articleName {
+.mosaic .item-links-articleName {
   max-width: 100%;
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
-#mosaic .item-links-lieu:before {
+.mosaic .item-links-lieu:before {
   content: "";
   display: inline-block;
   width: 17px;
@@ -564,7 +564,7 @@ main .linkMap span:before {
   vertical-align: sub;
 }
 
-#mosaic .item-links-auteur:before {
+.mosaic .item-links-auteur:before {
   content: "";
   display: inline-block;
   width: 17px;
@@ -576,57 +576,57 @@ main .linkMap span:before {
   vertical-align: sub;
 }
 
-#mosaic .item-links a {
+.mosaic .item-links a {
   display: table;
   color: white;
 }
 
-#mosaic .item:hover .item-links {
+.mosaic .item:hover .item-links {
   opacity: 1;
 }
 
-#mosaic .item:hover img {
+.mosaic .item:hover img {
   -webkit-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
 
-#mosaic .p1x1 {
+.mosaic .p1x1 {
   float: left;
   width: 16.6666666%;
 }
 
-#mosaic .p1x1:before {
+.mosaic .p1x1:before {
   content: "";
   display: inline-block;
   padding-top: 125%;
 }
 
-#mosaic .p2x1 {
+.mosaic .p2x1 {
   float: left;
   width: 33.3333333%;
 }
 
-#mosaic .p2x1:before {
+.mosaic .p2x1:before {
   content: "";
   display: inline-block;
   padding-top: 62.5%;
 }
 
-#mosaic .p2x2 {
+.mosaic .p2x2 {
   float: left;
   width: 33.3333333%;
 }
 
-#mosaic .p2x2:before {
+.mosaic .p2x2:before {
   content: "";
   display: inline-block;
   padding-top: 125%;
 }
 
-#mosaic .recommande:after,
-#mosaic .suivi:after,
-#mosaic .nonlu:after {
+.mosaic .recommande:after,
+.mosaic .suivi:after,
+.mosaic .nonlu:after {
   z-index: 10;
   position: absolute;
   content: "";
@@ -639,16 +639,23 @@ main .linkMap span:before {
   border-width: 35px 35px 0 0;
 }
 
-#mosaic .recommande:after {
+.mosaic .recommande:after {
   border-color: transparent #e64c27 transparent transparent;
 }
 
-#mosaic .suivi:after {
+.mosaic .suivi:after {
   border-color: transparent #3f7fbb transparent transparent;
 }
 
-#mosaic .nonlu:after {
+.mosaic .nonlu:after {
   border-color: transparent #57b178 transparent transparent;
+}
+
+.mosaic.mosaic-small {
+  width: 66.66666%;
+  float: right;
+  margin: 0;
+  border: 0;
 }
 
 .lieu {
@@ -675,14 +682,6 @@ main .linkMap span:before {
   width: 100%;
 }
 
-.lieu #mosaic {
-  width: 66.66666% !important;
-  float: right !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-left: 3px solid white !important;
-}
-
 .lieu .info-lieu {
   display: inline-block;
   margin: 0;
@@ -704,6 +703,11 @@ main .linkMap span:before {
 
 .lieu .info-meteo li {
   display: inline-block;
+  width: 50px;
+}
+
+.lieu .info-meteo li img {
+  width: 50px;
 }
 
 .lieu .icone {

@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
 	// =========================== FILTRES MOSAIC ===========================
 
-	$('#mosaic').packery({ itemSelector: '.item' });
+	$('.mosaic').packery({ itemSelector: '.item' });
 	
 	$('.nav-filtre').each(function(index, el) {
 		$(this).click(function(event) {
@@ -13,8 +13,8 @@ jQuery(document).ready(function($) {
 			} else {
 				$('.' + filter).css('display', 'none');
 			}
-			$('#mosaic').packery('destroy');
-			$('#mosaic').packery({ itemSelector: '.item' });
+			$('.mosaic').packery('destroy');
+			$('.mosaic').packery({ itemSelector: '.item' });
 		});
 	});
 

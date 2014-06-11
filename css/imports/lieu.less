@@ -12,14 +12,6 @@
 
     .panoramique { width: 100%; }
 
-	#mosaic {
-		width: 66.66666% !important;
-		float: right !important;
-		margin: 0 !important;
-		border: 0 !important;
-		border-left: 3px solid white !important;
-	}
-
     .info-lieu {
     	display: inline-block;
     	margin: 0;
@@ -37,13 +29,19 @@
     	font-size: 26px;
     }
 
-    .info-meteo li {display: inline-block;}
+    .info-meteo li {
+    	display: inline-block;
+    	width: 50px;
+
+    	img {
+    		width: 50px;
+    	}
+    }
+
     .icone {
     	width: 50px;
     }
-    .jour {
 
-    }
     .terrain img{
     	position: relative;
     	left:-20px;
