@@ -5,25 +5,85 @@
     width: 96.5%;
     margin-left: 3.5%;
     float: left;
+    .center-articlesPoste{
+        display: inline-block;
+        float: left;
+        width: 33.333333%;
+        text-align: center;
+        padding: 15px 0;
+        margin: 0;
+        background: @grey;
+        font-size: 18px;
+    }
+    .center-articlesPartage{
+        display: inline-block;
+        float: right;
+        width: 33.33333%;
+        text-align: center;
+        padding: 15px 0;
+        margin: 0;
+        font-size: 18px;
+    }
     
-    .info { width: 25%}
+    .info { width: 33.33333%; float: left;}
 
     ul li { list-style: none; }
 
     .info-user img { width: 100%;}
 
-    .info-nom {
-    	position: relative;
-    	top: -34px;
-    	height: 45px;
-    	background: @black;
-    	color: white;
-    	text-align: center;
-    	padding: 28px;
-    	 font-size: 34px;
+    .info-nom{
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0;
+        margin: 0;
+        background: @black;
+        color: white;
+        text-align: center;
+         font-size: 34px;
     }
 
+    .ajouterLieu a{
+        display: inline-block;
+        float: left;
+        width: 100%; 
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .ajouterLieu a:before{
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url(../img/icones/home.svg) no-repeat center center;
+        background-size: contain;
+        vertical-align: -10px;
+        padding-right: 70px;
+    }
     .ajouterLieu p{
         visibility: hidden;
+    }
+    .info-article {
+        width: 100%;
+    }
+    .info-article h1{
+        display: inline-block;
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+    .info-article a{
+        display: inline-block;
+        float: right;
+        width: 50%;
+    }
+    .info-follow h1{
+        display: inline-block;
+        float: left;
+        width: 100%;  
+    }
+    .info-amis h1{
+        display: inline-block;
+        float: left;
     }
 }

@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'EB Garamond';
   src: url('../fonts/eb-garamond/eb-garamond-08-italic.eot');
@@ -13,34 +12,26 @@
   font-weight: normal;
   font-style: italic;
 }
-
 /* GRIS NEUTRE: #d0d0d0 ------- GRIS CHAUD: : #f2efed */
-
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #211e1e;
   margin: 0;
 }
-
 a {
   text-decoration: none;
   color: #211e1e;
 }
-
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
-
 .clearfix:after {
   clear: both;
 }
-
 main {
   position: absolute;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: white;
   z-index: 2;
@@ -49,17 +40,11 @@ main {
   display: inline-block;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 1.3s ease;
   transition: transform 1.3s ease;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
-
 main .scroller {
   z-index: 1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-top: solid 44px transparent;
   padding-top: 30px;
@@ -67,14 +52,12 @@ main .scroller {
   height: 100%;
   width: 96.5%;
 }
-
 main .scroller:after {
   content: "";
   display: inline-block;
   height: 40px;
   width: 100%;
 }
-
 main .linkMap {
   z-index: 3;
   background: #3f7fbb;
@@ -84,13 +67,9 @@ main .linkMap {
   height: 100%;
   width: 3.5%;
   display: block;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: -webkit-transform 1.3s ease, background 1.3s ease;
   transition: transform 1.3s ease, background 1.3s ease;
 }
-
 main .linkMap span {
   position: absolute;
   text-align: center;
@@ -99,7 +78,6 @@ main .linkMap span {
   font-size: 14px;
   font-weight: bold;
 }
-
 main .linkMap span:before {
   content: "";
   top: 200px;
@@ -107,10 +85,8 @@ main .linkMap span:before {
   width: 100%;
   padding-top: 100%;
   background: url("../img/icones/map.svg") no-repeat center center;
-  -webkit-background-size: 30px;
   background-size: 30px;
 }
-
 #largeMap {
   z-index: 1;
   background: white;
@@ -120,34 +96,23 @@ main .linkMap span:before {
   left: 0;
   height: 100%;
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-top: 44px solid white;
   border-left: 44px solid white;
 }
-
 .kickOutContent {
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-
 .letLinkMap {
-  -webkit-transform: translateX(100%) !important;
-  -ms-transform: translateX(100%) !important;
   transform: translateX(100%) !important;
   background: #ed7f30 !important;
 }
-
 .letLinkMap span {
   font-size: 10px!important;
 }
-
 .letLinkMap span:before {
   background: url("../img/icones/gazette.svg") no-repeat center center !important;
 }
-
 .nav {
   z-index: 3;
   background: white;
@@ -156,8 +121,6 @@ main .linkMap span:before {
   left: 0;
   text-align: center;
   height: 44px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   padding: 0 3.5% 0 3.5%;
@@ -166,55 +129,44 @@ main .linkMap span:before {
   line-height: 46px;
   border-bottom: 1px solid #eeeae7;
 }
-
 .nav-logo {
   width: 165px;
   float: left;
   margin: 7px 20px 0 0;
 }
-
 .nav-gazette,
 .nav-grimpeur {
   font-weight: bold;
 }
-
 .nav-gazette,
 .nav-grimpeur,
 .nav-filtre,
 .nav-register {
   display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 12px;
   height: 43px;
   text-align: center;
   background: white;
   float: left;
-  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-
 .nav-register {
   float: right;
 }
-
 .nav-gazette:hover,
 .nav-grimpeur:hover,
 .nav-filtre:hover,
 .nav-register:hover {
   background: #eeeae7;
 }
-
 .nav-filtre {
   cursor: pointer;
   background: #f6f4f3;
 }
-
 .nav-filtre input {
   display: none;
 }
-
 .nav-filtre-text:before {
   content: "";
   display: inline-block;
@@ -224,28 +176,22 @@ main .linkMap span:before {
   border-width: 0 0 12px 12px;
   margin-right: 5px;
   border-color: transparent transparent #c7bab2 transparent;
-  -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
 }
-
 .nav-filtre input:checked + .navRecommandes:before {
   border-color: transparent transparent #e64c27 transparent;
 }
-
 .nav-filtre input:checked + .navSuivi:before {
   border-color: transparent transparent #3f7fbb transparent;
 }
-
 .nav-filtre input:checked + .navNonlus:before {
   border-color: transparent transparent #57b178 transparent;
 }
-
 .nav-recherche {
   margin-top: 9px;
   display: inline-block;
   height: 26px;
 }
-
 .nav-recherche-input {
   display: inline-block;
   width: 250px;
@@ -256,11 +202,9 @@ main .linkMap span:before {
   border: 1px solid #eeeae7;
   float: left;
 }
-
 .nav-recherche-input:focus {
   outline: none;
 }
-
 .nav-recherche-submit {
   display: inline-block;
   height: 26px;
@@ -269,19 +213,16 @@ main .linkMap span:before {
   -webkit-appearance: none;
   border: none;
   background: #eeeae7 url(../img/icones/flunks.svg) no-repeat 14px 6px;
-  -webkit-background-size: 16px;
   background-size: 16px;
   width: 45px;
   cursor: pointer;
 }
-
 .nav-creer {
   margin: 8px 12px 0 10px;
   display: inline-block;
   float: right;
   width: 30px;
 }
-
 .nav-profil-photo {
   display: inline-block;
   width: 43px;
@@ -289,11 +230,8 @@ main .linkMap span:before {
   float: right;
   cursor: pointer;
 }
-
 .nav-profil-toggle {
   z-index: 10;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
   margin-top: 44px;
@@ -304,13 +242,9 @@ main .linkMap span:before {
   position: fixed;
   top: 0;
   right: 0;
-  -webkit-transform: translate3d(340px, 0, 0);
-  -ms-transform: translate3d(340px, 0, 0);
   transform: translate3d(340px, 0, 0);
-  -webkit-transition: -webkit-transform 0.35s ease;
   transition: transform 0.35s ease;
 }
-
 .nav-profil-toggle-user {
   height: 165px;
   min-height: 165px;
@@ -318,28 +252,23 @@ main .linkMap span:before {
   padding: 8px 23px 0 23px;
   display: block;
 }
-
 .nav-profil-toggle-user-name {
   font-size: 22px;
   font-weight: bold;
 }
-
 .nav-profil-toggle-user-statut:before {
   content: "\00A0\00A0/\00A0";
 }
-
 .nav-profil-toggle-user-logout {
   float: right;
   position: relative;
   bottom: 10px;
   color: #e9634f !important;
 }
-
 .nav-profil-toggle-user-links {
   padding: 0;
   margin: 5px 0 0 0;
 }
-
 .nav-profil-toggle-user-links li {
   float: left;
   clear: left;
@@ -348,7 +277,6 @@ main .linkMap span:before {
   line-height: 0px;
   list-style: none;
 }
-
 .nav-profil-toggle-user-links-profil:before {
   content: "";
   display: inline-block;
@@ -356,15 +284,12 @@ main .linkMap span:before {
   height: 20px;
   margin-right: 10px;
   background: url("../img/icones/user-white.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
   vertical-align: sub;
 }
-
 .nav-profil-toggle-user-links-favoris {
   margin: 10px 0;
 }
-
 .nav-profil-toggle-user-links-favoris:before {
   content: "";
   display: inline-block;
@@ -372,11 +297,9 @@ main .linkMap span:before {
   height: 20px;
   margin-right: 10px;
   background: url("../img/icones/like-white.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
   vertical-align: sub;
 }
-
 .nav-profil-toggle-user-links-parametres:before {
   content: "";
   display: inline-block;
@@ -384,11 +307,9 @@ main .linkMap span:before {
   height: 20px;
   margin-right: 10px;
   background: url("../img/icones/settings-white.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
   vertical-align: sub;
 }
-
 .nav-profil-toggle-notif {
   position: absolute;
   top: 174px;
@@ -397,7 +318,6 @@ main .linkMap span:before {
   padding: 0 23px 0 23px;
   margin: 0;
 }
-
 .nav-profil-toggle-notif-oneNotif {
   position: relative;
   line-height: normal;
@@ -405,23 +325,19 @@ main .linkMap span:before {
   height: 60px;
   padding: 23px 0;
 }
-
 .nav-profil-toggle-notif-oneNotif img {
   width: 60px;
   float: left;
   margin-right: 15px;
   display: block;
 }
-
 .nav-profil-toggle-notif-oneNotif p {
   margin: 0;
   display: block;
 }
-
 .nav-profil-toggle-notif-oneNotif .username {
   font-weight: bold;
 }
-
 .nav-profil-toggle-notif-oneNotif:not(:last-child):after {
   position: absolute;
   margin: 0;
@@ -433,37 +349,30 @@ main .linkMap span:before {
   width: 300px;
   border-bottom: 1px solid white;
 }
-
 .nav-profil-toggle-notif .message p:after {
   content: "";
   display: table;
   width: 20px;
   height: 20px;
   background: url("../img/icones/mail-white.svg") center bottom no-repeat;
-  -webkit-background-size: 20px;
   background-size: 20px;
 }
-
 .nav-profil-toggle-notif .site p:after {
   content: "";
   display: table;
   width: 20px;
   height: 20px;
   background: url("../img/icones/place-white.svg") center bottom no-repeat;
-  -webkit-background-size: 20px;
   background-size: 20px;
 }
-
 .nav-profil-toggle-notif .person p:after {
   content: "";
   display: table;
   width: 20px;
   height: 20px;
   background: url("../img/icones/user-white.svg") center bottom no-repeat;
-  -webkit-background-size: 20px;
   background-size: 20px;
 }
-
 .nav-profil-toggle-notif .unseen:before {
   position: absolute;
   content: "";
@@ -476,7 +385,6 @@ main .linkMap span:before {
   border-width: 17px 17px 0 0;
   border-color: #e64c27 transparent transparent transparent;
 }
-
 .nav-profil-toggle-footer {
   position: absolute;
   bottom: 0;
@@ -488,61 +396,44 @@ main .linkMap span:before {
   margin: 0;
   padding: 15px 23px 15px 23px;
 }
-
 .nav-profil-toggle-user:before,
 .nav-profil-toggle-user:after {
   content: " ";
   display: table;
   clear: both;
 }
-
 .nav-profil .open {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
 }
-
 .nav-profil a {
   color: white;
 }
-
 .mosaic {
   display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-right: 44px solid transparent;
   width: 96.5%;
   margin-left: 3.5%;
   float: left;
 }
-
 .mosaic .item {
   z-index: 2;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   border: 1px solid white;
   background: silver;
   overflow: hidden;
 }
-
 .mosaic .item-img {
   position: absolute;
   width: 100%;
   z-index: 1;
-  -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
-
 .mosaic .item-links {
   z-index: 3;
   opacity: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 20px;
@@ -551,17 +442,14 @@ main .linkMap span:before {
   width: 100%;
   bottom: 0;
   background: #211e1e;
-  -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-
 .mosaic .item-links-articleName {
   max-width: 100%;
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 5px;
 }
-
 .mosaic .item-links-lieu:before {
   content: "";
   display: inline-block;
@@ -569,11 +457,9 @@ main .linkMap span:before {
   height: 17px;
   margin-right: 10px;
   background: url("../img/icones/place-white.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
   vertical-align: sub;
 }
-
 .mosaic .item-links-auteur:before {
   content: "";
   display: inline-block;
@@ -581,59 +467,46 @@ main .linkMap span:before {
   height: 17px;
   margin-right: 10px;
   background: url("../img/icones/user-white.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
   vertical-align: sub;
 }
-
 .mosaic .item-links a {
   display: table;
   color: white;
 }
-
 .mosaic .item:hover .item-links {
   opacity: 1;
 }
-
 .mosaic .item:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-  -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-
 .mosaic .p1x1 {
   float: left;
   width: 16.6666666%;
 }
-
 .mosaic .p1x1:before {
   content: "";
   display: inline-block;
   padding-top: 125%;
 }
-
 .mosaic .p2x1 {
   float: left;
   width: 33.3333333%;
 }
-
 .mosaic .p2x1:before {
   content: "";
   display: inline-block;
   padding-top: 62.5%;
 }
-
 .mosaic .p2x2 {
   float: left;
   width: 33.3333333%;
 }
-
 .mosaic .p2x2:before {
   content: "";
   display: inline-block;
   padding-top: 125%;
 }
-
 .mosaic .recommande:after,
 .mosaic .suivi:after,
 .mosaic .nonlu:after {
@@ -648,25 +521,22 @@ main .linkMap span:before {
   border-style: solid;
   border-width: 35px 35px 0 0;
 }
-
 .mosaic .recommande:after {
   border-color: transparent #e64c27 transparent transparent;
 }
-
 .mosaic .suivi:after {
   border-color: transparent #3f7fbb transparent transparent;
 }
-
 .mosaic .nonlu:after {
   border-color: transparent #57b178 transparent transparent;
 }
-
 .mosaic.mosaic-small {
   width: 66.66666%;
   float: right;
   margin: 0;
   border: 0;
 }
+<<<<<<< HEAD
 
 .mosaic.mosaic-small .p1x1 {
   float: left;
@@ -701,41 +571,35 @@ main .linkMap span:before {
   padding-top: 125%;
 }
 
+=======
+>>>>>>> FETCH_HEAD
 .lieu {
   display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-right: 44px solid transparent;
   width: 96.5%;
   margin-left: 3.5%;
   float: left;
 }
-
 .lieu .info {
   width: 33.33333%;
   float: left;
   display: inline-block;
 }
-
 .lieu article:before,
 .lieu article:after {
   content: " ";
   display: table;
 }
-
 .lieu article:after {
   clear: both;
 }
-
 .lieu ul li {
   list-style: none;
 }
-
 .lieu .panoramique {
   width: 100%;
 }
-
 .lieu .info-lieu {
   display: inline-block;
   margin: 0;
@@ -747,7 +611,6 @@ main .linkMap span:before {
   padding: 30px 0;
   font-size: 34px;
 }
-
 .lieu .info-terrain h1,
 .lieu .info-meteo h1,
 .lieu .info-voie h1 {
@@ -755,11 +618,9 @@ main .linkMap span:before {
   font-size: 26px;
   padding: 0;
 }
-
 .lieu .info-meteo ul {
   padding: 0;
 }
-
 .lieu .info-meteo ul li {
   font-weight: bold;
   text-align: center;
@@ -767,115 +628,88 @@ main .linkMap span:before {
   width: 20%;
   float: left;
 }
-
 .lieu .info-meteo ul li img {
   width: 80%;
   display: block;
   margin: 0 auto 10px auto;
 }
-
 .lieu .info-meteo ul li .cloudy {
   background: url("../img/weather/cloudy.svg") no-repeat;
-  -webkit-background-size: contain;
   background-size: contain;
 }
-
 .lieu .info-meteo ul li .stormy {
   background: url("../img/weather/stormy.svg") no-repeat center center;
-  -webkit-background-size: contain;
   background-size: contain;
 }
-
 .lieu .info-meteo ul li .sunny {
   background: url("../img/weather/sunny.svg") no-repeat;
-  -webkit-background-size: contain;
   background-size: contain;
 }
-
 .lieu .info-terrain {
   margin-top: 20px;
 }
-
 .lieu .info-terrain img {
   width: 50%;
   float: left;
 }
-
 .lieu .info-terrain ul {
   width: 50%;
   float: right;
   margin: 0;
   padding: 0;
 }
-
 .lieu .info-terrain ul li {
   margin-left: 20px;
   font-size: 18px;
   margin-bottom: 20px;
   width: 160px;
 }
-
 .lieu .info-terrain ul li span {
   float: right;
 }
-
 .lieu .info-terrain ul li span:before {
   content: "/ ";
 }
-
 .lieu .info-terrain ul li:before {
   content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
   background: red;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-right: 10px;
   position: relative;
   top: 1px;
 }
-
 .lieu .info-terrain ul .granite:before {
   background-color: #dcc668;
 }
-
 .lieu .info-terrain ul .calcaire:before {
   background-color: #f2efed;
 }
-
 .lieu .info-terrain ul .gres:before {
   background-color: #e9634f;
 }
-
 .lieu .info-terrain ul .schiste:before {
   background-color: #211e1e;
 }
-
 .lieu .info-terrain ul .glace:before {
   background-color: #68c4dd;
 }
-
 .lieu .text {
   display: none;
 }
-
 .lieu .info-voie ul {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   padding: 0;
   width: 100%;
 }
-
 .lieu .info-voie ul li {
   display: block;
   height: 24px;
 }
-
 .lieu .info-voie ul li span:last-of-type {
   font-size: 18px;
   padding-bottom: 1px;
@@ -886,72 +720,118 @@ main .linkMap span:before {
   display: block;
   float: left;
 }
-
 .lieu .info-voie ul li .nombre:before {
   display: inline-block;
   padding-bottom: 3px;
   padding-top: 3px;
   content: "\A0x";
 }
-
 .lieu .level1 {
   background: #57b178;
 }
-
 .lieu .level2 {
   background: #3f7fbb;
 }
-
 .lieu .level3 {
   background: #dcc668;
 }
-
 .lieu .level4 {
   background: #ed7f30;
 }
-
 .lieu .level5 {
   background: #e64c27;
 }
-
 .lieu .level6 {
   background: #211e1e;
 }
-
 .profil {
   display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-right: 44px solid transparent;
   width: 96.5%;
   margin-left: 3.5%;
   float: left;
 }
-
-.profil .info {
-  width: 25%;
+.profil .center-articlesPoste {
+  display: inline-block;
+  float: left;
+  width: 33.333333%;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  background: #f2efed;
+  font-size: 18px;
 }
-
+.profil .center-articlesPartage {
+  display: inline-block;
+  float: right;
+  width: 33.33333%;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  font-size: 18px;
+}
+.profil .info {
+  width: 33.33333%;
+  float: left;
+}
 .profil ul li {
   list-style: none;
 }
-
 .profil .info-user img {
   width: 100%;
 }
-
 .profil .info-nom {
-  position: relative;
-  top: -34px;
-  height: 45px;
+  display: inline-block;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
   background: #211e1e;
   color: white;
   text-align: center;
-  padding: 28px;
   font-size: 34px;
 }
-
+.profil .ajouterLieu a {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.profil .ajouterLieu a:before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/icones/home.svg) no-repeat center center;
+  background-size: contain;
+  vertical-align: -10px;
+  padding-right: 70px;
+}
 .profil .ajouterLieu p {
   visibility: hidden;
+}
+.profil .info-article {
+  width: 100%;
+}
+.profil .info-article h1 {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin: 0;
+}
+.profil .info-article a {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+.profil .info-follow h1 {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+.profil .info-amis h1 {
+  display: inline-block;
+  float: left;
 }
