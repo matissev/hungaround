@@ -831,7 +831,7 @@ main .linkMap span:before {
 }
 
 .profil .mosaic {
-  position: absolute;
+  position: relative;
   width: 71.5%;
   top: 73px;
   right: 90px;
@@ -850,4 +850,8 @@ main .linkMap span:before {
   text-align: center;
   padding: 28px;
   font-size: 34px;
+}
+
+.profil .ajouterLieu p {
+  visibility: hidden;
 }
