@@ -668,6 +668,39 @@ main .linkMap span:before {
   border: 0;
 }
 
+.mosaic.mosaic-small .p1x1 {
+  float: left;
+  width: 25%;
+}
+
+.mosaic.mosaic-small .p1x1:before {
+  content: "";
+  display: inline-block;
+  padding-top: 125%;
+}
+
+.mosaic.mosaic-small .p2x1 {
+  float: left;
+  width: 50%;
+}
+
+.mosaic.mosaic-small .p2x1:before {
+  content: "";
+  display: inline-block;
+  padding-top: 62.5%;
+}
+
+.mosaic.mosaic-small .p2x2 {
+  float: left;
+  width: 50%;
+}
+
+.mosaic.mosaic-small .p2x2:before {
+  content: "";
+  display: inline-block;
+  padding-top: 125%;
+}
+
 .lieu {
   display: block;
   -webkit-box-sizing: border-box;

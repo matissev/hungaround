@@ -18,19 +18,6 @@ jQuery(document).ready(function($) {
 		});
 	});
 
-
-	$(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
-	$(".linkMap").click(function(event) {
-		$("#content").toggleClass("kickOutContent");
-		$(this).toggleClass("letLinkMap");
-
-		if ($("#textLinkMap").html() == "Carte" ) {
-			$("#textLinkMap").html("Gazette");
-		} else {
-			$("#textLinkMap").html("Carte");
-		}
-	})
-
 	// =========================== GOOGLE MAPS API ===========================
 
 	function initialize() {
@@ -47,7 +34,19 @@ jQuery(document).ready(function($) {
 
 
 
-    // =========================== TOGGLE NOTIF ===========================
+    // =========================== TOGGLES ===========================
+
+    $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
+	$(".linkMap").click(function(event) {
+		$("#content").toggleClass("kickOutContent");
+		$(this).toggleClass("letLinkMap");
+
+		if ($("#textLinkMap").html() == "Carte" ) {
+			$("#textLinkMap").html("Gazette");
+		} else {
+			$("#textLinkMap").html("Carte");
+		}
+	})
 
     // =========================== AJAXIFY ============================
 
