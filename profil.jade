@@ -6,45 +6,47 @@ html(lang="fr")
 		include includes/nav
 		main#content
 			.scroller
-				section.info
-					article.info-user
-						img(src="img/photos/francois.jpg" alt="photoDeProfil")
-						h1 <strong>Francois</strong>
-						article.ajouterLieu
-							img(src="img/icones/home.svg" alt="maison")
-							p Habite à 
-							a(href="#") Ajoutez une localisation
-					article.info-article
-						h1 Article Posté
-						p.info-article-Postes 0
-						a.info-article-creer(href="#") Ajouter un article
-					article.info-info	
-						h1 Grimpeurs suivis
-						a.nmb(href="#") 0 
-							//- fenetre pop up avec les folowers
-					article.info-amis	
-						h1 Compagnons de grimpe
-						img.photo(src="img/photos/users/1.jpg" alt="photoAmis1")
-						img.photo(src="img/photos/users/2.jpg" alt="photoAmis2")
-						img.photo(src="img/photos/users/3.jpg" alt="photoAmis3")
-						a.nmb(href="#") +6 
-							//- fenetre pop up avec les amis
-					article.info-habitudes
-						h1 Sites les plus grimpés
-						ul
-							li
-								span.site1 Col de la grimpette
-								span.nombre 7 Ascension
-							li
-								span.site2 Plateau de jeune pousse
-								span.nombre 4
-							li
-								span.site3 La montagne noire
-								span.nombre 2
-				section.center
-					a.center-articlesPoste(href="#") Articles postés
-					a.center-articlesPartage(href="#") Articles partagés
-				include includes/mosaic
+				.profil
+					section.info
+						article.info-user
+							img(src="img/photos/francois.jpg" alt="photoDeProfil")
+							h1 <strong>Francois</strong>
+							article.ajouterLieu
+								img(src="img/icones/home.svg" alt="maison")
+								p Habite à 
+								a(href="#") Ajoutez une localisation
+						article.info-article
+							h1 Article Posté
+							p.info-article-Postes 0
+							a.info-article-creer(href="#") Ajouter un article
+						article.info-info	
+							h1 Grimpeurs suivis
+							a.nmb(href="#") 0 
+								//- fenetre pop up avec les folowers
+						article.info-amis	
+							h1 Compagnons de grimpe
+							img.photo(src="img/photos/users/1.jpg" alt="photoAmis1")
+							img.photo(src="img/photos/users/2.jpg" alt="photoAmis2")
+							img.photo(src="img/photos/users/3.jpg" alt="photoAmis3")
+							a.nmb(href="#") +6 
+								//- fenetre pop up avec les amis
+						article.info-habitudes
+							h1 Sites les plus grimpés
+							ul
+								li
+									a.site1 Col de la lyé
+									span.nombre 7 Ascension
+								li
+									a.site2 Plateau de jeune pousse
+									span.nombre 4
+								li
+									a.site3 La montagne noire
+									span.nombre 2
+					section.center
+						a.center-articlesPoste(href="#") Articles postés
+						a.center-articlesPartage(href="#") Articles partagés
+					.mosaic		
+						include includes/mosaic
 			a.linkMap(href="#")
 				span#textLinkMap Carte
 		#largeMap
