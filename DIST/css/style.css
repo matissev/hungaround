@@ -778,3 +778,23 @@ main .linkMap span:before {
 .profil .info-article {
   width: 100%;
 }
+.profil .info-article h1 {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin: 0;
+}
+.profil .info-article a {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+.profil .info-follow h1 {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+.profil .info-amis h1 {
+  display: inline-block;
+  float: left;
+}
