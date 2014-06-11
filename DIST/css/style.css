@@ -833,45 +833,43 @@ main .linkMap span:before {
   padding-top: 1px;
 }
 
+.lieu .info-voie li .text {
+  color: white;
+}
+
 .lieu .level1 {
   background: #57b178;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
 .lieu .level2 {
   background: #3f7fbb;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
 .lieu .level3 {
   background: #dcc668;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
 .lieu .level4 {
   background: #ed7f30;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
 .lieu .level5 {
   background: #e64c27;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
 .lieu .level6 {
   background: #211e1e;
   font-size: 18px;
-  color: white;
   padding-left: 10px;
 }
 
