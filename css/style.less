@@ -48,6 +48,15 @@ body {
 
 a { text-decoration: none; color: @black; }
 
+.clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    
+    &:after { clear: both; }
+}
+
 @import "imports/main";
 @import "imports/nav";
 @import "imports/mosaic";

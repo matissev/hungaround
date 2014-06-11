@@ -6,7 +6,8 @@
     margin-left: 3.5%;
     float: left;
     
-    .info { width: 33.33333%; float: left;}
+    .info { width: 33.33333%; float: left; display: inline-block; }
+    article { .clearfix }
 
     ul li { list-style: none; }
 
@@ -27,89 +28,117 @@
 	.info-terrain h1, .info-meteo h1, .info-voie h1 {
     	margin-left: 20px;
     	font-size: 26px;
+    	padding: 0;
     }
 
-    .info-meteo li {
-    	display: inline-block;
-    	width: 50px;
+    .info-meteo {
+    	ul {
+			padding: 0;
 
-    	img {
-    		width: 50px;
+    		li {
+    			font-weight: bold;
+    			text-align: center;
+    			display: block;
+    			width: 20%;
+ 				float: left;
+
+ 				img { width: 80%; display: block; margin: 0 auto 10px auto; }
+
+ 				.cloudy { background: url("../img/weather/cloudy.svg") no-repeat; background-size: contain; }
+				.stormy { background: url("../img/weather/stormy.svg") no-repeat center center; background-size: contain; }
+				.sunny { background: url("../img/weather/sunny.svg") no-repeat; background-size: contain; }
+			}
     	}
     }
 
-    .icone {
-    	width: 50px;
+    .info-terrain {
+    	margin-top: 20px;
+
+    	img { width: 50%; float: left; }
+
+    	ul {
+    		width: 50%;
+    		float: right;
+    		margin: 0;
+    		padding: 0;
+
+    		li {
+    			margin-left: 20px;
+    			span { float: right; }
+    			font-size: 18px;
+				margin-bottom: 20px;
+				width: 160px;
+
+				span:before { content: "/ "; }
+    		}
+
+    		li:before {
+    			content: "";
+    			display: inline-block;
+    			width: 15px;
+    			height: 15px;
+    			background: red;
+    			transform: rotate(45deg);
+    			margin-right: 10px;
+    			position: relative;
+    			top: 1px;
+    		}
+
+    		.granite:before { background-color: @yellow; }
+			.calcaire:before { background-color: @grey; }
+			.gres:before { background-color: @red-light; }
+			.schiste:before { background-color: @black; }
+			.glace:before { background-color: @blue-light; }
+    	}
     }
 
-    .terrain img{
-    	position: relative;
-    	left:-20px;
-    	width: 180px;
-    }
-    .granite, .calcaire, .gres, .schiste, .glace, {
-    	font-size: 18px;
-    	position: relative;
-		left: 230px;
-		top: -190px;
-		margin-bottom: 20px;
-    }
-    .text{
-    	visibility: hidden;
+
+    .text {
+    	display: none;
 	}
-	.niveau1, .niveau2, .niveau3, .niveau4 {
+
+	.info-voie {
+		li span:last-of-type {
+			padding-bottom: 1px;
+			padding-top: 1px;
+		}
+	}
+
+	.level1 {
 		background: @green;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
-	.niveau5a, .niveau5b, .niveau6a{
+	.level2{
 		background: @blue;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
-	.niveau6aplus, .niveau6b, .niveau6bplus, .niveau6c, .niveau6cplus, .niveau7a{
+	.level3{
 		background: @yellow;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
-	.niveau7aplus, .niveau7b, .niveau7bplus, .niveau7c, .niveau7cplus{
+	.level4 {
 		background: @orange;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
-	.niveau8a, .niveau8aplus, .niveau8b, .niveau8bplus, .niveau8c, .niveau8cplus, .niveau9a{
+	.level5 {
 		background: @red;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
-	.niveau9aplus, .niveau9b, .niveau9bplus{
+	.level6 {
 		background: @black;
 		font-size: 18px;
 		color: white;
-		padding-right: 50px;
 		padding-left: 10px;
-		padding-bottom: 1px;
-		padding-top: 1px;
 	}
 	
 }

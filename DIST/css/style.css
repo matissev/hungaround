@@ -27,6 +27,16 @@ a {
   color: #211e1e;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 main {
   position: absolute;
   -webkit-box-sizing: border-box;
@@ -672,6 +682,17 @@ main .linkMap span:before {
 .lieu .info {
   width: 33.33333%;
   float: left;
+  display: inline-block;
+}
+
+.lieu article:before,
+.lieu article:after {
+  content: " ";
+  display: table;
+}
+
+.lieu article:after {
+  clear: both;
 }
 
 .lieu ul li {
@@ -699,123 +720,159 @@ main .linkMap span:before {
 .lieu .info-voie h1 {
   margin-left: 20px;
   font-size: 26px;
+  padding: 0;
 }
 
-.lieu .info-meteo li {
-  display: inline-block;
-  width: 50px;
+.lieu .info-meteo ul {
+  padding: 0;
 }
 
-.lieu .info-meteo li img {
-  width: 50px;
+.lieu .info-meteo ul li {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 20%;
+  float: left;
 }
 
-.lieu .icone {
-  width: 50px;
+.lieu .info-meteo ul li img {
+  width: 80%;
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
-.lieu .terrain img {
-  position: relative;
-  left: -20px;
-  width: 180px;
+.lieu .info-meteo ul li .cloudy {
+  background: url("../img/weather/cloudy.svg") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.lieu .granite,
-.lieu .calcaire,
-.lieu .gres,
-.lieu .schiste,
-.lieu .glace {
+.lieu .info-meteo ul li .stormy {
+  background: url("../img/weather/stormy.svg") no-repeat center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.lieu .info-meteo ul li .sunny {
+  background: url("../img/weather/sunny.svg") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.lieu .info-terrain {
+  margin-top: 20px;
+}
+
+.lieu .info-terrain img {
+  width: 50%;
+  float: left;
+}
+
+.lieu .info-terrain ul {
+  width: 50%;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.lieu .info-terrain ul li {
+  margin-left: 20px;
   font-size: 18px;
-  position: relative;
-  left: 230px;
-  top: -190px;
   margin-bottom: 20px;
+  width: 160px;
+}
+
+.lieu .info-terrain ul li span {
+  float: right;
+}
+
+.lieu .info-terrain ul li span:before {
+  content: "/ ";
+}
+
+.lieu .info-terrain ul li:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: red;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.lieu .info-terrain ul .granite:before {
+  background-color: #dcc668;
+}
+
+.lieu .info-terrain ul .calcaire:before {
+  background-color: #f2efed;
+}
+
+.lieu .info-terrain ul .gres:before {
+  background-color: #e9634f;
+}
+
+.lieu .info-terrain ul .schiste:before {
+  background-color: #211e1e;
+}
+
+.lieu .info-terrain ul .glace:before {
+  background-color: #68c4dd;
 }
 
 .lieu .text {
-  visibility: hidden;
+  display: none;
 }
 
-.lieu .niveau1,
-.lieu .niveau2,
-.lieu .niveau3,
-.lieu .niveau4 {
+.lieu .info-voie li span:last-of-type {
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.lieu .level1 {
   background: #57b178;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
-.lieu .niveau5a,
-.lieu .niveau5b,
-.lieu .niveau6a {
+.lieu .level2 {
   background: #3f7fbb;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
-.lieu .niveau6aplus,
-.lieu .niveau6b,
-.lieu .niveau6bplus,
-.lieu .niveau6c,
-.lieu .niveau6cplus,
-.lieu .niveau7a {
+.lieu .level3 {
   background: #dcc668;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
-.lieu .niveau7aplus,
-.lieu .niveau7b,
-.lieu .niveau7bplus,
-.lieu .niveau7c,
-.lieu .niveau7cplus {
+.lieu .level4 {
   background: #ed7f30;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
-.lieu .niveau8a,
-.lieu .niveau8aplus,
-.lieu .niveau8b,
-.lieu .niveau8bplus,
-.lieu .niveau8c,
-.lieu .niveau8cplus,
-.lieu .niveau9a {
+.lieu .level5 {
   background: #e64c27;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
-.lieu .niveau9aplus,
-.lieu .niveau9b,
-.lieu .niveau9bplus {
+.lieu .level6 {
   background: #211e1e;
   font-size: 18px;
   color: white;
-  padding-right: 50px;
   padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
 .profil {
@@ -835,13 +892,6 @@ main .linkMap span:before {
 
 .profil ul li {
   list-style: none;
-}
-
-.profil .mosaic {
-  position: relative;
-  width: 71.5%;
-  top: 73px;
-  right: 90px;
 }
 
 .profil .info-user img {
