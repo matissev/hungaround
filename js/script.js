@@ -49,8 +49,6 @@ jQuery(document).ready(function($) {
 	})
 
     // =========================== AJAXIFY ============================
-
-    $.Ajaxify.container = '.scroller';
 });
 
 
