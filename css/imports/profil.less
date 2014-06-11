@@ -54,6 +54,7 @@
         font-weight: bold;
         text-decoration: underline;
         padding-bottom: 30px;
+        padding-left: 30px;
     }
     .ajouterLieu a:before{
         content: "";
@@ -63,7 +64,6 @@
         background: url(../img/icones/home.svg) no-repeat center center;
         background-size: contain;
         vertical-align: -10px;
-        padding-right: 70px;
     }
     .ajouterLieu p{
         visibility: hidden;
@@ -74,10 +74,12 @@
     .info-article h1{
         display: inline-block;
         float: left;
-        width: 50%;
+        width: 40%;
         margin: 0;
         padding-bottom: 20px;
         font-size: 20px;
+        padding-top: 10px;
+        padding-left: 30px;
     }
     .info-article a{
         text-align: center;
@@ -87,20 +89,46 @@
         background: @blue;
         width: 50%;
         padding: 10px 0;
+        font-size: 18px;
     }
-    .info-follow{
-        width: 50%;
-    }
-    .info-follow h1{
-
-    }
-    .nmd{
+    .info-follow h1, {
         display: inline-block;
         float: left;
+        width: 100%;
+        font-size: 25px;
+    }
+    .info-follow a{
+        display: inline-block;
+        float: left;
+        width: 50px;
+        background: @black;
+        font-size: 21px;
+        color: white;
+        height: 35px;
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 20px;
     }
     .info-amis h1{
         display: inline-block;
         float: left;
         margin: 0;
+        width: 100%;
+        font-size: 25px;
+    }
+    .info-amis img, .info-amis a{
+        display: inline-block;
+        float: left;
+    }
+    .info-habitudes h1{
+        width: 100%;
+        display: inline-block;
+        float: left;
+        font-size: 25px;
+    }
+    .info-habitudes ul{
+         width: 100%;
+        display: inline-block;
+        float: left;
     }
 }
