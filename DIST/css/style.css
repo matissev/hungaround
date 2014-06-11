@@ -762,3 +762,19 @@ main .linkMap span:before {
   font-weight: bold;
   text-decoration: underline;
 }
+.profil .ajouterLieu a:before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/icones/home.svg) no-repeat center center;
+  background-size: contain;
+  vertical-align: -10px;
+  padding-right: 70px;
+}
+.profil .ajouterLieu p {
+  visibility: hidden;
+}
+.profil .info-article {
+  width: 100%;
+}
