@@ -6,9 +6,16 @@
     margin-left: 3.5%;
     float: left;
     
-    .info { width: 30%}
+    .info { width: 25%}
     ul li { list-style: none; }
     .panoramique { width: 100%; }
+	.mosaic{
+		position: relative;
+		width: 80.4%;
+		float: right;
+		top:-1530px;
+		right: -45px;
+	}
     .info-lieu {
     	position: relative;
     	top: -28px;
@@ -19,7 +26,6 @@
     	padding: 30px;
     	 font-size: 34px;
     }
-
 	.info-terrain h1, .info-meteo h1, .info-voie h1 {
     	margin-left: 20px;
     	font-size: 26px;
@@ -32,13 +38,15 @@
 
     }
     .terrain img{
-    	width: 200px;
+    	position: relative;
+    	left:-20px;
+    	width: 180px;
     }
     .granite, .calcaire, .gres, .schiste, .glace, {
     	font-size: 18px;
     	position: relative;
-		left: 260px;
-		top: -200px;
+		left: 230px;
+		top: -190px;
 		margin-bottom: 20px;
     }
     .text{
@@ -98,11 +106,5 @@
 		padding-bottom: 1px;
 		padding-top: 1px;
 	}
-	.mosaic{
-		position: relative;
-		width: 75.5%;
-		float: right;
-		top:-1530px;
-		right: -45px;
-	}
+	
 }

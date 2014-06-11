@@ -662,7 +662,7 @@ main .linkMap span:before {
 }
 
 .lieu .info {
-  width: 30%;
+  width: 25%;
 }
 
 .lieu ul li {
@@ -671,6 +671,14 @@ main .linkMap span:before {
 
 .lieu .panoramique {
   width: 100%;
+}
+
+.lieu .mosaic {
+  position: relative;
+  width: 80.4%;
+  float: right;
+  top: -1530px;
+  right: -45px;
 }
 
 .lieu .info-lieu {
@@ -700,7 +708,9 @@ main .linkMap span:before {
 }
 
 .lieu .terrain img {
-  width: 200px;
+  position: relative;
+  left: -20px;
+  width: 180px;
 }
 
 .lieu .granite,
@@ -710,8 +720,8 @@ main .linkMap span:before {
 .lieu .glace {
   font-size: 18px;
   position: relative;
-  left: 260px;
-  top: -200px;
+  left: 230px;
+  top: -190px;
   margin-bottom: 20px;
 }
 
@@ -801,10 +811,43 @@ main .linkMap span:before {
   padding-top: 1px;
 }
 
-.lieu .mosaic {
+.profil {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 44px solid transparent;
+  width: 96.5%;
+  margin-left: 3.5%;
+  float: left;
+}
+
+.profil .info {
+  width: 25%;
+}
+
+.profil ul li {
+  list-style: none;
+}
+
+.profil .mosaic {
+  position: absolute;
+  width: 71.5%;
+  top: 73px;
+  right: 90px;
+}
+
+.profil .info-user img {
+  width: 100%;
+}
+
+.profil .info-nom {
   position: relative;
-  width: 75.5%;
-  float: right;
-  top: -1530px;
-  right: -45px;
+  top: -34px;
+  height: 45px;
+  background: #211e1e;
+  color: white;
+  text-align: center;
+  padding: 28px;
+  font-size: 34px;
 }
