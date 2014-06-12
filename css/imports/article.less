@@ -168,22 +168,85 @@
 }
 
 .comments {
+	margin: 50px 0;
 	background: @black;
 	color: white;
 	display: block;
-	.usersPhoto { width: 70px; }
-	
-	.clearfix
+	width: 100%;
+
+	.writeComment {
+		box-sizing: border-box;
+		width: 100%;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		border-left: 100px solid transparent;
+		border-right: 110px solid transparent;
+	}
+
+	textarea {
+		resize: none;
+		box-sizing: border-box;
+		padding: 5px 5px;
+		height: 30px;
+		font-size: 15px;
+		width: 100%;
+	}
+
+	textarea:focus { outline: none; }
+
+	.usersPhoto {
+		margin: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 70px;
+		float: right;
+	}
 
 	.oneComment {
+		min-height: 110px;
+		position: relative;
 		width: 100%;
 		display: block;
-		time { width: 50px; float: left; text-align: center; }
+
+		time { width: 50px; padding: 20px; float: left; text-align: center; }
 
 		.comment {
+			min-height: 110px;
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-left: 100px solid transparent;
+			padding-top: 20px;
+			width: 100%;
 			display: inline-block;
-			float: left;
-			border-bottom: 1px solid white;
+			float: right;
+
+			p {
+				margin: 0;
+				box-sizing: border-box;
+				width: 100%;
+				padding-right: 90px;
+
+				.name { display: block; font-weight: bold; margin-bottom: 10px; }
+
+				.atblue { color: @blue; }
+			}
 		}
+
+		.clearfix
 	}
+
+	.oneComment:not(:last-child) .comment:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-bottom: 1px solid white;
+	}
+
+	.clearfix
 }

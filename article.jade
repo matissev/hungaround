@@ -58,24 +58,43 @@ html(lang="fr")
 					p Racontez nous votre histoire
 
 			.comments
-				input(placeholder="Hello")
+				.writeComment
+					textarea.expanding(placeholder="Exprimez-vous...")
 				.oneComment
 					time(datetime="2014-06-18") 10 Mai 2014 14h05
 					.comment
-						span.name ClimberDu44
-						p Quelle expérience... C’est fou. Très belle photo en passant!
-						img.usersPhoto(src="img/photos/users/1.jpg")
+						p
+							span.name ClimberDu44
+							| Quelle expérience... C’est fou. Très belle photo en passant!
+						img.usersPhoto(src="img/photos/users/8.jpg")
 				.oneComment
 					time(datetime="2014-06-18") 10 Mai 2014 14h05
 					.comment
-						span.name ClimberDu44
-						p Quelle expérience... C’est fou. Très belle photo en passant!
-						img.usersPhoto(src="img/photos/users/1.jpg")
+						p
+							span.name JoJo
+							| Vous êtes descendu en rappel? Bien joué, j’aurais pas osé dans une crevasse aussi étroite
+						img.usersPhoto(src="img/photos/users/28.jpg")
 				.oneComment
 					time(datetime="2014-06-18") 10 Mai 2014 14h05
 					.comment
-						span.name ClimberDu44
-						p Quelle expérience... C’est fou. Très belle photo en passant!
-						img.usersPhoto(src="img/photos/users/1.jpg")
+						p
+							span.name Tristan Morain
+							| Vous êtes descendu en rappel? Bien joué, j’aurais pas osé dans une crevasse aussi étroite
+						img.usersPhoto(src="img/photos/users/12.jpg")
+				.oneComment
+					time(datetime="2014-06-18") 10 Mai 2014 14h05
+					.comment
+						p
+							span.name MargotMontargie
+							| Superbes Monts... Et cette forêt! Ça doit sentir bon à cette période de l’année.
+						img.usersPhoto(src="img/photos/users/5.jpg")
+				.oneComment
+					time(datetime="2014-06-18") 10 Mai 2014 14h05
+					.comment
+						p
+							span.name Tristan Morain
+							| <span class="atblue">@MargotMontargie</span> : Oui c’est vrai Margot, ça doit être parfait.
+						img.usersPhoto(src="img/photos/users/12.jpg")
+		include includes/scripts
 
 
