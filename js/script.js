@@ -37,7 +37,9 @@ jQuery(document).ready(function($) {
     // =========================== TOGGLES ===========================
 
     $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
-    $(".nav-register").click(function(event) { $("#popup").toggleClass("open"); })
+
+    $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
+
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
 		$(this).toggleClass("letLinkMap");
