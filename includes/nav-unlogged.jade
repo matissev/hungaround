@@ -7,9 +7,11 @@ nav.nav
 		img.nav-creer(src="img/icones/new-article.svg" alt="boussole")
 
 	a.nav-register.no-ajaxy(href="gazette.html") S'incrire / Se connecter
-	include $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
+		include includes/inscription
 
 	.nav-recherche
 		input.nav-recherche-input(type='search', placeholder='Recherche', name='barre de recherche')
 		input.nav-recherche-submit(type='submit' value="")
+
+
 
