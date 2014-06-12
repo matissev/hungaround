@@ -3,6 +3,54 @@
 	margin: 200px auto 0 auto;
 	width: 62%;
 
+	.infos {
+		position: relative;
+		width: 100%;
+		background: red;
+		display: block;
+
+		.meteo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40%;
+			height: 100%;
+			float: left;
+			background: green;
+			font-size: 3vw;
+			vertical-align: middle;
+			font-weight: bold;
+
+			.temperature { float: right; margin-right: 20px; margin-top: 10px; }
+		}
+
+		.itineraire {
+			position: absolute;
+			top: 0;
+			left: 40%;
+			width: 45%;
+			height: 100%;
+			background: yellow;
+			float: left;
+		}
+
+		time {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 15%;
+			height: 100%;
+			background: blue;
+			float: right;
+		}
+	}
+
+	.infos:after {
+		content: "";
+		display: inline-block;
+		padding-top: 15%;
+	}
+
 	.item {
 		float: left;
 		width: 23.125%;
