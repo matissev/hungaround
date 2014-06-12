@@ -6,13 +6,17 @@ html(lang="fr")
 		include includes/nav
 		.creationContainer
 			a.closeArticle(href="#")
-			.titre
+			.titreArticle
 				input(type='text', name='fname', value="... Votre titre d'article ici ...")
-
 			.infos
 				.meteo1
 					span.temperature Mise a jour de la météo grace à la géolocalisation
 				.itineraire
 					p.geoloc Le lieu se mettra à jour grace a la géolocalisation
 				time(datetime="2014-06-18") 
-					.ajoutDay Ajouter une date
+					.day Ajouter une date
+		.ajoutText
+			.ajoutTitre
+				input(type='text', name='fname', value="titre")
+			.ajoutParagraphe
+				textarea(name='textarea', rows='10', cols='50') Saisir un texte ici.
