@@ -7,16 +7,20 @@ html(lang="fr")
 		.articleContainer
 			a.closeArticle(href="#")
 
-			.infos
-				.meteo
-					span.temperature 21°C<br>24°C
-				.itineraire
-					p.depart Pic du diable
-					p.arrivee Falaise d'argent
-				time(datetime="2014-06-18") 10 Mai 2014
-
 			article
 				h1 Hello
+
+				.infos
+					.meteo
+						span.temperature 21°C<br>24°C
+					.itineraire
+						p.depart Pic du diable
+						p.arrivee Falaise d'argent
+					time(datetime="2014-06-18") 
+						.jour 10 
+						.mois Mai
+						.annee 2014
+
 				p Malgré toutes les compétitions auxquelles je participe durant ce printemps, j'ai quand même le temps de profiter de la forêt pendant quelques journées... Fin Mars, frustré de ne toujours pas comprendre comment s'en sortir dans la mythique dalle de "Duel", Jerem m'emmène découvrir un bloc beaucoup plus physique ou je pourrai mieux m'exprimer... Nous voilà au pied de "L'insoutenable légèreté de l'être" un 8B classique de la foret, mais rendu très difficile suite à la casse d'une bonne inversée dans le réta final.
 
 				h2 Jack
@@ -51,4 +55,26 @@ html(lang="fr")
 					a.item-links-auteur(href="profil.html") Francois Juste
 			a.item.comeOn(href="")
 				p Racontez nous votre histoire
+
+			.comments
+				input(placeholder="Hello")
+				.oneComment
+					time(datetime="2014-06-18") 10 Mai 2014 14h05
+					.comment
+						span.name ClimberDu44
+						p Quelle expérience... C’est fou. Très belle photo en passant!
+						img(src="img/photos/users/1.jpg")
+				.oneComment
+					time(datetime="2014-06-18") 10 Mai 2014 14h05
+					.comment
+						span.name ClimberDu44
+						p Quelle expérience... C’est fou. Très belle photo en passant!
+						img(src="img/photos/users/1.jpg")
+				.oneComment
+					time(datetime="2014-06-18") 10 Mai 2014 14h05
+					.comment
+						span.name ClimberDu44
+						p Quelle expérience... C’est fou. Très belle photo en passant!
+						img(src="img/photos/users/1.jpg")
+
 
