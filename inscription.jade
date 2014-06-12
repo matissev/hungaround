@@ -1,42 +1,47 @@
-.popup
-	img.popup-logo(src="img/logo.svg" alt="logo")
+html(lang="fr")
+	head
+		include includes/head
+	body
+		main#content
+			.popup
+				img.popup-logo(src="img/logo.svg" alt="logo")
 
-	a.fermeture(href="index.html") 
-		img(src="img/icones/close.svg" alt="close")
+				a.fermeture(href="index.html") 
+					img(src="img/icones/close.svg" alt="close")
 
-	section.inscrip
-		h1 Inscription
-		article.champ
-			form(action='demo_form.asp')
-				article.nom
-					img.icones(src="img/icones/user.svg" alt="user")
-					span Nom d'utilisateur:
-					input.saisi(type='text', name='fname')
-					br
-				article.email
-					img.icones(src="img/icones/mail.svg" alt="password")
-					span Email:
-					input.saisi(type='password', name='pwd')
-					br
-				article.mp
-					img.icones(src="img/icones/password.svg" alt="password")
-					span Mot de passe:
-					input.saisi(type='password', name='pwd')
-					br
-				input.valid(type='submit', value='Submit')
+				section.inscrip
+					h1 Inscription
+					article.champ
+						form(action='demo_form.asp')
+							article.nom
+								img.icones1(src="img/icones/user.svg" alt="user")
+								span Nom d'utilisateur:
+								input.saisi1(type='text', name='fname')
+								br
+							article.email
+								img.icones(src="img/icones/mail.svg" alt="password")
+								span Email:
+								input.saisi2(type='password', name='pwd')
+								br
+							article.mp
+								img.icones(src="img/icones/password.svg" alt="password")
+								span Mot de passe:
+								input.saisi3(type='password', name='pwd')
+								br
+							input.valid(type='submit', value='Valider')
 
-	section.connex
-		h1 Connexion
-		article.champ
-			form(action='demo_form.asp')
-				article.nom
-					img.icones(src="img/icones/user.svg" alt="user")
-					span Nom d'utilisateur:
-					input.saisi(type='text', name='fname')
-					br
-				article.mp
-					img.icones(src="img/icones/password.svg" alt="password")
-					span Mot de passe:
-					input.saisi(type='password', name='pwd')
-					br
-				input.valid(type='submit', value='Submit')
+				section.connex
+					h1 Connexion
+					article.champ
+						form(action='demo_form.asp')
+							article.nom
+								img.icones1(src="img/icones/user.svg" alt="user")
+								span Nom d'utilisateur:
+								input.saisi4(type='text', name='fname')
+								br
+							article.mp
+								img.icones(src="img/icones/password.svg" alt="password")
+								span Mot de passe:
+								input.saisi5(type='password', name='pwd')
+								br
+							input.valid(type='submit', value='Valider')
