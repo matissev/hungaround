@@ -60,6 +60,7 @@ html(lang="fr")
 			.comments
 				.writeComment
 					textarea.expanding(placeholder="Exprimez-vous...")
+					input(type="submit" value="Envoyer")
 				.oneComment
 					time(datetime="2014-06-18") 10 Mai 2014 14h05
 					.comment
@@ -93,8 +94,15 @@ html(lang="fr")
 					.comment
 						p
 							span.name Tristan Morain
-							| <span class="atblue">@MargotMontargie</span> : Oui c’est vrai Margot, ça doit être parfait.
+							| <span class="atblue">@MargotMontargie</span> : Oui c’est vrai Margot, ça doit être parfait. :)
 						img.usersPhoto(src="img/photos/users/12.jpg")
+				.commentPages
+					span Pages
+					a.noline(href="#") <
+					a.noline(href="#") 1
+					a(href="#") 2
+					a(href="#") 3
+					a.noline(href="#") >
 		include includes/scripts
 
 
