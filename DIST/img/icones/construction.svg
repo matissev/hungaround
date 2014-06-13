@@ -2,12 +2,11 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="47.16px" height="42.5px" viewBox="-2.33 2.33 47.16 42.5" enable-background="new -2.33 2.33 47.16 42.5"
-	 xml:space="preserve">
-<g>
-	<polygon fill="#DDC667" points="4.596,44.83 -2.33,37.904 -2.33,44.83 	"/>
-	<polygon fill="#DDC667" points="16.59,44.83 28.176,44.83 -2.33,14.325 -2.33,25.91 	"/>
-	<polygon fill="#DDC667" points="44.83,44.83 44.83,37.904 9.255,2.33 -2.33,2.33 40.17,44.83 	"/>
-	<polygon fill="#DDC667" points="32.836,2.33 21.25,2.33 44.83,25.91 44.83,14.325 	"/>
+	 width="47.16px" height="42.5px" viewBox="0 0 47.16 42.5" enable-background="new 0 0 47.16 42.5" xml:space="preserve">
+<g opacity="0.7">
+	<polygon fill="#DDC667" points="6.926,42.5 0,35.574 0,42.5 	"/>
+	<polygon fill="#DDC667" points="18.92,42.5 30.506,42.5 0,11.995 0,23.58 	"/>
+	<polygon fill="#DDC667" points="47.16,42.5 47.16,35.574 11.585,0 0,0 42.5,42.5 	"/>
+	<polygon fill="#DDC667" points="35.166,0 23.58,0 47.16,23.58 47.16,11.995 	"/>
 </g>
 </svg>
