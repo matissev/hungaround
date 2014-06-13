@@ -18,6 +18,12 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// =========================== LIGHT GALLERY ===========================
+
+	if ($('#gallery').length) {
+		$("#gallery").lightGallery();
+	} 
+
 	// =========================== GOOGLE MAPS API ===========================
 
 	function initialize() {
