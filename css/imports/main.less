@@ -8,7 +8,7 @@ main {
     display: inline-block;
     width: 100%;
     height: 100%;
-    transition: transform 1.3s ease;
+    transition: transform 1s ease;
     transform: translateX(0);
 
     .scroller {
@@ -62,15 +62,25 @@ main {
     position: fixed !important;
     display: block;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
     border-top: 44px solid white;
     border-left: 44px solid white;
+    transition: width 1s ease, border-left 1s ease;
+    transform: translate3d(0,0,0);
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+
+.littlemap {
+    width: 33.33333%!important;
+    border-left: none!important;
 }
 
 .kickOutContent { transform: translateX(-100%); }
+.away { transform: translateX(-37%); }
 .letLinkMap {
     transform: translateX(100%)!important;
     background: @orange!important;

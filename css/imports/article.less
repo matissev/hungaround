@@ -1,7 +1,25 @@
+.article {
+	background: white;
+	z-index: 2;
+	position: absolute;
+	left: -66.66666%;
+	top: 0;
+	width: 66.66666%;
+	height: 100%;
+	animation: hello 3s ease-out forwards;
+    box-sizing: border-box;
+    border-top: solid 44px transparent;
+    overflow-y: scroll;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+}
+
+.toggleArticle { transform: translateX(100%); }
+
 .articleContainer {
-	padding-top: 20px;
-	margin: 200px auto 0 auto;
-	width: 62%;
+	box-sizing: border-box;
+	padding: 0 60px 0 60px;
+	width: 100%;
 
 	.item {
 		float: left;
@@ -12,7 +30,6 @@
 	.i-right { margin: 0 2.5% 0 1.25%; }
 
 	article {
-		margin-top: 50px;
 		position: relative;
 		font-family: @garalde;
 		font-size: 19px;
@@ -73,15 +90,19 @@
 }
 
 .closeArticle {
+	z-index: 1000000000000;
 	display: inline-block;
 	position: fixed;
 	background: url("../img/icones/close.svg") no-repeat center center;
 	background-size: contain;
 	width: 30px;
 	height: 30px;
-	top: 75px;
-	left: 1.5%;
+	top: 84px;
+	transition: -webkit-transform 0.4s ease;
+	transform: translateX(-300%);
 }
+
+.toggleCloser { transform: translateX(50%)!important; transition: -webkit-transform 0.4s ease 0.65s;  }
 
 .infos {
 	position: relative;
@@ -127,7 +148,7 @@
 	}
 }
 
-.depart, .arrivee { font-size: 20px; }
+.depart, .arrivee { font-size: 20px; display: block; white-space: nowrap; text-ellipsis: ellipsis; }
 
 .depart { margin: 16px 0 16px 0; }
 .arrivee { margin: 0; }
@@ -137,7 +158,7 @@
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	margin: 0 10px 0 40px;
+	margin: 0 10px 0 20px;
 }
 
 .depart:before { background: url("../img/icones/place-green.svg") no-repeat center bottom; background-size: contain; }
@@ -185,7 +206,7 @@
 
 .comments {
 	position: relative;
-	margin: 50px 0;
+	margin: 40px 0 30px 0;
 	background: @black;
 	color: white;
 	display: block;
