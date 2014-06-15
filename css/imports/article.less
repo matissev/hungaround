@@ -90,7 +90,7 @@
 }
 
 .closeArticle {
-	z-index: 1000000000000;
+	z-index: 10;
 	display: inline-block;
 	position: fixed;
 	background: url("../img/icones/close.svg") no-repeat center center;
@@ -196,12 +196,18 @@
 	background-size: 70%;
 	position: absolute;
 	top: 0px;
+	transition: transform 0.3s ease;
+}
+
+.comeOn:hover:before {
+	transform: scale(1.1, 1.1);
 }
 
 .comeOn:after {
 	content: "";
 	display: inline-block;
 	padding-top: 125%;
+
 }
 
 .comments {
