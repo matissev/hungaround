@@ -39,9 +39,11 @@ a {
 
 .bubble-container {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  -webkit-transform: translate(-71px, 29px);
-  -ms-transform: translate(-71px, 29px);
-  transform: translate(-71px, 29px);
+  background: red;
+  -webkit-transform: translateX(-37px);
+  -ms-transform: translateX(-37px);
+  transform: translateX(-37px);
+  z-index: 0;
 }
 
 .bubble-container .p1x1 {
