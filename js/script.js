@@ -1,5 +1,7 @@
 var shown = false;
 var step = 0;
+var timer = false;
+var checker = false;
 
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
@@ -38,10 +40,28 @@ var greenMarkersPosition = [
 	{ "lat" : "41.995003" , "long" : "1.170606" }
 ];
 
+function triggerWindows() {
+	var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
+	for (i=0; i<allMarkers.length; i++) {
+		var markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
+		var centerMap = map.getCenter();
+		var distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
+
+		if (oldDistance == 0 || distance < oldDistance) {
+			oldDistance = distance;
+		}
+	}
+
+	infowindow.open(map,oldDistance);
+}
+
+checker = setTimeout("triggerWindows()", 1000);
+
 var blueMarkers = [];
 var greenMarkers = [];
 var redMarkers = [];
 var marker = 0;
+var oldDistance = 0;
 
 jQuery(document).ready(function($) {
 
@@ -86,7 +106,6 @@ jQuery(document).ready(function($) {
       hideCloseButton: true,
   	});
 
-	var timer = false;
 	function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(44.770137, 6.965332),
@@ -125,7 +144,6 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
-			infowindow.open(map,marker);
   		}
     }
     google.maps.event.addDomListener(window, 'load', initialize);
