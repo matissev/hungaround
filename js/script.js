@@ -68,11 +68,9 @@ var bestMarker = 0;
 var oldBestMarker = 0;
 var bestMarkerLiteral = 0;
 var oldMapCenter = 0;
+var markerRed = [];
 
 jQuery(document).ready(function($) {
-
-	$('.my-sticky-element').waypoint('sticky');
-	$('.infinite-container').waypoint('infinite');
 
 	// =========================== FILTRES MOSAIC ===========================
 
@@ -157,17 +155,15 @@ jQuery(document).ready(function($) {
 
   		for (var i = 0; i < redMarkersPosition.length; i++) {
   			redMarkers[i] = new google.maps.LatLng(redMarkersPosition[i].lat, redMarkersPosition[i].long);
-  			marker = new google.maps.Marker({
+  			markerRed[i] = new google.maps.Marker({
 	    		position: redMarkers[i],
 	    		map: map,
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
 
-			jack = infowindowRed[i];
-
-			google.maps.event.addListener(marker, 'click', function() {
-        		jack.open(map, this);
+			google.maps.event.addListener(markerRed, 'click', function() {
+        		infowindowRed[].open(map, this);
     		});
   		}
     }
@@ -324,9 +320,6 @@ jQuery(document).ready(function($) {
 	$('#marker3').waypoint(function() {
   		map.panTo(LatLng3);
 	}, {context: '.article'});
-
-	$('.infinite-container').waypoint('infinite');
-	$('.my-sticky-element').waypoint('sticky');
 
 });
 
