@@ -15,30 +15,32 @@ html(lang="fr")
 					p.geoloc Le lieu se mettra à jour grace a la géolocalisation
 				time(datetime="2014-06-18") 
 					.day Ajouter une date
-			.ajoutText
-				.ajoutTitre
-					input(type='text', name='fname', placeholder="Titre")
-				.ajoutParagraphe
-					textarea(name='textarea', rows='10', cols='50' placeholder="Saisir un texte ici.")
-				.ajoutLieuText
-					input(type='text', name='fname', placeholder="Ajouter une localisation")
-				.validationText
-					input(type='submit', value='Valider')
-			.ajouterMedia
-				.Img
+			.all-slide
+				.slide
+					.ajoutTitre
+						input(type='text', name='fname', placeholder="Titre")
+					.ajoutParagraphe
+						textarea(name='textarea', rows='10', cols='50' placeholder="Saisir un texte ici.")
+					.ajoutLieuText
+						input(type='text', name='fname', placeholder="Ajouter une localisation")
+					.validationText
+						input(type='submit', value='Valider')
+				.slide
 					.ajoutImg
 						input(type="file", name="pic", accept="image/*", placeholder="Ajouter une localisation")
 					.ajoutLieuImg
 						input(type='text', name='fname', placeholder="Ajouter une localisation")
 					.validationImg
 						input(type='submit', value='Valider')
-				.Vid
+				.slide
 					.ajoutVid
 						input(type="file", name="vid", accept="video/*")
 					.ajoutLieuVid
 						input(type='text', name='fname', placeholder="Ajouter une localisation")
 					.validationVid
 						input(type='submit', value='Valider')
+				.cloned-slides
+					
 			.boutonAjout
 				a.textBut(href="#") Ajouter un paragraphe
 				a.imgBut(href="#") Poster une photo
