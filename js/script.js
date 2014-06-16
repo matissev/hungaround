@@ -1,7 +1,5 @@
 var shown = false;
 var step = 0;
-var timer = false;
-var checker = false;
 
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
@@ -40,23 +38,6 @@ var greenMarkersPosition = [
 	{ "lat" : "41.995003" , "long" : "1.170606" }
 ];
 
-function triggerWindows() {
-	var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
-	for (i=0; i<allMarkers.length; i++) {
-		var markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
-		var centerMap = map.getCenter();
-		var distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
-
-		if (oldDistance == 0 || distance < oldDistance) {
-			oldDistance = distance;
-		}
-	}
-
-	infowindow.open(map,oldDistance);
-}
-
-checker = setTimeout("triggerWindows()", 1000);
-
 var blueMarkers = [];
 var greenMarkers = [];
 var redMarkers = [];
@@ -92,6 +73,8 @@ jQuery(document).ready(function($) {
 	} 
 
 	// =========================== GOOGLE MAPS API ===========================
+	var timer = false;
+	var checker = false;
 
 	var contentString = '<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>';
 	var infowindow = new InfoBubble({
@@ -147,6 +130,23 @@ jQuery(document).ready(function($) {
   		}
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+
+    function triggerWindows() {
+		var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
+		for (i=0; i<allMarkers.length; i++) {
+			var markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
+			var centerMap = map.getCenter();
+			var distance = google.maps.geometry.spherical.computeHeading(centerMap,markerCompared);
+	
+			if (oldDistance == 0 || distance < oldDistance) {
+				oldDistance = distance;
+			}
+		}
+	
+		infowindow.open(map,oldDistance);
+	}
+
+    checker = setInterval("triggerWindows()", 1000);
 
 
     // =========================== TOGGLES ===========================
