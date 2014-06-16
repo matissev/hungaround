@@ -1,6 +1,22 @@
 var shown = false;
 var step = 0;
+
 var blueMarkersPosition = [
+	{ "lat" : "43.248363" , "long" : "2.427920" },
+	{ "lat" : "43.412190" , "long" : "0.214175" },
+	{ "lat" : "42.681586" , "long" : "-0.280210" },
+	{ "lat" : "44.031490" , "long" : "4.081363" },
+	{ "lat" : "43.300819" , "long" : "-1.615689" },
+	{ "lat" : "42.948002" , "long" : "-0.429166" }
+];
+
+var redMarkersPosition = [
+	{ "lat" : "43.982085" , "long" : "3.907478" },
+	{ "lat" : "43.430126" , "long" : "0.699470" },
+	{ "lat" : "43.174278" , "long" : "-1.173699" }
+];
+
+var greenMarkersPosition = [
 	{ "lat" : "43.909806" , "long" : "6.225070" },
 	{ "lat" : "44.193841" , "long" : "6.192950" },
 	{ "lat" : "44.039483" , "long" : "6.696849" },
@@ -21,8 +37,11 @@ var blueMarkersPosition = [
 	{ "lat" : "42.362094" , "long" : "-0.207881" },
 	{ "lat" : "41.995003" , "long" : "1.170606" }
 ];
+
 var blueMarkers = [];
-var marker = [];
+var greenMarkers = [];
+var redMarkers = [];
+var marker = 0;
 
 jQuery(document).ready(function($) {
 
@@ -67,10 +86,30 @@ jQuery(document).ready(function($) {
         map.setTilt(45);
   		map.setHeading(90);
 
+  		for (var i = 0; i < greenMarkersPosition.length; i++) {
+  			greenMarkers[i] = new google.maps.LatLng(greenMarkersPosition[i].lat, greenMarkersPosition[i].long);
+  			marker = new google.maps.Marker({
+	    		position: greenMarkers[i],
+	    		map: map,
+	    		title: "Hello World!",
+	    		icon: 'img/icones/nonlu.svg'
+			});
+  		}
+
   		for (var i = 0; i < blueMarkersPosition.length; i++) {
   			blueMarkers[i] = new google.maps.LatLng(blueMarkersPosition[i].lat, blueMarkersPosition[i].long);
-  			marker[i] = new google.maps.Marker({
+  			marker = new google.maps.Marker({
 	    		position: blueMarkers[i],
+	    		map: map,
+	    		title: "Hello World!",
+	    		icon: 'img/icones/suivi.svg'
+			});
+  		}
+
+  		for (var i = 0; i < redMarkersPosition.length; i++) {
+  			redMarkers[i] = new google.maps.LatLng(redMarkersPosition[i].lat, redMarkersPosition[i].long);
+  			marker = new google.maps.Marker({
+	    		position: redMarkers[i],
 	    		map: map,
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
