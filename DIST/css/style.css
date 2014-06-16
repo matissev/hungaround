@@ -37,6 +37,10 @@ a {
   clear: both;
 }
 
+.infowindow {
+  width: 100px;
+}
+
 main {
   position: absolute;
   -webkit-box-sizing: border-box;
