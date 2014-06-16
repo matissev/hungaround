@@ -43,6 +43,8 @@ var greenMarkers = [];
 var redMarkers = [];
 var marker = 0;
 var oldDistance = 0;
+var bestMarker = 0;
+var oldMapLocation = 0;
 
 jQuery(document).ready(function($) {
 
@@ -87,6 +89,7 @@ jQuery(document).ready(function($) {
       shadowStyle: 2,
       arrowSize: 0,
       hideCloseButton: true,
+      disableAutoPan: true
   	});
 
 	function initialize() {
@@ -131,27 +134,44 @@ jQuery(document).ready(function($) {
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 
-    function triggerWindows() {
+    checker = setInterval(function() {
 		var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
-		for (i=0; i<allMarkers.length; i++) {
-			var markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
-			var centerMap = map.getCenter();
-			var distance = google.maps.geometry.spherical.computeHeading(centerMap,markerCompared);
-	
-			if (oldDistance == 0 || distance < oldDistance) {
-				oldDistance = distance;
-			}
-		}
-	
-		infowindow.open(map,oldDistance);
-	}
+		centerMap = map.getCenter();
 
-    checker = setInterval("triggerWindows()", 1000);
+		if(oldMapLocation != centerMap) {
+			for (i=1; i<allMarkers.length; i++) {
+				 markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
+				 distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
+		
+				if (oldDistance == 0 || distance <= oldDistance) {
+					oldDistance = distance;
+					bestMarker = markerCompared;
+					console.log(oldDistance);
+				}
+			}
+
+			marker = new google.maps.Marker({
+	    	position: bestMarker,
+	    	map: map,
+	    	title: "Hello World!",
+	    	icon: 'img/icones/nonlu.svg'
+			});
+
+			infowindow.open(map,marker);	
+		}
+
+		oldDistance = 0;
+
+		oldMapLocation = centerMap;
+	}, 200);
 
 
     // =========================== TOGGLES ===========================
 
     $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
+
+    $(".posted-articles").click(function(event) { $(".shared-mosaic").toggleClass("hideit"); $(".posted-mosaic").toggleClass("showit"); })
+    $(".shared-articles").click(function(event) { $(".shared-mosaic").toggleClass("showit"); $(".posted-mosaic").toggleClass("hideit"); })
 
     $(".showArticle").click(function(event) {
     	$(".article").toggleClass("toggleArticle");
