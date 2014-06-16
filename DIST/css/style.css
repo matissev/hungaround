@@ -1812,6 +1812,24 @@ main .linkMap span:before {
   width: 70%;
 }
 
+::-webkit-input-placeholder {
+  color: #211e1e;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #211e1e;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #211e1e;
+}
+
+:-ms-input-placeholder {
+  color: #211e1e;
+}
+
 .ajoutTitre input {
   width: 100%;
   border: none;
@@ -1838,6 +1856,28 @@ main .linkMap span:before {
 }
 
 .ajoutLieu input {
+  width: 100%;
+  border: none;
+  border: dashed 2px #3f7fbb;
+  font-size: 24px;
+  font-family: "EB Garamond", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  padding-left: 15px;
+  padding-top: 8px;
+  margin: 0;
+}
+
+.ajoutImg input {
+  width: 100%;
+  border: none;
+  border: dashed 2px #3f7fbb;
+  font-size: 24px;
+  font-family: "EB Garamond", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  padding-left: 15px;
+  padding-top: 8px;
+  margin: 0;
+}
+
+.ajoutVid input {
   width: 100%;
   border: none;
   border: dashed 2px #3f7fbb;
