@@ -1,5 +1,6 @@
 var shown = false;
 var step = 0;
+var u = 0;
 
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
@@ -38,13 +39,35 @@ var greenMarkersPosition = [
 	{ "lat" : "41.995003" , "long" : "1.170606" }
 ];
 
+var contentStringRed = [
+	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-2.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-3.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+
+var contentStringGreen = [
+	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-4.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-5.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-6.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+
+var contentStringBlue = [
+	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-7.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-8.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-9.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+
 var blueMarkers = [];
 var greenMarkers = [];
 var redMarkers = [];
+
+var infowindowRed = [];
+var infowindowBlue = [];
+var infowindowGreen = [];
+
 var marker = 0;
 var oldDistance = 0;
 var bestMarker = 0;
-var oldMapLocation = 0;
+var oldBestMarker = 0;
+var bestMarkerLiteral = 0;
+var oldMapCenter = 0;
 
 jQuery(document).ready(function($) {
 
@@ -78,19 +101,25 @@ jQuery(document).ready(function($) {
 	var timer = false;
 	var checker = false;
 
-	var contentString = '<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>';
-	var infowindow = new InfoBubble({
-      content: contentString,
-      minWidth: 170,
-      minHeight: 212,
-      padding: 0,
-      borderRadius: 0,
-      borderWidth: 0,
-      shadowStyle: 2,
-      arrowSize: 0,
-      hideCloseButton: true,
-      disableAutoPan: true
-  	});
+	for (var i = 0; i < redMarkersPosition.length; i++) {
+		u++;
+		if (u >= contentStringRed.length) { u = 0; }
+
+		infowindowRed[i] = new InfoBubble({
+	      content: contentStringRed[u],
+	      minWidth: 170,
+	      minHeight: 212,
+	      padding: 0,
+	      borderRadius: 0,
+	      borderWidth: 0,
+	      shadowStyle: 2,
+	      arrowSize: 0,
+	      hideCloseButton: true,
+	      disableAutoPan: true
+	  	});
+
+	  	console.log(contentStringRed[u]);
+	}
 
 	function initialize() {
         var mapOptions = {
@@ -110,6 +139,9 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/nonlu.svg'
 			});
+			google.maps.event.addListener(marker, 'click', function() {
+        		infowindow.open(map, this);
+    		});
   		}
 
   		for (var i = 0; i < blueMarkersPosition.length; i++) {
@@ -120,6 +152,9 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/suivi.svg'
 			});
+			google.maps.event.addListener(marker, 'click', function() {
+        		infowindow.open(map, this);
+    		});
   		}
 
   		for (var i = 0; i < redMarkersPosition.length; i++) {
@@ -130,40 +165,49 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
+
+			jack = infowindowRed[i];
+
+			google.maps.event.addListener(marker, 'click', function() {
+        		jack.open(map, this);
+    		});
   		}
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 
-    checker = setInterval(function() {
-		var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
-		centerMap = map.getCenter();
+ //    checker = setInterval(function() {
+ //    	centerMap = map.getCenter();
+ //    	if (oldMapCenter != centerMap) {
+	//     	var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
 
-		if(oldMapLocation != centerMap) {
-			for (i=1; i<allMarkers.length; i++) {
-				 markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
-				 distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
+	// 		for (i=0; i<allMarkers.length; i++) {
+	// 			 markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
+	// 			 distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
 		
-				if (oldDistance == 0 || distance <= oldDistance) {
-					oldDistance = distance;
-					bestMarker = markerCompared;
-					console.log(oldDistance);
-				}
-			}
+	// 			if (oldDistance == 0 || distance < oldDistance) {
+	// 				oldDistance = distance;
+	// 				bestMarker = markerCompared;
+	// 				bestMarkerLiteral = allMarkers[i];
+	// 			}
+	// 		}
 
-			marker = new google.maps.Marker({
-	    	position: bestMarker,
-	    	map: map,
-	    	title: "Hello World!",
-	    	icon: 'img/icones/nonlu.svg'
-			});
+	// 		if(oldBestMarker != bestMarkerLiteral) {
 
-			infowindow.open(map,marker);	
-		}
+	// 			marker = new google.maps.Marker({
+	// 	    	position: bestMarker,
+	// 	    	map: map,
+	// 	    	title: "Hello World!",
+	// 	    	icon: 'img/icones/nonlu.svg'
+	// 			});
 
-		oldDistance = 0;
-
-		oldMapLocation = centerMap;
-	}, 200);
+	// 			infowindow.open(map,marker);
+	// 			oldBestMarker = bestMarkerLiteral;
+	// 		}
+			
+	// 		oldDistance = 0;
+ //    	}
+ //    	oldMapCenter = centerMap;
+	// }, 500);
 
 
     // =========================== TOGGLES ===========================
