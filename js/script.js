@@ -77,7 +77,12 @@ jQuery(document).ready(function($) {
 	var infowindow = new google.maps.InfoWindow({
       content: contentString,
       maxWidth: 100,
-      pixelOffset: 0
+      pixelOffset: 0,
+      boxStyle: {
+                opacity: 0.75,
+                width: "280px"
+      },
+      closeBoxMargin: "0"
   	});
 
 	var timer = false;
