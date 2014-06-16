@@ -117,8 +117,6 @@ jQuery(document).ready(function($) {
 	      hideCloseButton: true,
 	      disableAutoPan: true
 	  	});
-
-	  	console.log(contentStringRed[u]);
 	}
 
 	function initialize() {
