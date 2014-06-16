@@ -73,7 +73,12 @@ jQuery(document).ready(function($) {
 
 	// =========================== GOOGLE MAPS API ===========================
 
-	
+	var contentString = '<img class="infowindow" src="img/photos/mosaic/1x1-1.jpg" alt="">';
+	var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 100,
+      pixelOffset: 0
+  	});
 
 	var timer = false;
 	function initialize() {
@@ -114,6 +119,7 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
+			infowindow.open(map,marker);
   		}
     }
     google.maps.event.addDomListener(window, 'load', initialize);
