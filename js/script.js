@@ -287,5 +287,3 @@ jQuery(document).ready(function($) {
 	$('.my-sticky-element').waypoint('sticky');
 
 });
-
-
