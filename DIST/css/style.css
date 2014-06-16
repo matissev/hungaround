@@ -1749,8 +1749,13 @@ main .linkMap span:before {
 }
 
 .creationContainer {
-  width: 50%;
+  width: 66.6666666%;
   margin: 0 auto;
+}
+
+.creationContainer input:focus,
+.creationContainer textarea:focus {
+  outline: none;
 }
 
 .titreArticle {
@@ -1844,7 +1849,6 @@ main .linkMap span:before {
   padding-top: 5px;
   margin: 0;
   border-top: none;
-  color: grey;
   border-bottom: none;
 }
 
@@ -1930,12 +1934,10 @@ main .linkMap span:before {
 }
 
 :-moz-placeholder {
-  /* Firefox 18- */
   color: grey;
 }
 
 ::-moz-placeholder {
-  /* Firefox 19+ */
   color: grey;
 }
 
