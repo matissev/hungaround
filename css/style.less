@@ -57,8 +57,12 @@ a { text-decoration: none; color: @black; }
     &:after { clear: both; }
 }
 
-.infowindow {
-    width: 100px;
+.bubble-container {
+    font-family: @lineal;
+    background: red;
+    transform: translateX(-37px);
+    z-index: 0;
+    .p1x1 { float: left; width: 100%;} 
 }
 
 @import "imports/main";

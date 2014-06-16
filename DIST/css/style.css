@@ -37,8 +37,18 @@ a {
   clear: both;
 }
 
-.infowindow {
-  width: 100px;
+.bubble-container {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: red;
+  -webkit-transform: translateX(-37px);
+  -ms-transform: translateX(-37px);
+  transform: translateX(-37px);
+  z-index: 0;
+}
+
+.bubble-container .p1x1 {
+  float: left;
+  width: 100%;
 }
 
 main {

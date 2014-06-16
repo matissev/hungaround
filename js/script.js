@@ -73,16 +73,17 @@ jQuery(document).ready(function($) {
 
 	// =========================== GOOGLE MAPS API ===========================
 
-	var contentString = '<img class="infowindow" src="img/photos/mosaic/1x1-1.jpg" alt="">';
-	var infowindow = new google.maps.InfoWindow({
+	var contentString = '<div class="item p1x1"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>';
+	var infowindow = new InfoBubble({
       content: contentString,
-      maxWidth: 100,
-      pixelOffset: 0,
-      boxStyle: {
-                opacity: 0.75,
-                width: "280px"
-      },
-      closeBoxMargin: "0"
+      minWidth: 170,
+      minHeight: 212,
+      padding: 0,
+      borderRadius: 0,
+      borderWidth: 0,
+      shadowStyle: 2,
+      arrowSize: 0,
+      hideCloseButton: true,
   	});
 
 	var timer = false;
