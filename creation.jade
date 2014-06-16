@@ -20,13 +20,25 @@ html(lang="fr")
 					input(type='text', name='fname', placeholder="Titre")
 				.ajoutParagraphe
 					textarea(name='textarea', rows='10', cols='50' placeholder="Saisir un texte ici.")
-				.ajoutLieu
+				.ajoutLieuText
 					input(type='text', name='fname', placeholder="Ajouter une localisation")
+				.validationText
+					input(type='submit', value='Valider')
 			.ajouterMedia
-				.ajoutImg
-					input(type="file", name="pic", accept="image/*", placeholder="Ajouter une localisation")
-				.ajoutVid
-					input(type="file", name="vid", accept="video/*")
+				.Img
+					.ajoutImg
+						input(type="file", name="pic", accept="image/*", placeholder="Ajouter une localisation")
+					.ajoutLieuImg
+						input(type='text', name='fname', placeholder="Ajouter une localisation")
+					.validationImg
+						input(type='submit', value='Valider')
+				.Vid
+					.ajoutVid
+						input(type="file", name="vid", accept="video/*")
+					.ajoutLieuVid
+						input(type='text', name='fname', placeholder="Ajouter une localisation")
+					.validationVid
+						input(type='submit', value='Valider')
 			.boutonAjout
 				a.textBut(href="#") Ajouter un paragraphe
 				a.imgBut(href="#") Poster une photo

@@ -1852,7 +1852,7 @@ main .linkMap span:before {
   border-bottom: none;
 }
 
-.ajoutLieu input {
+.ajoutLieuText input {
   width: 100%;
   border: none;
   border: dashed 2px #3f7fbb;
@@ -1861,6 +1861,27 @@ main .linkMap span:before {
   padding-left: 15px;
   padding-top: 8px;
   margin: 0;
+}
+
+.validationText {
+  width: 100%;
+}
+
+.validationText input {
+  background: #3f7fbb;
+  width: 20%;
+  display: inline-block;
+  float: right;
+  height: 40px;
+  line-height: 30px;
+  color: white;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #211e1e;
+  border-right: 1px solid #211e1e;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .ajoutImg input {
@@ -1875,6 +1896,39 @@ main .linkMap span:before {
   margin-top: 15px;
 }
 
+.ajoutLieuImg input {
+  width: 100%;
+  border: none;
+  border: dashed 2px #57b178;
+  font-size: 24px;
+  font-family: "EB Garamond", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  padding-left: 15px;
+  padding-top: 8px;
+  border-top: none;
+  margin: 0;
+}
+
+.validationImg {
+  width: 100%;
+}
+
+.validationImg input {
+  background: #57b178;
+  width: 20%;
+  display: inline-block;
+  float: right;
+  height: 40px;
+  line-height: 30px;
+  color: white;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #211e1e;
+  border-right: 1px solid #211e1e;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
 .ajoutVid input {
   width: 100%;
   border: none;
@@ -1885,6 +1939,40 @@ main .linkMap span:before {
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 15px;
+}
+
+.ajoutLieuVid input {
+  width: 100%;
+  border: none;
+  border: dashed 2px #e64c27;
+  font-size: 24px;
+  font-family: "EB Garamond", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  padding-left: 15px;
+  padding-top: 8px;
+  border-top: none;
+  margin: 0;
+}
+
+.validationVid {
+  width: 100%;
+  margin-bottom: 90px;
+}
+
+.validationvid input {
+  background: #e64c27;
+  width: 20%;
+  display: inline-block;
+  float: right;
+  height: 40px;
+  line-height: 30px;
+  color: white;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #211e1e;
+  border-right: 1px solid #211e1e;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .textBut {
