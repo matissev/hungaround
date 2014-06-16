@@ -1,7 +1,7 @@
 var shown = false;
 var step = 0;
 var blueMarkersPosition = ["43.909806, 6.225070", "44.193841, 6.192950", "44.039483, 6.696849", "43.959635, 5.573183", "43.600241, 6.113721", "43.830815, 7.071214", "44.057757, 4.765858", "43.933368, 4.305138", "48.393764, 2.605991", "48.39365, 2.638435", "48.382478, 2.651482", "43.373566, 2.440705", "42.892971, 0.935572", "42.857416, -0.555427", "43.012346, -1.168948", "43.088416, -1.842834", "42.690938, -1.145438", "42.362094, -0.207881", "41.995003, 1.170606"];
-var blueMarkers = [];
+var blueMarkers = 0;
 var marker = [];
 
 jQuery(document).ready(function($) {
@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
   		map.setHeading(90);
 
   		for (var i = 0; i < blueMarkersPosition.length; i++) {
-  			blueMarkers[i] = new google.maps.LatLng(blueMarkersPosition[i]);
+  			blueMarkers = new google.maps.LatLng(blueMarkersPosition[i]);
   			marker[i] = new google.maps.Marker({
 	    		position: blueMarkers[i],
 	    		map: map,
