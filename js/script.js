@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
 
 	// =========================== GOOGLE MAPS API ===========================
 
-	var contentString = '<div class="item p1x1"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>';
+	var contentString = '<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>';
 	var infowindow = new InfoBubble({
       content: contentString,
       minWidth: 170,

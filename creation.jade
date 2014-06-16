@@ -7,7 +7,7 @@ html(lang="fr")
 		.creationContainer
 			a.closeArticle(href="#")
 			.titreArticle
-				input(type='text', name='fname', value="... Votre titre d'article ici ...")
+				input(type='text', name='fname', placeholder="Votre titre d'article ici ...")
 			.infos
 				.meteo1
 					span.temperature Mise a jour de la météo grace à la géolocalisation
@@ -19,12 +19,12 @@ html(lang="fr")
 				.ajoutTitre
 					input(type='text', name='fname', placeholder="Titre")
 				.ajoutParagraphe
-					textarea(name='textarea', rows='10', cols='50') Saisir un texte ici.
+					textarea(name='textarea', rows='10', cols='50' placeholder="Saisir un texte ici.")
 				.ajoutLieu
 					input(type='text', name='fname', placeholder="Ajouter une localisation")
 			.ajouterMedia
 				.ajoutImg
-					input(type="file", name="pic", accept="image/*", value="Ajouter une localisation")
+					input(type="file", name="pic", accept="image/*", placeholder="Ajouter une localisation")
 				.ajoutVid
 					input(type="file", name="vid", accept="video/*")
 			.boutonAjout
