@@ -2,18 +2,6 @@ nav.nav
 	a(href="gazette.html")
 		img.nav-logo(src="img/logo.svg" alt="logo")
 
-	label.nav-filtre(for="checkRecommandes" data-filtered="recommande")
-		input.nav-filtre-check#checkRecommandes( type='checkbox' name='choix1' checked="checked")
-		span.nav-filtre-text.navRecommandes Recommandés
-		
-	label.nav-filtre(for="checkSuivi" data-filtered="suivi")
-		input.nav-filtre-check#checkSuivi( type='checkbox' name='choix2' checked="checked")
-		span.nav-filtre-text.navSuivi Suivi
-		
-	label.nav-filtre(for="checkNonlus" data-filtered="nonlu")
-		input.nav-filtre-check#checkNonlus( type='checkbox' name='choix3' checked="checked" )
-		span.nav-filtre-text.navNonlus Non lus
-
 	a.nav-grimpeur.showArticle(href="#") Grimpeurs
 		
 	.nav-profil
