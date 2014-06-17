@@ -410,22 +410,19 @@ jQuery(document).ready(function($) {
     $(".textBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
-    	var id = this.href.split('#')[1];
-    	var containerAnchor = $('.creationContainer');
-    	smoothscrollTo(document.getElementById(id), containerAnchor, 500, 'easeInOutCubic');
-    	return false;
+    	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:1000});
     })
 
     $(".imgBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutImg"> <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/> </div> <div class="ajoutLieuImg"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
-    	smoothscrollTo($('#bazinga'), $('.creation'));
+    	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:1000});
     })
 
     $(".vidBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div> </div>');
     	reloadSlides();
-    	smoothscrollTo($('#bazinga'), $('.creation'));
+    	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:1000});
     })
 
     function reloadSlides() {
