@@ -3,7 +3,6 @@ html(lang="fr")
 		include includes/head
 		title Col de la Lyé
 	body
-		include includes/nav
 		.creationContainer
 			a.closeArticle(href="#")
 			.titreArticle
@@ -25,18 +24,21 @@ html(lang="fr")
 						.ajoutLieuText
 							input(type='text', name='fname', placeholder="Ajouter une localisation")
 						.handle
+						.deleteBut
 					.slide.ajoutFile
 						.ajoutImg
 							input(type="file", name="pic", accept="image/*", placeholder="Ajouter une localisation")
 						.ajoutLieuImg
 							input(type='text', name='fname', placeholder="Ajouter une localisation")
 						.handle
+						.deleteBut
 					.slide.ajoutFile
 						.ajoutVid
 							input(type="file", name="vid", accept="video/*")
 						.ajoutLieuVid
 							input(type='text', name='fname', placeholder="Ajouter une localisation")
 						.handle
+						.deleteBut
 					
 			.boutonAjout#bazinga
 				a.textBut(href="#" onclick="return false") Ajouter un paragraphe
