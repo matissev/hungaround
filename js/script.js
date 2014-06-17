@@ -1,6 +1,7 @@
 var shown = false;
 var step = 0;
 var u = 0;
+var switchMosaic = false;
 
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
@@ -258,8 +259,25 @@ jQuery(document).ready(function($) {
 
     $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
 
-    $(".posted-articles").click(function(event) { $(".shared-mosaic").toggleClass("hideit"); $(".posted-mosaic").toggleClass("showit"); })
-    $(".shared-articles").click(function(event) { $(".shared-mosaic").toggleClass("showit"); $(".posted-mosaic").toggleClass("hideit"); })
+    $(".posted-articles").click(function(event) {
+    	if ( switchMosaic == true ) {
+    		console.log("haha");
+    		$(".shared-mosaic").toggleClass("hideit");
+    		$(".posted-mosaic").toggleClass("hideit");
+    		switchMosaic = !switchMosaic;
+    		$('.mosaic').packery('destroy');
+    	}
+    })
+
+    $(".shared-articles").click(function(event) {
+    	if ( switchMosaic == false ) {
+    		console.log("haha");
+    		$(".shared-mosaic").toggleClass("hideit");
+    		$(".posted-mosaic").toggleClass("hideit");
+    		switchMosaic = !switchMosaic;
+    		$('.mosaic').packery({ itemSelector: '.item' });
+    	}
+    })
 
     $(".showArticle").click(function(event) {
     	$(".article").toggleClass("toggleArticle");
