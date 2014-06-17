@@ -1,46 +1,61 @@
 .messageContainer {
-	position: relative;
-	z-index: 3000;
-	width: 66.6666666%;
-	margin: 0 auto;
+	z-index: 1000;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: fade(@black, 70%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
 
-	.message-destinataire input{
-		width: 100%;
-		border: dashed 2px @blue;
-		font-size: 35px;
-		font-family: @garalde;
-		padding-left: 15px;
-		padding-top: 5px;
-		margin: 0;
-	}
-	.message-texte textarea{
-		width: 100%;
-		height: 370px;
-		border: dashed 2px @blue;
-		font-size: 28px;
-		font-family: @garalde;
-		padding-left: 15px;
-		padding-top: 5px;
-		margin: 0;
-		border-top: none;
-		border-bottom: none;
-	}
-	.message-envoi{
-		width: 100%;
-	}
-	.message-envoi input{
-		background: @blue;
-		width: 20%;
-		display: inline-block;
-		float: right;
-		height: 40px;
-		line-height: 30px;
-		color: white;
-		font-size: 19px;
-		cursor: pointer;
-		border-bottom: 1px solid @black;
-		border-right: 1px solid @black;
-		margin-top: 10px;
-		margin-bottom: 15px;
-	}
+.show {
+	display: block;
+	opacity: 1;
+}
+.mail{
+		background: white;
+	width: 800px;
+	height: 500px;
+	margin: 80px auto 0 auto;
+	box-shadow: 5px 5px 15px black; 
+}
+.message-destinataire input{
+	width: 100%;
+	font-size: 35px;
+	font-family: @garalde;
+	padding-left: 15px;
+	padding-top: 5px;
+	margin: 0;
+}
+.message-texte textarea{
+	width: 100%;
+	height: 370px;
+	font-size: 28px;
+	font-family: @garalde;
+	padding-left: 15px;
+	padding-top: 5px;
+	margin: 0;
+	border-top: none;
+	border-bottom: none;
+}
+.message-envoi{
+	width: 100%;
+}
+.message-envoi input{
+	background: @blue;
+	width: 100%;
+	padding-bottom: 50px;
+	display: inline-block;
+	float: right;
+	height: 60px;
+	line-height: 57px;
+	color: white;
+	font-size: 25px;
+	cursor: pointer;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
