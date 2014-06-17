@@ -1,70 +1,18 @@
-$(".slide").each(function(i) {
-  var item = $(this);
-  var item_clone = item.clone();
-  item.data("clone", item_clone);
-  var position = item.position();
-  item_clone
-  .css({
-    left: position.left,
-    top: position.top,
-    visibility: "hidden"
-  })
-    .attr("data-pos", i+1);
-  
-  $("#cloned-slides").append(item_clone);
+docReady( function() {
+  var container = document.querySelector('.slides');
+var pckry = new Packery( container, {
+  rowHeight: 140,
+  columnWidth: 1000
 });
 
-$(".all-slides").sortable({
-  
-  axis: "y",
-  revert: true,
-  scroll: false,
-  placeholder: "sortable-placeholder",
-  cursor: "move",
+var itemElems = pckry.getItemElements();
+// for each item...
+for ( var i=0, len = itemElems.length; i < len; i++ ) {
+  var elem = itemElems[i];
+  // make element draggable with Draggabilly
+  var draggie = new Draggabilly( elem );
+  // bind Draggabilly events to Packery
+  pckry.bindDraggabillyEvents( draggie );
+}
 
-  start: function(e, ui) {
-    ui.helper.addClass("exclude-me");
-    $(".all-slides .slide:not(.exclude-me)")
-      .css("visibility", "hidden");
-    ui.helper.data("clone").hide();
-    $(".cloned-slides .slide").css("visibility", "visible");
-  },
-
-  stop: function(e, ui) {
-    $(".all-slides .slide.exclude-me").each(function() {
-      var item = $(this);
-      var clone = item.data("clone");
-      var position = item.position();
-
-      clone.css("left", position.left);
-      clone.css("top", position.top);
-      clone.show();
-
-      item.removeClass("exclude-me");
-    });
-    
-    $(".all-slides .slide").each(function() {
-      var item = $(this);
-      var clone = item.data("clone");
-      
-      clone.attr("data-pos", item.index());
-    });
-
-    $(".all-slides .slide").css("visibility", "visible");
-    $(".cloned-slides .slide").css("visibility", "hidden");
-  },
-
-  change: function(e, ui) {
-    $(".all-slides .slide:not(.exclude-me)").each(function() {
-      var item = $(this);
-      var clone = item.data("clone");
-      clone.stop(true, false);
-      var position = item.position();
-      clone.animate({
-        left: position.left,
-        top: position.top
-      }, 200);
-    });
-  }
-  
 });

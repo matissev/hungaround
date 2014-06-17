@@ -72,46 +72,57 @@
           <div class="day">Ajouter une date</div>
         </time>
       </div>
-      <div class="all-slide">
-        <div class="slide">
-          <div class="ajoutTitre">
-            <input type="text" name="fname" placeholder="Titre"/>
+      <div class="slidesContainer">
+        <div class="slides">
+          <div class="slide ajoutText">
+            <div class="ajoutTitre">
+              <input type="text" name="fname" placeholder="Titre"/>
+            </div>
+            <div class="ajoutParagraphe">
+              <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea>
+            </div>
+            <div class="ajoutLieuText">
+              <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+            </div>
+            <div class="validationText">
+              <input type="submit" value="Valider"/>
+            </div>
           </div>
-          <div class="ajoutParagraphe">
-            <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea>
+          <div class="slide ajoutFile">
+            <div class="ajoutImg">
+              <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/>
+            </div>
+            <div class="ajoutLieuImg">
+              <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+            </div>
+            <div class="validationImg">
+              <input type="submit" value="Valider"/>
+            </div>
           </div>
-          <div class="ajoutLieuText">
-            <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-          </div>
-          <div class="validationText">
-            <input type="submit" value="Valider"/>
+          <div class="slide ajoutFile">
+            <div class="ajoutVid">
+              <input type="file" name="vid" accept="video/*"/>
+            </div>
+            <div class="ajoutLieuVid">
+              <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+            </div>
+            <div class="validationVid">
+              <input type="submit" value="Valider"/>
+            </div>
           </div>
         </div>
-        <div class="slide">
-          <div class="ajoutImg">
-            <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/>
-          </div>
-          <div class="ajoutLieuImg">
-            <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-          </div>
-          <div class="validationImg">
-            <input type="submit" value="Valider"/>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="ajoutVid">
-            <input type="file" name="vid" accept="video/*"/>
-          </div>
-          <div class="ajoutLieuVid">
-            <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-          </div>
-          <div class="validationVid">
-            <input type="submit" value="Valider"/>
-          </div>
-        </div>
-        <div class="cloned-slides"></div>
       </div>
       <div class="boutonAjout"><a href="#" class="textBut">Ajouter un paragraphe</a><a href="#" class="imgBut">Poster une photo</a><a href="#" class="vidBut">Poster une vidéo</a></div>
     </div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/packery.min.js"></script>
+    <script type="text/javascript" src="js/lightGallery.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/draggabilly.min.js"></script>
+    <script type="text/javascript" src="js/draggable.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyyHBk577NziTUibLUV-R7yXQbDHFS9EE"></script>
+    <script type="text/javascript" src="js/infobubble.min.js"></script>
+    <script type="text/javascript" src="js/expanding.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
