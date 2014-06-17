@@ -68,6 +68,7 @@ var bestMarker = 0;
 var oldBestMarker = 0;
 var bestMarkerLiteral = 0;
 var oldMapCenter = 0;
+var jack3 = 0;
 
 jQuery(document).ready(function($) {
 
