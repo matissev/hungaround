@@ -1,10 +1,15 @@
 html(lang="fr")
 	head
 		include includes/head
-		title Hang arond
+		style
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
+			.logged { display: none; }
+			.unlogged { display: inline-block; }
+
 	body
-		include includes/nav
-		include includes/messagerie
+		include includes/nav-unlogged
+		include includes/inscription
 		main#content
 			
 			.scroller
@@ -13,10 +18,10 @@ html(lang="fr")
 						article.info-user
 							img(src="img/photos/users/31.jpg" alt="photoDeProfil")
 							h1.info-nom <strong>Milène Delabougne</strong>
-						article.ajoutSuivi
+						article.ajoutSuivi.registerForm
 							a(href="#") Suivre 
-						article.mail
-							a.toggleMessagerie(href="#") Envoyer un message
+						article.mail.registerForm
+							a(href="#") Envoyer un message
 						article.ajouterLieu
 							p Habite à 
 							a(href="#") Montpellier

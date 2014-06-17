@@ -418,7 +418,7 @@ jQuery(document).ready(function($) {
     	}
     })
 
-    $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
+    $(".registerForm, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
     $(".toggleMessagerie").click(function(event) { $(".messagerieContainer").toggleClass("show"); })
 
     $(".textBut").click(function(event) {

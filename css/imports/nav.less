@@ -149,7 +149,13 @@
                         height: 25px;
                         line-height: 0px;
                         list-style: none;
+                        transition: transform 0.3s ease!important;
                     }
+
+                    li:hover {
+                        transform: translateX(5px)!important;
+                    }
+
                     
                     &-profil:before {
                         content: "";
@@ -205,6 +211,14 @@
                     img { width: 60px; float: left; margin-right: 15px; display: block; }
                     p { margin: 0; display: block; }
                     .username { font-weight: bold; }
+                }
+
+                &-oneNotif p {
+                    transition: transform 0.3s ease;
+                }
+
+                &-oneNotif:hover p {
+                    transform: translateX(5px);
                 }
 
                 &-oneNotif:not(:last-child):after {
