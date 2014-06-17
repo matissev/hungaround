@@ -1,0 +1,56 @@
+html(lang="fr")
+	head
+		include includes/head
+		title Hang arond
+	body
+		include includes/nav
+		main#content
+			.scroller
+				.profil
+					section.info
+						article.info-user
+							img(src="img/photos/users/31.jpg" alt="photoDeProfil")
+							h1.info-nom <strong>Milène Delabougne</strong>
+						article.ajoutSuivi
+							a(href="#") Suivre 
+						article.ajouterLieu
+							p Habite à 
+							a(href="#") Montpellier
+						article.info-article
+							h1 <span>23</span> Article(s) Posté(s)
+						article.info-follow	
+							h1 Grimpeurs suivis
+							a(href="#") 10
+								//- fenetre pop up avec les folowers
+						article.info-amis	
+							h1 Compagnons de grimpe 
+							img.photo1(src="img/photos/users/9.jpg" alt="photoAmis1")
+							img.photo(src="img/photos/users/22.jpg" alt="photoAmis2")
+							img.photo(src="img/photos/users/29.jpg" alt="photoAmis3")
+							a.nmb(href="#") +24
+								//- fenetre pop up avec les amis
+						article.info-habitudes
+							h1 Sites les plus grimpés
+							ul
+								li
+									a.site1 Erebor:
+									span.nombre 9 Ascensions
+								li
+									a.site2 Montagne du destin:
+									span.nombre 5
+								li
+									a.site3 Pic de l'arpège:
+									span.nombre 4
+					section.center
+						a.posted-articles.active(href="#") Articles postés
+						a.shared-articles(href="#") Articles partagés
+					
+						include includes/mosaic-small
+			a.linkMap(href="#")
+				span#textLinkMap Carte
+		.article
+				include includes/article
+		a.closeArticle.showArticle(href="#")
+		#largeMap
+
+		include includes/scripts
