@@ -68,7 +68,6 @@ var bestMarker = 0;
 var oldBestMarker = 0;
 var bestMarkerLiteral = 0;
 var oldMapCenter = 0;
-var markerRed = [];
 
 jQuery(document).ready(function($) {
 
@@ -117,6 +116,42 @@ jQuery(document).ready(function($) {
 	  	});
 	}
 
+	for (var i = 0; i < blueMarkersPosition.length; i++) {
+		u++;
+		if (u >= contentStringBlue.length) { u = 0; }
+
+		infowindowBlue[i] = new InfoBubble({
+	      content: contentStringBlue[u],
+	      minWidth: 170,
+	      minHeight: 212,
+	      padding: 0,
+	      borderRadius: 0,
+	      borderWidth: 0,
+	      shadowStyle: 2,
+	      arrowSize: 0,
+	      hideCloseButton: true,
+	      disableAutoPan: true
+	  	});
+	}
+
+	for (var i = 0; i < greenMarkersPosition.length; i++) {
+		u++;
+		if (u >= contentStringGreen.length) { u = 0; }
+
+		infowindowGreen[i] = new InfoBubble({
+	      content: contentStringGreen[u],
+	      minWidth: 170,
+	      minHeight: 212,
+	      padding: 0,
+	      borderRadius: 0,
+	      borderWidth: 0,
+	      shadowStyle: 2,
+	      arrowSize: 0,
+	      hideCloseButton: true,
+	      disableAutoPan: true
+	  	});
+	}
+
 	function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(44.770137, 6.965332),
@@ -135,8 +170,13 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/nonlu.svg'
 			});
+			
+			jack1 = infowindowGreen[i];
+
 			google.maps.event.addListener(marker, 'click', function() {
-        		infowindow.open(map, this);
+				jack2.close();
+				jack3.close();
+        		jack1.open(map, this);
     		});
   		}
 
@@ -148,22 +188,31 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/suivi.svg'
 			});
+			
+			jack2 = infowindowBlue[i];
+
 			google.maps.event.addListener(marker, 'click', function() {
-        		infowindow.open(map, this);
+				jack1.close();
+        		jack2.open(map, this);
+        		jack3.close();
     		});
   		}
 
   		for (var i = 0; i < redMarkersPosition.length; i++) {
   			redMarkers[i] = new google.maps.LatLng(redMarkersPosition[i].lat, redMarkersPosition[i].long);
-  			markerRed[i] = new google.maps.Marker({
+  			marker = new google.maps.Marker({
 	    		position: redMarkers[i],
 	    		map: map,
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
 
-			google.maps.event.addListener(markerRed, 'click', function() {
-        		infowindowRed[].open(map, this);
+			jack3 = infowindowRed[i];
+
+			google.maps.event.addListener(marker, 'click', function() {
+				jack1.close();
+				jack2.close();
+        		jack3.open(map, this);
     		});
   		}
     }
