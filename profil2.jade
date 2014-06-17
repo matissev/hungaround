@@ -2,9 +2,13 @@ html(lang="fr")
 	head
 		include includes/head
 		title Hang arond
+		style
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
 	body
 		include includes/nav-nofilters
 		include includes/messagerie
+		include includes/reponse
+		
 		main#content
 			
 			.scroller

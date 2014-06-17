@@ -2,9 +2,12 @@ html(lang="fr")
 	head
 		include includes/head
 		title Col de la Lyé
+		style
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
 	body
 		include includes/nav-nofilters
-
+		include includes/reponse
+		
 		main#content
 			.scroller
 				.lieu

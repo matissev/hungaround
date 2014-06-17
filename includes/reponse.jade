@@ -1,7 +1,9 @@
 .reponseContainer
-	.reponse
-		.reponse-destinataire
-			span Message de Milène Delabougne
-		.reponse-texte
-			span Salut Francois.</br>Je viens de voir que tu étais au col de la Lyé dimanche dernier. C'est dommage, j'y étais samedi. Il faut qu'on ce programme une sortie ensemble un de ces 4. :) 
+	.messagerie.reponse
+		.messagerie-destinataire
+			span Milène Delabougne
+		.messagerie-texte
+			p Salut Francois.</br>Je viens de voir que tu étais au col de la Lyé dimanche dernier. C'est dommage, j'y étais samedi. Il faut qu'on ce programme une sortie ensemble un de ces 4. :) 
+			textarea(name='textarea', rows='10', cols='50' placeholder="Saisissez votre texte ici.")
+		.messagerie-envoi
 			input.toggleMessagerie(type='submit', value='Envoyer')
