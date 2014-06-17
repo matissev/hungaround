@@ -405,7 +405,7 @@ jQuery(document).ready(function($) {
     })
 
     $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
-    $(".mail").click(function(event) { $(".messagerieContainer").toggleClass("show"); })
+    $(".messagerie").click(function(event) { $(".messageContainer").toggleClass("show"); })
 
     $(".textBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
