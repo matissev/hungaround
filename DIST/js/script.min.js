@@ -73,7 +73,6 @@ var oldMapCenter = 0;
 var jack3 = 0;
 
 jQuery(document).ready(function($) {
-
 	smoothScroll.init();
 
 	// =========================== FILTRES MOSAIC ===========================
@@ -411,6 +410,10 @@ jQuery(document).ready(function($) {
 		  	pckry.bindDraggabillyEvents( draggie );
 		}
     }
+
+    /*$(".deleteBut").click(function(event) {
+    	pckry.remove( event.target );
+    })*/
 
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");

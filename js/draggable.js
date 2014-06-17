@@ -17,4 +17,15 @@ for ( var i=0, len = itemElems.length; i < len; i++ ) {
   pckry.bindDraggabillyEvents( draggie );
 }
 
+eventie.bind( slidecontainer, 'click', function( event ) {
+    // don't proceed if item was not clicked on
+    if ( !classie.has( event.target, '.slide' ) ) {
+      return;
+    }
+    // remove clicked element
+    pckry.remove( event.target );
+    // layout remaining item elements
+    pckry.layout();
+  });
+
 });
