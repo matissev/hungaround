@@ -269,7 +269,8 @@ jQuery(document).ready(function($) {
     		
     		$('.mosaic').packery({ itemSelector: '.item' });
 
-    		$(".shared-articles").toggleClass("deactive");
+
+    		$(".shared-articles").toggleClass("active");
     		$(".posted-articles").toggleClass("active");
     		switchArticles = !switchArticles;
     	}
@@ -284,8 +285,9 @@ jQuery(document).ready(function($) {
 
     		$('.mosaic').packery({ itemSelector: '.item' });
 
+
+    		$(".posted-articles").toggleClass("active");
     		$(".shared-articles").toggleClass("active");
-    		$(".posted-articles").toggleClass("deactive");
     		switchArticles = !switchArticles;
     	}
     })
