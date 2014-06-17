@@ -1,6 +1,37 @@
+.creation {
+	background: white;
+	z-index: 2;
+	position: absolute;
+	left: -66.66666%;
+	top: 0;
+	width: 66.66666%;
+	height: 100%;
+	animation: hello 3s ease-out forwards;
+    box-sizing: border-box;
+    border-top: solid 44px transparent;
+    overflow-y: scroll;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+}
+
+.closeCreation {
+	z-index: 10;
+	display: inline-block;
+	position: fixed;
+	background: url("../img/icones/close.svg") no-repeat center center;
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	top: 84px;
+	transition: -webkit-transform 0.4s ease;
+	transform: translateX(-300%);
+}
+
 .creationContainer{
-	width: 66.6666666%;
-	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 60px 0 60px;
+	width: 100%;
 
 	input:focus, textarea:focus { outline: none; }
 
@@ -28,7 +59,7 @@
 		display: block;
 		font-family: @lineal;
 		margin: 30px 0;
-		font-size: 25px;
+		font-size: 23px;
 
 		.meteo1 {
 			width: 40%;
@@ -39,7 +70,6 @@
 			.temperature { 
 				display: inline-block;
 				margin-top: 30px;
-				margin-left: 20px;
 			}
 		}
 
@@ -50,7 +80,7 @@
 
 			.geoloc{
 				margin-top: 30px;
-			 	margin-left: 30px;
+			 	margin-left: 20px;
 			}
 		}
 
@@ -66,7 +96,7 @@
 				font-size: 30px; 
 				height: 55px; 
 				font-weight: bold; 
-				margin-top: 20px;
+				margin-top: 25px;
 			}
 		}
 	}
@@ -218,7 +248,8 @@
 		background-color: @blue;
 		margin-bottom: 50px;
 		margin-top: 20px;
-		padding-top: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 	.imgBut{
 		display: inline-block;
@@ -253,6 +284,7 @@
 	.clearfix
 }
 .slide {
+	position: relative;
 	display: block;
 	width: 100%;
 	margin: 20px 0;

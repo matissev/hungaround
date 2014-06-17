@@ -1,53 +1,81 @@
 
-<div class="creationContainer"><a href="#" class="closeArticle"></a>
-  <div class="titreArticle">
-    <input type="text" name="fname" placeholder="Votre titre d'article ici ..."/>
-  </div>
-  <div class="infos">
-    <div class="meteo1"><span class="temperature">Mise a jour de la météo grace à la géolocalisation</span></div>
-    <div class="itineraire">
-      <p class="geoloc">Le lieu se mettra à jour grace a la géolocalisation</p>
+<html lang="fr">
+  <head>
+    <title>Hung Around</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="img/icones/favicon.ico"/>
+    <script type="text/javascript" src="js/video.min.js"></script>
+    <script>videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"</script>
+  </head>
+  <body>
+    <div id="content" class="article">
+      <div class="creationContainer">
+        <div class="titreArticle">
+          <input type="text" name="fname" placeholder="Votre titre d'article ici ..."/>
+        </div>
+        <div class="infos">
+          <div class="meteo1"><span class="temperature">Mise a jour de la météo grace à la géolocalisation</span></div>
+          <div class="itineraire">
+            <p class="geoloc">Le lieu se mettra à jour grace a la géolocalisation</p>
+          </div>
+          <time datetime="2014-06-18"> 
+            <div class="day">Ajouter une date</div>
+          </time>
+        </div>
+        <div class="slidesContainer">
+          <div class="slides">
+            <div class="slide ajoutText">
+              <div class="ajoutTitre">
+                <input type="text" name="fname" placeholder="Titre"/>
+              </div>
+              <div class="ajoutParagraphe">
+                <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea>
+              </div>
+              <div class="ajoutLieuText">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+            <div class="slide ajoutFile">
+              <div class="ajoutImg">
+                <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="ajoutLieuImg">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+            <div class="slide ajoutFile">
+              <div class="ajoutVid">
+                <input type="file" name="vid" accept="video/*"/>
+              </div>
+              <div class="ajoutLieuVid">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+          </div>
+        </div>
+        <div id="bazinga" class="boutonAjout"><a href="#" onclick="return false" class="textBut">Ajouter un paragraphe</a><a href="#" onclick="return false" class="imgBut">Poster une photo</a><a href="#" onclick="return false" class="vidBut">Poster une vidéo</a></div>
+      </div>
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/scrollto.min.js"></script>
+      <script type="text/javascript" src="js/history.min.js"></script>
+      <script type="text/javascript" src="js/ajaxify.min.js"></script>
+      <script type="text/javascript" src="js/packery.min.js"></script>
+      <script type="text/javascript" src="js/lightGallery.min.js"></script>
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <script type="text/javascript" src="js/draggabilly.min.js"></script>
+      <script type="text/javascript" src="js/draggable.min.js"></script>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyyHBk577NziTUibLUV-R7yXQbDHFS9EE"></script>
+      <script type="text/javascript" src="js/infobubble.min.js"></script>
+      <script type="text/javascript" src="js/expanding.min.js"></script>
+      <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+      <script type="text/javascript" src="js/script.min.js"></script>
     </div>
-    <time datetime="2014-06-18"> 
-      <div class="day">Ajouter une date</div>
-    </time>
-  </div>
-  <div class="slidesContainer">
-    <div class="slides">
-      <div class="slide ajoutText">
-        <div class="ajoutTitre">
-          <input type="text" name="fname" placeholder="Titre"/>
-        </div>
-        <div class="ajoutParagraphe">
-          <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea>
-        </div>
-        <div class="ajoutLieuText">
-          <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-        </div>
-        <div class="handle"></div>
-        <div class="deleteBut"></div>
-      </div>
-      <div class="slide ajoutFile">
-        <div class="ajoutImg">
-          <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/>
-        </div>
-        <div class="ajoutLieuImg">
-          <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-        </div>
-        <div class="handle"></div>
-        <div class="deleteBut"></div>
-      </div>
-      <div class="slide ajoutFile">
-        <div class="ajoutVid">
-          <input type="file" name="vid" accept="video/*"/>
-        </div>
-        <div class="ajoutLieuVid">
-          <input type="text" name="fname" placeholder="Ajouter une localisation"/>
-        </div>
-        <div class="handle"></div>
-        <div class="deleteBut"></div>
-      </div>
-    </div>
-  </div>
-  <div id="bazinga" class="boutonAjout"><a href="#" onclick="return false" class="textBut">Ajouter un paragraphe</a><a href="#" onclick="return false" class="imgBut">Poster une photo</a><a href="#" onclick="return false" class="vidBut">Poster une vidéo</a></div>
-</div>
+  </body>
+</html>

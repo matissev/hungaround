@@ -52,7 +52,7 @@
           </ul>
           <p class="nav-profil-toggle-footer">À propos - Aide - Conditions - Confidentialité - Cookies - Informations sur la publicité - Marque - Blog - Statut - Applications - Offres d'emploi - Annoncer - Professionnels - Médias - Développeurs</p>
         </div>
-      </div><a href="creation.html"><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a>
+      </div><a href="#" class="showCreation"><img src="img/icones/new-article.svg" alt="boussole" class="nav-creer"/></a>
       <div class="nav-recherche">
         <input id="textField" type="search" placeholder="Recherche" name="barre de recherche" class="nav-recherche-input"/>
         <input type="submit" value="" class="nav-recherche-submit"/>
@@ -228,12 +228,63 @@
           <div class="commentPages"><span>Pages</span><a href="#" class="noline"><</a><a href="#" class="noline">1</a><a href="#">2</a><a href="#">3</a><a href="#" class="noline">></a></div>
         </div>
       </div>
-    </div><a href="#" class="closeArticle showArticle"></a>
+    </div>
+    <div class="creation">
+      <div class="creationContainer">
+        <div class="titreArticle">
+          <input type="text" name="fname" placeholder="Votre titre d'article ici ..."/>
+        </div>
+        <div class="infos">
+          <div class="meteo1"><span class="temperature">Mise a jour de la météo grace à la géolocalisation</span></div>
+          <div class="itineraire">
+            <p class="geoloc">Le lieu se mettra à jour grace a la géolocalisation</p>
+          </div>
+          <time datetime="2014-06-18"> 
+            <div class="day">Ajouter une date</div>
+          </time>
+        </div>
+        <div class="slidesContainer">
+          <div class="slides">
+            <div class="slide ajoutText">
+              <div class="ajoutTitre">
+                <input type="text" name="fname" placeholder="Titre"/>
+              </div>
+              <div class="ajoutParagraphe">
+                <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea>
+              </div>
+              <div class="ajoutLieuText">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+            <div class="slide ajoutFile">
+              <div class="ajoutImg">
+                <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="ajoutLieuImg">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+            <div class="slide ajoutFile">
+              <div class="ajoutVid">
+                <input type="file" name="vid" accept="video/*"/>
+              </div>
+              <div class="ajoutLieuVid">
+                <input type="text" name="fname" placeholder="Ajouter une localisation"/>
+              </div>
+              <div class="handle"></div>
+              <div class="deleteBut"></div>
+            </div>
+          </div>
+        </div>
+        <div id="bazinga" class="boutonAjout"><a href="#" onclick="return false" class="textBut">Ajouter un paragraphe</a><a href="#" onclick="return false" class="imgBut">Poster une photo</a><a href="#" onclick="return false" class="vidBut">Poster une vidéo</a></div>
+      </div>
+    </div><a href="#" class="closeArticle showArticle"></a><a href="#" class="closeCreation showCreation"></a>
     <div id="largeMap"></div>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/scrollto.min.js"></script>
-    <script type="text/javascript" src="js/history.min.js"></script>
-    <script type="text/javascript" src="js/ajaxify.min.js"></script>
     <script type="text/javascript" src="js/packery.min.js"></script>
     <script type="text/javascript" src="js/lightGallery.min.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>

@@ -293,12 +293,45 @@ jQuery(document).ready(function($) {
     	}
     })
 
+    $(".showCreation").click(function(event) {
+    	$(".creation").toggleClass("toggleArticle");
+    	$(".closeCreation").toggleClass("toggleCloser");
+
+    	if ($(".article").hasClass( "toggleArticle" )) {
+    		$(".article").toggleClass("toggleArticle").delay( 1000 );
+    		$(".closeArticle").toggleClass("toggleCloser").delay( 1000 );
+    	}
+
+    	if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
+    		$("#largeMap").removeClass("littlemap");
+    		$("main").removeClass("away");
+    	}
+    	else {
+    		$("#largeMap").addClass("littlemap");
+    		$("main").addClass("away");
+    	}
+    })
+
     $(".showArticle").click(function(event) {
     	$(".article").toggleClass("toggleArticle");
     	$("main").toggleClass("away");
     	$("#largeMap").toggleClass("littlemap");
     	$(".closeArticle").toggleClass("toggleCloser");
     	shown = !shown;
+
+    	if ($(".creation").hasClass( "toggleArticle" )) {
+    		$(".creation").toggleClass("toggleArticle");
+    		$(".closeCreation").toggleClass("toggleCloser");
+    	}
+
+    	if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
+    		$("#largeMap").removeClass("littlemap");
+    		$("main").removeClass("away");
+    	}
+    	else {
+    		$("#largeMap").addClass("littlemap");
+    		$("main").addClass("away");
+    	}
 
     	if ( shown == true ) {
     		LatLng1 = new google.maps.LatLng(45.4101435, 5.8236147);
