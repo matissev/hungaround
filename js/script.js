@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
 			} else {
 				$('.' + filter).css('display', 'none');
 			}
-			$('.mosaic').packery('destroy');
+			//$('.mosaic').packery('destroy');
 			$('.mosaic').packery({ itemSelector: '.item' });
 		});
 	});
@@ -265,7 +265,8 @@ jQuery(document).ready(function($) {
     		$(".shared-mosaic").toggleClass("hideit");
     		$(".posted-mosaic").toggleClass("hideit");
     		switchMosaic = !switchMosaic;
-    		$('.mosaic').packery('destroy');
+    		
+    		$('.mosaic').packery({ itemSelector: '.item' });
     	}
     })
 
@@ -275,6 +276,7 @@ jQuery(document).ready(function($) {
     		$(".shared-mosaic").toggleClass("hideit");
     		$(".posted-mosaic").toggleClass("hideit");
     		switchMosaic = !switchMosaic;
+
     		$('.mosaic').packery({ itemSelector: '.item' });
     	}
     })
