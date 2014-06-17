@@ -1,6 +1,6 @@
 docReady( function() {
-  var container = document.querySelector('.slides');
-var pckry = new Packery( container, {
+  slidecontainer = document.querySelector('.slides');
+  pckry = new Packery( slidecontainer, {
   rowHeight: 130,
   columnWidth: 1000
 });

@@ -74,6 +74,8 @@ var jack3 = 0;
 
 jQuery(document).ready(function($) {
 
+	smoothScroll.init();
+
 	// =========================== FILTRES MOSAIC ===========================
 
 	$('.mosaic').packery({ itemSelector: '.item' });
@@ -374,14 +376,41 @@ jQuery(document).ready(function($) {
     $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
 
     $(".textBut").click(function(event) {
-    	var elems = 0;
-    	var fragment = document.createDocumentFragment();
-
-    	var elem = document.createElement('div');
-    	elem.className = '.ajoutText';
-    	fragment.appendChild( elem );
-    	elems.push( elem );
+    	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div>');
+    	reloadSlides();
+    	smoothScroll.animateScroll( null, '#bazinga' );
     })
+
+    $(".imgBut").click(function(event) {
+    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutImg"> <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/> </div> <div class="ajoutLieuImg"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div>');
+    	reloadSlides();
+    	smoothScroll.animateScroll( null, '#bazinga' );
+    })
+
+    $(".vidBut").click(function(event) {
+    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div> </div>');
+    	reloadSlides();
+    	smoothScroll.animateScroll( null, '#bazinga' );
+    })
+
+    function reloadSlides() {
+    	$(".slides").packery({ itemSelector: '.slide' });
+
+    	pckry.appended( $('.newslide') );
+    	$('.newslide').removeClass('newslide');
+
+    	var itemElems = pckry.getItemElements();
+
+		for ( var i=0, len = itemElems.length; i < len; i++ ) {
+			var elem = itemElems[i];
+		  	// make element draggable with Draggabilly
+		  	var draggie = new Draggabilly( elem, {
+		  	 	handle: '.handle'
+		  	} );
+		  	// bind Draggabilly events to Packery
+		  	pckry.bindDraggabillyEvents( draggie );
+		}
+    }
 
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
