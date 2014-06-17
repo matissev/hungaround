@@ -735,6 +735,14 @@ main .linkMap span:before {
   border-color: transparent #57b178 transparent transparent;
 }
 
+.hideit {
+  display: none;
+}
+
+.showit {
+  display: block;
+}
+
 .lieu {
   display: block;
   -webkit-box-sizing: border-box;
@@ -965,7 +973,7 @@ main .linkMap span:before {
   float: left;
 }
 
-.profil .center-articlesPoste {
+.profil .posted-articles {
   display: inline-block;
   float: left;
   width: 33.333333%;
@@ -976,7 +984,7 @@ main .linkMap span:before {
   font-size: 18px;
 }
 
-.profil .center-articlesPartage {
+.profil .shared-articles {
   display: inline-block;
   float: right;
   width: 33.33333%;
