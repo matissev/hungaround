@@ -73,7 +73,6 @@ var oldMapCenter = 0;
 var jack3 = 0;
 
 jQuery(document).ready(function($) {
-	smoothScroll.init();
 
 	// =========================== FILTRES MOSAIC ===========================
 
@@ -298,8 +297,8 @@ jQuery(document).ready(function($) {
     	$(".closeCreation").toggleClass("toggleCloser");
 
     	if ($(".article").hasClass( "toggleArticle" )) {
-    		$(".article").toggleClass("toggleArticle").delay( 1000 );
-    		$(".closeArticle").toggleClass("toggleCloser").delay( 1000 );
+    		$(".article").delay( 800 ).toggleClass("toggleArticle");
+    		$(".closeArticle").delay( 800 ).toggleClass("toggleCloser");
     	}
 
     	if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
@@ -408,21 +407,24 @@ jQuery(document).ready(function($) {
     $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
 
     $(".textBut").click(function(event) {
-    	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div>');
+    	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
-    	smoothScroll.animateScroll( null, '#bazinga' );
+    	var id = this.href.split('#')[1];
+    	var containerAnchor = $('.creationContainer');
+    	smoothscrollTo(document.getElementById(id), containerAnchor, 500, 'easeInOutCubic');
+    	return false;
     })
 
     $(".imgBut").click(function(event) {
-    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutImg"> <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/> </div> <div class="ajoutLieuImg"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div>');
+    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutImg"> <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/> </div> <div class="ajoutLieuImg"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
-    	smoothScroll.animateScroll( null, '#bazinga' );
+    	smoothscrollTo($('#bazinga'), $('.creation'));
     })
 
     $(".vidBut").click(function(event) {
-    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> </div> </div>');
+    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div> </div>');
     	reloadSlides();
-    	smoothScroll.animateScroll( null, '#bazinga' );
+    	smoothscrollTo($('#bazinga'), $('.creation'));
     })
 
     function reloadSlides() {
