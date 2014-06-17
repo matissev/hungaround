@@ -4,11 +4,14 @@
   display: block;
 
   li {
+    box-sizing: border-box;
     display: block;
     float: left;
     list-style: none;
     width: 15.16666%;
     margin: 0.75%;
+    border: @blue-light 1px solid;
+    transition: border 0.2s ease;
 
     img {
       cursor: pointer;
@@ -17,6 +20,9 @@
       width: 100%;
     }
   }
+
+  li:hover { border: @blue-light 3px solid; }
+
   .clearfix
 }
 
