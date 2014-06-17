@@ -1,7 +1,6 @@
 var shown = false;
 var step = 0;
 var u = 0;
-
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
 	{ "lat" : "43.412190" , "long" : "0.214175" },
@@ -10,13 +9,11 @@ var blueMarkersPosition = [
 	{ "lat" : "43.300819" , "long" : "-1.615689" },
 	{ "lat" : "42.948002" , "long" : "-0.429166" }
 ];
-
 var redMarkersPosition = [
 	{ "lat" : "43.982085" , "long" : "3.907478" },
 	{ "lat" : "43.430126" , "long" : "0.699470" },
 	{ "lat" : "43.174278" , "long" : "-1.173699" }
 ];
-
 var greenMarkersPosition = [
 	{ "lat" : "43.909806" , "long" : "6.225070" },
 	{ "lat" : "44.193841" , "long" : "6.192950" },
@@ -38,41 +35,32 @@ var greenMarkersPosition = [
 	{ "lat" : "42.362094" , "long" : "-0.207881" },
 	{ "lat" : "41.995003" , "long" : "1.170606" }
 ];
-
 var contentStringRed = [
 	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-2.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-3.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
-
 var contentStringGreen = [
 	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-4.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-5.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-6.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
-
 var contentStringBlue = [
 	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-7.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-8.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
 	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-9.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
-
 var blueMarkers = [];
 var greenMarkers = [];
 var redMarkers = [];
-
 var infowindowRed = [];
 var infowindowBlue = [];
 var infowindowGreen = [];
-
 var marker = 0;
 var oldDistance = 0;
 var bestMarker = 0;
 var oldBestMarker = 0;
 var bestMarkerLiteral = 0;
 var oldMapCenter = 0;
-
 jQuery(document).ready(function($) {
-
 	// =========================== FILTRES MOSAIC ===========================
-
 	$('.mosaic').packery({ itemSelector: '.item' });
 	
 	$('.nav-filtre').each(function(index, el) {
@@ -87,21 +75,16 @@ jQuery(document).ready(function($) {
 			$('.mosaic').packery({ itemSelector: '.item' });
 		});
 	});
-
 	// =========================== LIGHT GALLERY ===========================
-
 	if ($('#gallery').length) {
 		$("#gallery").lightGallery();
 	} 
-
 	// =========================== GOOGLE MAPS API ===========================
 	var timer = false;
 	var checker = false;
-
 	for (var i = 0; i < redMarkersPosition.length; i++) {
 		u++;
 		if (u >= contentStringRed.length) { u = 0; }
-
 		infowindowRed[i] = new InfoBubble({
 	      content: contentStringRed[u],
 	      minWidth: 170,
@@ -115,11 +98,9 @@ jQuery(document).ready(function($) {
 	      disableAutoPan: true
 	  	});
 	}
-
 	for (var i = 0; i < blueMarkersPosition.length; i++) {
 		u++;
 		if (u >= contentStringBlue.length) { u = 0; }
-
 		infowindowBlue[i] = new InfoBubble({
 	      content: contentStringBlue[u],
 	      minWidth: 170,
@@ -133,11 +114,9 @@ jQuery(document).ready(function($) {
 	      disableAutoPan: true
 	  	});
 	}
-
 	for (var i = 0; i < greenMarkersPosition.length; i++) {
 		u++;
 		if (u >= contentStringGreen.length) { u = 0; }
-
 		infowindowGreen[i] = new InfoBubble({
 	      content: contentStringGreen[u],
 	      minWidth: 170,
@@ -151,7 +130,6 @@ jQuery(document).ready(function($) {
 	      disableAutoPan: true
 	  	});
 	}
-
 	function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(44.770137, 6.965332),
@@ -161,7 +139,6 @@ jQuery(document).ready(function($) {
         map = new google.maps.Map(document.getElementById("largeMap"), mapOptions);
         map.setTilt(45);
   		map.setHeading(90);
-
   		for (var i = 0; i < greenMarkersPosition.length; i++) {
   			greenMarkers[i] = new google.maps.LatLng(greenMarkersPosition[i].lat, greenMarkersPosition[i].long);
   			marker = new google.maps.Marker({
@@ -172,13 +149,11 @@ jQuery(document).ready(function($) {
 			});
 			
 			jack1 = infowindowGreen[i];
-
 			google.maps.event.addListener(marker, 'click', function() {
 				initialize();
         		jack1.open(map, this);
     		});
   		}
-
   		for (var i = 0; i < blueMarkersPosition.length; i++) {
   			blueMarkers[i] = new google.maps.LatLng(blueMarkersPosition[i].lat, blueMarkersPosition[i].long);
   			marker = new google.maps.Marker({
@@ -189,12 +164,10 @@ jQuery(document).ready(function($) {
 			});
 			
 			jack2 = infowindowBlue[i];
-
 			google.maps.event.addListener(marker, 'click', function() {
         		jack2.open(map, this);
     		});
   		}
-
   		for (var i = 0; i < redMarkersPosition.length; i++) {
   			redMarkers[i] = new google.maps.LatLng(redMarkersPosition[i].lat, redMarkersPosition[i].long);
   			marker = new google.maps.Marker({
@@ -203,21 +176,17 @@ jQuery(document).ready(function($) {
 	    		title: "Hello World!",
 	    		icon: 'img/icones/recommande.svg'
 			});
-
 			jack3 = infowindowRed[i];
-
 			google.maps.event.addListener(marker, 'click', function() {
         		jack3.open(map, this);
     		});
   		}
     }
     google.maps.event.addDomListener(window, 'load', initialize);
-
  //    checker = setInterval(function() {
  //    	centerMap = map.getCenter();
  //    	if (oldMapCenter != centerMap) {
 	//     	var allMarkers = blueMarkersPosition.concat(redMarkersPosition).concat(greenMarkersPosition);
-
 	// 		for (i=0; i<allMarkers.length; i++) {
 	// 			 markerCompared = new google.maps.LatLng(allMarkers[i].lat, allMarkers[i].long);
 	// 			 distance = google.maps.geometry.spherical.computeDistanceBetween(centerMap,markerCompared);
@@ -228,16 +197,13 @@ jQuery(document).ready(function($) {
 	// 				bestMarkerLiteral = allMarkers[i];
 	// 			}
 	// 		}
-
 	// 		if(oldBestMarker != bestMarkerLiteral) {
-
 	// 			marker = new google.maps.Marker({
 	// 	    	position: bestMarker,
 	// 	    	map: map,
 	// 	    	title: "Hello World!",
 	// 	    	icon: 'img/icones/nonlu.svg'
 	// 			});
-
 	// 			infowindow.open(map,marker);
 	// 			oldBestMarker = bestMarkerLiteral;
 	// 		}
@@ -246,66 +212,53 @@ jQuery(document).ready(function($) {
  //    	}
  //    	oldMapCenter = centerMap;
 	// }, 500);
-
-
     // =========================== TOGGLES ===========================
-
     $(".nav-profil-photo").click(function(event) { $("#menuNotif").toggleClass("open"); })
-
     $(".posted-articles").click(function(event) { $(".shared-mosaic").toggleClass("hideit"); $(".posted-mosaic").toggleClass("showit"); })
     $(".shared-articles").click(function(event) { $(".shared-mosaic").toggleClass("showit"); $(".posted-mosaic").toggleClass("hideit"); })
-
     $(".showArticle").click(function(event) {
     	$(".article").toggleClass("toggleArticle");
     	$("main").toggleClass("away");
     	$("#largeMap").toggleClass("littlemap");
     	$(".closeArticle").toggleClass("toggleCloser");
     	shown = !shown;
-
     	if ( shown == true ) {
     		LatLng1 = new google.maps.LatLng(45.4101435, 5.8236147);
     		LatLng2 = new google.maps.LatLng(45.3597474, 5.8129717);
     		LatLng3 = new google.maps.LatLng(45.2850354, 5.7752062);
     		map.setCenter(LatLng1);
     		map.setZoom(13);
-
 			timer = setTimeout(function() {
 				google.maps.event.trigger(map, 'resize');
 	  			map.panTo(LatLng1);
-
 	  			var markerArticle1 = new google.maps.Marker({
 		    		position: LatLng1,
 		    		map: map,
 		    		title: "Hello World!",
 		    		icon: 'img/icones/map-marker.svg'
 				});
-
 				var markerArticle2 = new google.maps.Marker({
 		    		position: LatLng2,
 		    		map: map,
 		    		title: "Hello World!",
 		    		icon: 'img/icones/map-marker.svg'
 				});
-
 				var markerArticle3 = new google.maps.Marker({
 		    		position: LatLng3,
 		    		map: map,
 		    		title: "Hello World!",
 		    		icon: 'img/icones/map-marker.svg'
 				});
-
 				var lineSymbol = {
     				path: 'M 0,-1 0,1',
     				strokeOpacity: 1,
     				scale: 4
   				};
-
 				var flightPlanCoordinates = [
     				LatLng1,
     				LatLng2,
     				LatLng3
   				];
-
 				var flightPath = new google.maps.Polyline({
     				path: flightPlanCoordinates,
     				icons: [{
@@ -318,14 +271,11 @@ jQuery(document).ready(function($) {
     				strokeOpacity: 0,
     				strokeWeight: 3
     			});
-
     			flightPath.setMap(map);
 			}, 1000);
     	}
-
     	else {
     		initialize();
-
     		timer = setInterval(function() {
     			google.maps.event.trigger(map, 'resize');
     			step++ ;
@@ -333,36 +283,27 @@ jQuery(document).ready(function($) {
     		}, 500);
     	}
     })
-
     $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
-
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
 		$(this).toggleClass("letLinkMap");
-
 		if ($("#textLinkMap").html() == "Carte" ) {
 			$("#textLinkMap").html("Gazette");
 		} else {
 			$("#textLinkMap").html("Carte");
 		}
 	})
-
     // =========================== WAYPOINTS ============================
-
 	$('#marker1').waypoint(function() {
   		map.panTo(LatLng1);
 	}, {context: '.article'});
-
 	$('#marker2-1').waypoint(function() {
   		map.panTo(LatLng2);
 	}, {context: '.article'});
-
 	$('#marker2-2').waypoint(function() {
   		map.panTo(LatLng2);
 	}, {context: '.article'});
-
 	$('#marker3').waypoint(function() {
   		map.panTo(LatLng3);
 	}, {context: '.article'});
-
 });
