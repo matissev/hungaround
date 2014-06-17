@@ -1,4 +1,3 @@
-var shown = false;
 var step = 0;
 var u = 0;
 var switchMosaic = false;
@@ -219,7 +218,19 @@ jQuery(document).ready(function($) {
     		});
   		}
     }
+
     google.maps.event.addDomListener(window, 'load', initialize);
+
+    function cleanMap() {
+    	var mapOptions = {
+    	  center: new google.maps.LatLng(44.770137, 6.965332),
+    	  zoom: 8,
+    	  mapTypeId: google.maps.MapTypeId.TERRAIN
+    	};
+    	map = new google.maps.Map(document.getElementById("largeMap"), mapOptions);
+    	map.setTilt(45);
+		map.setHeading(90);
+  	}
 
  //    checker = setInterval(function() {
  //    	centerMap = map.getCenter();
@@ -309,6 +320,8 @@ jQuery(document).ready(function($) {
     		$("#largeMap").addClass("littlemap");
     		$("main").addClass("away");
     	}
+
+    	if ($(".creation").hasClass( "toggleArticle" )) {cleanMap();};
     })
 
     $(".showArticle").click(function(event) {
@@ -316,7 +329,6 @@ jQuery(document).ready(function($) {
     	$("main").toggleClass("away");
     	$("#largeMap").toggleClass("littlemap");
     	$(".closeArticle").toggleClass("toggleCloser");
-    	shown = !shown;
 
     	if ($(".creation").hasClass( "toggleArticle" )) {
     		$(".creation").toggleClass("toggleArticle");
@@ -332,7 +344,7 @@ jQuery(document).ready(function($) {
     		$("main").addClass("away");
     	}
 
-    	if ( shown == true ) {
+    	if ( $(".article").hasClass( "toggleArticle" ) ) {
     		LatLng1 = new google.maps.LatLng(45.4101435, 5.8236147);
     		LatLng2 = new google.maps.LatLng(45.3597474, 5.8129717);
     		LatLng3 = new google.maps.LatLng(45.2850354, 5.7752062);
