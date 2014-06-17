@@ -2,6 +2,8 @@ html(lang="fr")
 	head
 		include includes/head
 		title Col de la Lyé
+		style
+			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
 	body
 		include includes/nav-unlogged
 		include includes/inscription
@@ -157,7 +159,7 @@ html(lang="fr")
 									span.nombre 2
 									span.text voies de niveau
 									span.level6 9b+		
-					include includes/mosaic-small
+					include includes/mosaic-small-unlogged
 			a.linkMap(href="#")
 				span#textLinkMap Carte
 		.article

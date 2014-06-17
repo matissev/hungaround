@@ -3,7 +3,6 @@ html(lang="fr")
 		include includes/head
 		style
 			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
-			.recommande:after, .suivi:after, .nonlu:after { visibility: hidden; }
 			.logged { display: none; }
 			.unlogged { display: inline-block; }
 
@@ -54,7 +53,7 @@ html(lang="fr")
 						a.posted-articles.active(href="#") Articles postés
 						a.shared-articles(href="#") Articles partagés
 					
-						include includes/mosaic-small
+						include includes/mosaic-small-unlogged
 			a.linkMap(href="#")
 				span#textLinkMap Carte
 		.article
