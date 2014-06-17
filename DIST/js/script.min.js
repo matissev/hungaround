@@ -2,6 +2,7 @@ var shown = false;
 var step = 0;
 var u = 0;
 var switchMosaic = false;
+var switchArticles = false;
 
 var blueMarkersPosition = [
 	{ "lat" : "43.248363" , "long" : "2.427920" },
@@ -267,17 +268,25 @@ jQuery(document).ready(function($) {
     		switchMosaic = !switchMosaic;
     		
     		$('.mosaic').packery({ itemSelector: '.item' });
+
+    		$(".shared-articles").toggleClass("deactive");
+    		$(".posted-articles").toggleClass("active");
+    		switchArticles = !switchArticles;
     	}
     })
 
     $(".shared-articles").click(function(event) {
     	if ( switchMosaic == false ) {
-    		console.log("haha");
+    		console.log("hoho");
     		$(".shared-mosaic").toggleClass("hideit");
     		$(".posted-mosaic").toggleClass("hideit");
     		switchMosaic = !switchMosaic;
 
     		$('.mosaic').packery({ itemSelector: '.item' });
+
+    		$(".shared-articles").toggleClass("active");
+    		$(".posted-articles").toggleClass("deactive");
+    		switchArticles = !switchArticles;
     	}
     })
 
