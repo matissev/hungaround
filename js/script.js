@@ -373,6 +373,16 @@ jQuery(document).ready(function($) {
 
     $(".nav-register, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
 
+    $(".textBut").click(function(event) {
+    	var elems = 0;
+    	var fragment = document.createDocumentFragment();
+
+    	var elem = document.createElement('div');
+    	elem.className = '.ajoutText';
+    	fragment.appendChild( elem );
+    	elems.push( elem );
+    })
+
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
 		$(this).toggleClass("letLinkMap");
