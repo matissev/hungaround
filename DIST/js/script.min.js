@@ -315,11 +315,13 @@ jQuery(document).ready(function($) {
     	if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
     		$("#largeMap").removeClass("littlemap");
     		$("main").removeClass("away");
+    		$(".nav-filtre").removeClass("notshew");
     		initialize();
     	}
     	else {
     		$("#largeMap").addClass("littlemap");
     		$("main").addClass("away");
+    		$(".nav-filtre").addClass("notshew");
     	}
 
     	if ($(".creation").hasClass( "toggleArticle" )) {cleanMap();};
@@ -339,11 +341,15 @@ jQuery(document).ready(function($) {
     	if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
     		$("#largeMap").removeClass("littlemap");
     		$("main").removeClass("away");
+    		$(".nav-filtre").removeClass("notshew");
+    		console.log("je suis la");
     		initialize();
     	}
     	else {
     		$("#largeMap").addClass("littlemap");
     		$("main").addClass("away");
+    		console.log("je suis la");
+    		$(".nav-filtre").addClass("notshew");
     	}
 
     	if ( $(".article").hasClass( "toggleArticle" ) ) {
