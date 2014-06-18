@@ -41,19 +41,19 @@ var greenMarkersPosition = [
 ];
 
 var contentStringRed = [
-	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-2.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 recommande"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-3.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+	'<div class="item p1x1 recommande"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 recommande"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-2.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 recommande"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-3.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
 
 var contentStringGreen = [
-	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-4.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-5.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 nonlu"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-6.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+	'<div class="item p1x1 nonlu"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-4.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 nonlu"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-5.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 nonlu"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-6.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
 
 var contentStringBlue = [
-	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-7.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-8.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
-	'<div class="item p1x1 suivi"><a href="#" class="showArticle"><img src="img/photos/mosaic/1x1-9.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
+	'<div class="item p1x1 suivi"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-7.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 suivi"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-8.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>',
+	'<div class="item p1x1 suivi"><a href="#article" class="showArticle"><img src="img/photos/mosaic/1x1-9.jpg" alt="" class="item-img"/></a><div class="item-links"><a href="#" class="item-links-articleName showArticle">D&#39;est en ouest...</a><a href="lieu.html" class="item-links-lieu">Col de la Lyé</a><a href="profil.html" class="item-links-auteur">Francois Juste</a></div></div>'];
 
 var blueMarkers = [];
 var greenMarkers = [];
@@ -420,6 +420,7 @@ jQuery(document).ready(function($) {
 
     $(".registerForm, .fermeture").click(function(event) { $(".popupContainer").toggleClass("show"); })
     $(".toggleMessagerie").click(function(event) { $(".messagerieContainer").toggleClass("show"); })
+    $(".toggleReponse").click(function(event) { $(".reponseContainer").toggleClass("show"); })
 
     $(".textBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
@@ -491,6 +492,91 @@ jQuery(document).ready(function($) {
   		map.panTo(LatLng3);
 	}, {context: '.article'});
 
+	$(window).bind('hashchange', function() {
+        var hash = location.hash;
+        
+        if ( hash == "#article" ) {
+        	$(".article").toggleClass("toggleArticle");
+			$("main").toggleClass("away");
+			$("#largeMap").toggleClass("littlemap");
+			$(".closeArticle").toggleClass("toggleCloser");
+
+			if ($(".creation").hasClass( "toggleArticle" )) {
+				$(".creation").toggleClass("toggleArticle");
+				$(".closeCreation").toggleClass("toggleCloser");
+			}
+
+			if (($(".creation").hasClass( "toggleArticle" ) == false) && ($(".article").hasClass( "toggleArticle" ) == false)) {
+				$("#largeMap").removeClass("littlemap");
+				$("main").removeClass("away");
+				initialize();
+			}
+			else {
+				$("#largeMap").addClass("littlemap");
+				$("main").addClass("away");
+			}
+
+			if ( $(".article").hasClass( "toggleArticle" ) ) {
+				LatLng1 = new google.maps.LatLng(45.4101435, 5.8236147);
+				LatLng2 = new google.maps.LatLng(45.3597474, 5.8129717);
+				LatLng3 = new google.maps.LatLng(45.2850354, 5.7752062);
+				map.setCenter(LatLng1);
+				map.setZoom(13);
+
+				timer = setTimeout(function() {
+					google.maps.event.trigger(map, 'resize');
+						map.panTo(LatLng1);
+
+						var markerArticle1 = new google.maps.Marker({
+			    		position: LatLng1,
+			    		map: map,
+			    		title: "Hello World!",
+			    		icon: 'img/icones/map-marker.svg'
+					});
+
+					var markerArticle2 = new google.maps.Marker({
+			    		position: LatLng2,
+			    		map: map,
+			    		title: "Hello World!",
+			    		icon: 'img/icones/map-marker.svg'
+					});
+
+					var markerArticle3 = new google.maps.Marker({
+			    		position: LatLng3,
+			    		map: map,
+			    		title: "Hello World!",
+			    		icon: 'img/icones/map-marker.svg'
+					});
+
+					var lineSymbol = {
+						path: 'M 0,-1 0,1',
+						strokeOpacity: 1,
+						scale: 4
+						};
+
+					var flightPlanCoordinates = [
+						LatLng1,
+						LatLng2,
+						LatLng3
+						];
+
+					var flightPath = new google.maps.Polyline({
+						path: flightPlanCoordinates,
+						icons: [{
+						  icon: lineSymbol,
+						  offset: '0',
+						  repeat: '20px'
+						}],
+						geodesic: true,
+						strokeColor: '#e64c27',
+						strokeOpacity: 0,
+						strokeWeight: 3
+					});
+
+					flightPath.setMap(map);
+				}, 1000);
+			        }
+		}
+	});
+
 });
-
-
