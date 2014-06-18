@@ -402,18 +402,32 @@ jQuery(document).ready(function($) {
 
 	$('#marker1').waypoint(function() {
   		map.panTo(LatLng1);
+  		map.setZoom(13);
 	}, {context: '.article'});
 
 	$('#marker2-1').waypoint(function() {
   		map.panTo(LatLng2);
+  		map.setZoom(13);
 	}, {context: '.article'});
 
 	$('#marker2-2').waypoint(function() {
   		map.panTo(LatLng2);
+  		map.setZoom(13);
 	}, {context: '.article'});
 
-	$('#marker3').waypoint(function() {
+	$('#marker3-1').waypoint(function() {
   		map.panTo(LatLng3);
+  		map.setZoom(13);
+	}, {context: '.article'});
+
+	$('#marker3-2').waypoint(function() {
+  		map.panTo(LatLng3);
+  		map.setZoom(13);
+	}, {context: '.article'});
+
+	$('#marker4').waypoint(function() {
+  		map.panTo(LatLng2);
+  		map.setZoom(12);
 	}, {context: '.article'});
 
 	$(window).bind('hashchange', function() {
