@@ -88,7 +88,7 @@
 .p2x1 { float: left; width: 33.3333333%;} .p2x1:before { content: ""; display: inline-block; padding-top: 62.5%; }
 .p2x2 { float: left; width: 33.3333333%;} .p2x2:before { content: ""; display: inline-block; padding-top: 125%; }
 
-.recommande:after, .suivi:after, .nonlu:after {
+.recommande:after, .suivi:after, .nonlu:after, .black-marker:after {
     z-index: 10;
     position: absolute;
     content: "";
@@ -104,6 +104,7 @@
 .recommande:after { border-color: transparent @red transparent transparent; }
 .suivi:after { border-color: transparent @blue transparent transparent; }
 .nonlu:after { border-color: transparent @green transparent transparent; }
+.black-marker:after { border-color: transparent @black transparent transparent; }
 
 .hideit {display: none; }
 
