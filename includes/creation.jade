@@ -1,6 +1,7 @@
 .creationContainer
 	.titreArticle
 		input(type='text', name='fname', placeholder="Votre titre d'article ici ...")
+		input.littleInput(type='text', name='fname', placeholder="Ajouter des compagnons de grimpe")
 	.infos
 		.meteo1
 			span.temperature Mise a jour de la météo grace à la géolocalisation
@@ -34,8 +35,8 @@
 			//- 	.handle
 			//- 	.deleteBut
 			
-	.boutonAjout#bazinga
-		a.textBut(href="#bazinga" onclick="return false") Ajouter un paragraphe
-		a.imgBut(href="#bazinga" onclick="return false") Poster une photo
-		a.vidBut(href="#bazinga" onclick="return false") Poster une vidéo
-	a.publier.showCreation(href="#") Publier l'article
+		.boutonAjout#bazinga
+			a.textBut(href="#bazinga" onclick="return false") Ajouter un paragraphe
+			a.imgBut(href="#bazinga" onclick="return false") Poster une photo
+			a.vidBut(href="#bazinga" onclick="return false") Poster une vidéo
+		a.publier.showCreation(href="#") Publier l'article

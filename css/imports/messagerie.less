@@ -17,6 +17,7 @@
 }
 
 .messagerie{
+	position: relative;
 	textarea:focus, input:focus {
 		outline: none;
 	}
@@ -97,4 +98,17 @@
 	.messagerie-texte textarea {
 		height: 300px;
 	}
+}
+
+.messagerieCloser {
+	width: 43px;
+	height: 43px;
+	display: block;
+	position: absolute;
+	background: url(../img/icones/close-little.svg) no-repeat center center;
+	background-size: 25px;
+	top: -21px;
+	left: -21px;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
 }

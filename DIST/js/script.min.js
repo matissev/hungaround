@@ -339,18 +339,21 @@ jQuery(document).ready(function($) {
     	$(".slides").append('<div class="slide newslide ajoutText"> <div class="ajoutTitre"> <input type="text" name="fname" placeholder="Titre"/> </div> <div class="ajoutParagraphe"> <textarea name="textarea" rows="10" cols="50" placeholder="Saisir un texte ici."></textarea> </div> <div class="ajoutLieuText"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
     	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:500});
+    	deleteBloc();
     })
 
     $(".imgBut").click(function(event) {
     	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutImg"> <input type="file" name="pic" accept="image/*" placeholder="Ajouter une localisation"/> </div> <div class="ajoutLieuImg"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div>');
     	reloadSlides();
     	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:500});
+    	deleteBloc();
     })
 
     $(".vidBut").click(function(event) {
-    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut"></div> </div> </div>');
+    	$(".slides").append('<div class="slide newslide ajoutFile"> <div class="ajoutVid"> <input type="file" name="vid" accept="video/*"/> </div> <div class="ajoutLieuVid"> <input type="text" name="fname" placeholder="Ajouter une localisation"/> </div> <div class="handle"></div> <div class="deleteBut" ></div> </div> </div>');
     	reloadSlides();
     	$('#bazinga').animatescroll({element:'.creation', scrollSpeed:500});
+    	deleteBloc();
     })
 
     function reloadSlides() {
@@ -372,10 +375,6 @@ jQuery(document).ready(function($) {
 		}
     }
 
-    /*$(".deleteBut").click(function(event) {
-    	pckry.remove( event.target );
-    })*/
-
 	$(".linkMap").click(function(event) {
 		$("#content").toggleClass("kickOutContent");
 		$(this).toggleClass("letLinkMap");
@@ -386,6 +385,18 @@ jQuery(document).ready(function($) {
 			$("#textLinkMap").html("Carte");
 		}
 	})
+
+	function deleteBloc() {
+		$('.deleteBut').click(function(event) {
+       		var $this = $(this);
+
+
+       		pckry.remove( $this.parent() );
+       		function cleanLayout() { pckry.layout(); }
+
+			setTimeout(cleanLayout, 400); 
+    	})
+	}
 
     // =========================== WAYPOINTS ============================
 
