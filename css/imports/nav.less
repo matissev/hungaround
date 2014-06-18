@@ -105,6 +105,7 @@
 
     &-profil {
         &-photo {
+            position: relative;
             display: inline-block;
             width: 43px;
             height: 43px;
@@ -293,6 +294,19 @@
 
         a { color: white; }
     }
+}
+
+.notif-number {
+    z-index: 10000000;
+    position: absolute;
+    top: 28px;
+    right: 3.5%;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icones/notif.svg") no-repeat center center;
+    background-size: contain;
+    display: block;
+    transform: translateX(3px);
 }
 
 .notshew { opacity: 0!important; }

@@ -80,7 +80,9 @@ main {
 }
 
 .kickOutContent { transform: translateX(-100%); }
-.away { transform: translateX(-37%); }
+
+.away { transform: translateX(-33.35%); }
+
 .letLinkMap {
     transform: translateX(100%)!important;
     background: @orange!important;
@@ -89,4 +91,34 @@ main {
     span:before {
         background: url("../img/icones/gazette.svg") no-repeat center center !important;
     }
+}
+
+.ajax-refresh {
+    position: relative;
+    left: 3.5%;
+    margin-top: 10px;
+    width: 92.8%;
+    text-align: center;
+    display: inline-block;
+    background: @black;
+    font-weight: bold;
+    color: white;
+    padding: 7px 0 10px 0;
+    transition: background 0.3s ease;
+}
+
+.ajax-refresh:before {
+    position: relative;
+    top: 3px;
+    left: -8px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icones/load.svg") no-repeat center center;
+    background-size: contain;
+}
+
+.ajax-refresh:hover {
+    background: lighten(@black, 10%);
 }

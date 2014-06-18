@@ -9,7 +9,8 @@
     <script>videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"</script>
   </head>
   <body>
-    <nav class="nav"><a href="gazette.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a>
+    <nav class="nav">
+      <div class="notif-number"></div><a href="gazette.html"><img src="img/logo.svg" alt="logo" class="nav-logo"/></a>
       <label for="checkRecommandes" data-filtered="recommande" class="nav-filtre">
         <input id="checkRecommandes" type="checkbox" name="choix1" checked="checked" class="nav-filtre-check"/><span class="nav-filtre-text navRecommandes">Recommandés</span>
       </label>
@@ -28,13 +29,13 @@
                 <li class="nav-profil-toggle-user-links-parametres"><span>Paramètres</span></li></a></ul><a href="index.html" class="nav-profil-toggle-user-logout no-ajaxy">Déconnexion</a>
           </div>
           <ul class="nav-profil-toggle-notif">
-            <li class="nav-profil-toggle-notif-oneNotif unseen message"><a href="#" class="toggleReponse"><img src="img/photos/users/5.jpg"/></a><a href="#" class="toggleReponse">
+            <li class="nav-profil-toggle-notif-oneNotif unseen message"><a href="#" class="toggleReponse"><img src="img/photos/users/31.jpg"/></a><a href="#" class="toggleReponse">
                 <p><span class="username">MargotMontargie</span> vous a envoyé un message.</p></a></li>
             <li class="nav-profil-toggle-notif-oneNotif unseen site"><a href="lieu.html"><img src="img/photos/users/28.jpg"/></a><a href="lieu.html">
                 <p><span class="username">Jojo</span> vous recommande Le Col de la Lyé.</p></a></li>
             <li class="nav-profil-toggle-notif-oneNotif message"><a href="#" class="toggleReponse"><img src="img/photos/users/12.jpg"/></a><a href="#" class="toggleReponse">
                 <p><span class="username">Tristan Morain</span> vous a envoyé un message.</p></a></li>
-            <li class="nav-profil-toggle-notif-oneNotif person"><a href="profil2.html"><img src="img/photos/users/5.jpg"/></a><a href="profil2.html">
+            <li class="nav-profil-toggle-notif-oneNotif person"><a href="profil2.html"><img src="img/photos/users/31.jpg"/></a><a href="profil2.html">
                 <p><span class="username">MargotMontargie</span> vous recommande Tristan Morain.</p></a></li>
             <li class="nav-profil-toggle-notif-oneNotif message"><a href="#" class="toggleReponse"><img src="img/photos/users/11.jpg"/></a><a href="#" class="toggleReponse">
                 <p><span class="username">émilie03</span> vous a envoyé un message.</p></a></li>
@@ -139,7 +140,7 @@
     <div class="article">
       <div class="articleContainer">
         <article>
-          <h1>D'est en ouest, nous grimpons.</h1><span id="author">Par Milène Delabougne</span>
+          <h1>D'est en ouest, nous grimpons.</h1><span id="author">Par Milène Delabougne, avec Jojo et Tristan Morain</span>
           <div class="infos">
             <div class="meteo"><span class="temperature">21°C<br>24°C</span></div>
             <div class="itineraire">
@@ -181,7 +182,8 @@
           <h2 id="marker3">Une session qui s'achève.</h2>
           <p>Puis nous avons fini ce long week end par une visite ensoleillée au Rempart, où Seb a empoché "Noir désir", "Tristesse", et "Big Boss". On peut dire que ce n'est pas si facile que ça en plein soleil (j'ai refait "Big boss" et "Fourmis rouges" pour m'en rendre compte).  </p>
           <p>http://guillaumeglaironmondet.blogspot.fr/2013/05/two-more-8bs-video.html</p><img src="img/photos/article/12.jpg"/>
-        </article><a href="#" class="share">Recommander</a>
+        </article><a href="#" class="share">Recommander</a><a href="#">
+          <div class="nav-profil-toggle-user-links-favoris-deux"><span>Favoris</span></div></a>
         <div class="clickPlease">
           <p class="mightBe">Quelques articles qui pourraient vous intéresser.</p>
           <div class="item p1x1"><a href=""><img src="img/photos/mosaic/1x1-1.jpg" alt="" class="item-img"/></a>

@@ -12,9 +12,33 @@
     overflow-y: scroll;
     transform: translateX(0%);
     transition: transform 1s ease;
+
+    .nav-profil-toggle-user-links-favoris-deux:before {
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-right: 7px;
+		background: url("../img/icones/like-white.svg") no-repeat center center!important;
+		background-size: contain!important;
+		vertical-align: sub;
+		list-style: none!important;
+    }
+
+	.nav-profil-toggle-user-links-favoris-deux {
+		color: white;
+		font-weight: bold;
+		display: inline;
+		margin-left: 20px;
+		background: @black;
+		padding: 7px 8px 6px 8px;
+	}
+
+    
 }
 
-.toggleArticle { transform: translateX(100%)!important; }
+
+.toggleArticle { transform: translateX(100%)!important; transition: transform 1s ease; }
 
 .articleContainer {
 	box-sizing: border-box;
