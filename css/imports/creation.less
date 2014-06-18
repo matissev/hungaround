@@ -28,6 +28,7 @@
 }
 
 .creationContainer{
+	text-align: center;
 	position: relative;
 	box-sizing: border-box;
 	padding: 0 60px 0 60px;
@@ -80,7 +81,6 @@
 
 			.geoloc{
 				margin-top: 30px;
-			 	margin-left: 20px;
 			}
 		}
 
@@ -332,6 +332,39 @@
 	left: -21px;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
+}
+
+.publier {
+	position: relative;
+	background: @black;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 50px;
+}
+
+.publier:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 100%;
+	background: white url(../img/icones/post-left.svg) no-repeat right center;
+	background-size: contain;
+}
+
+.publier:after {
+	position: absolute;
+	top: 0;
+	right: -2px;
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 103%;
+	background: white url(../img/icones/post-right.svg) no-repeat left center;
+	background-size: contain;
 }
 
 
